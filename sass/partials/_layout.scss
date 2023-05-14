@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+    background-color: $backgroundColor;
+
+    h1,h2,h3,h4,h5,h6{
+        font-family: Lora, Georgia, 'Times New Roman', Times, serif;
+    }
+    h1{
+        color: $primary;
+    }
+
+}

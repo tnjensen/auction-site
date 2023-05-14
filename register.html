@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto+Flex:wght@500;600&family=Roboto:wght@100;300;700;900&display=swap" rel="stylesheet">
+    <title>Auction App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="left">
+            <a href="/" class="logo">BidCove</a>
+        </div>
+        <div class="profile-details">
+            <a href="login.html" class="logLink">Login</a>
+            <span class="profile-divider">|</span>
+            <a href="register.html" class="regLink">Register</a>
+        </div>
+        <div class="right">
+            <div class="bars">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+               <!--  <li><a href="#profile">Profile</a></li> -->
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="register">
+        <div class="wrapper">
+            <div class="registerLeft">
+                <h3 class="registerLogo">BidCove</h3>
+                <span class="registerDesc">
+                Register and gain NOK 1000 to bid on our auctions            </span>
+            </div>
+            <div class="registerRight">
+                <div class="message-container"></div>
+                <form class="registerBox">
+                    <input placeholder='username' required class="registerName" />
+                    <input placeholder='email' required class="registerEmail" type="email" />
+                    <input placeholder='password' required class="registerPassword" type="password" minLength="6" />
+                    <input placeholder='avatar-link optional' type="text" class="registerAvatar" />
+                    <button class="signUpButton" type="submit">Sign up</button>
+                </form>           
+            </div>
+        </div>
+        </div>
+    <!-- <script src="js/script.js" type="module"></script> -->
+    <script src="js/register.js" type="module"></script>
+    <script src="js/logout.js" type="module"></script>
+</body>
+</html>

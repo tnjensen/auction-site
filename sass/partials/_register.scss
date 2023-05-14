@@ -1,0 +1,72 @@
+.register{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: $backgroundColor;
+
+    .wrapper{
+        width: 70%;
+        height: 70%;
+        display: flex;
+    }
+    .registerRight, .registerLeft{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 20px;
+    }
+    .registerLogo{
+        font-size: 48px;
+        font-weight: 800;
+        color: $primary;
+        margin-bottom: 10px;
+    }
+    .registerDesc{
+        font-size: 22px;
+    }
+    .registerBox{
+        height: 300px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .registerName, .registerEmail, .registerPassword, .registerAvatar{
+        height: 50px;
+        border-radius: 5px;
+        border: 1px solid gray;
+        padding-left: 10px;
+        margin: 5px 0;
+    }
+    input:focus{
+        outline: none;
+    }
+    .signUpButton{
+        height: 50px;
+        border-radius: 10px;
+        border: none;
+        background-color:$secondary;
+        color: $textColor;
+        font-weight: 500;
+        font-size: 18px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    .logintoButton{
+        padding: 5px 20px;
+        align-self: center;
+        min-height: 50px;
+        border-radius: 10px;
+        border: none;
+        background-color: $primary;
+        color: white;
+        font-weight: 500;
+        font-size: 18px;
+        cursor: pointer;
+        margin-top: 15px;
+    }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto+Flex:wght@500;600&family=Roboto:wght@100;300;700;900&display=swap" rel="stylesheet">
+    <title>Auction App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="left">
+            <a href="/" class="logo">BidCove</a>
+        </div>
+        <div class="profile-details">
+            <a href="login.html" class="logLink">Login</a>
+            <span class="profile-divider">|</span>
+            <a href="register.html" class="regLink">Register</a>
+        </div>
+        <div class="right">
+            <div class="bars">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <!-- <li><a href="profile.html">Profile</a></li> -->
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="login">
+        <div class="wrapper">
+            <div class="loginLeft">
+                <h3 class="loginLogo">BidCove</h3>
+                <span class="loginDesc">
+                Log in and use your NOK 1000 to bid on our auction items
+                </span>
+            </div>
+            <div class="loginRight">
+                <div class="message-container"></div>
+                <form class="loginBox">
+                    <input placeholder='email' type="email" class="loginEmail" />
+                    <input placeholder='password' type="password" class="loginPassword" minLength="6" />
+                    <button class="loginButton">Log in</button>
+                    <span class="forgotPassword">Forgot password ?</span>
+                </form>          
+            </div>
+        </div>
+    </div>
+   <!--  <script src="js/script.js"></script> -->
+    <script src="js/login.js" type="module"></script>
+    <script src="js/logout.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+.profile{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $backgroundColor;
+
+    @include tablet{
+        flex-direction: row;
+    }
+    .wrapper{
+        width: 70%;
+        height: 70%;
+       
+        @include tablet{
+            display: flex;
+        }
+    }
+    .profileRight, .profileLeft{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        margin: 0 20px;
+    }
+    .profileAvatar{
+       width: 40px;
+
+    }
+    .profileHeader{
+        color: $primary;
+    }
+    .profileDesc{
+        font-size: 18px;
+    }
+    .profileBox{
+        height: 300px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .editButton{
+        height: 50px;
+        border-radius: 10px;
+        border: none;
+        background-color:$secondary;
+        color: $textColor;
+        font-weight: 500;
+        font-size: 18px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    
+}
