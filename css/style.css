@@ -10911,6 +10911,9 @@ body h1, body .h1 {
   transform-origin: left;
   transition: all 1s ease;
 }
+.header .right .profileMenuLink {
+  display: none;
+}
 .header.active {
   background-color: #f3a086;
   color: #fffefe;
@@ -11077,18 +11080,28 @@ body h1, body .h1 {
 .showcase .slider .container .item .left .leftContainer h2, .showcase .slider .container .item .left .leftContainer .h2 {
   font-size: 18px;
 }
+@media (min-width: 768px) {
+  .showcase .slider .container .item .left .leftContainer h2, .showcase .slider .container .item .left .leftContainer .h2 {
+    font-size: 22px;
+  }
+}
 .showcase .slider .container .item .left .leftContainer p {
   font-size: 14px;
   overflow: hidden;
 }
 @media (min-width: 768px) {
   .showcase .slider .container .item .left .leftContainer p {
-    font-size: 13px;
+    font-size: 16px;
   }
 }
 .showcase .slider .container .item .left .leftContainer span {
   font-size: 16px;
   font-weight: 600;
+}
+@media (min-width: 768px) {
+  .showcase .slider .container .item .left .leftContainer span {
+    font-size: 18px;
+  }
 }
 .showcase .slider .container .item .right {
   height: 100%;
@@ -11106,7 +11119,6 @@ body h1, body .h1 {
 @media (min-width: 768px) {
   .showcase .slider .container .item .right img {
     width: 230px;
-    /* transform: rotate(-5deg); */
     overflow: hidden;
   }
 }
@@ -11296,6 +11308,10 @@ body h1, body .h1 {
 }
 .profile .profileDesc {
   font-size: 18px;
+}
+.profile .profileUser, .profile .profileCredits {
+  background-color: #fffefe;
+  padding: 5px 10px;
 }
 .profile .profileBox {
   height: 300px;

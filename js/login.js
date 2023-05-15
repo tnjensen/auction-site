@@ -1,6 +1,6 @@
 import displayMessage from "../js/components/displayMessage.js";
 import { baseUrl } from "../js/components/settings.js";
-import { saveCredits, saveToken, saveUser} from "../js/components/storage.js";
+import { saveCredits, saveToken, saveUser, saveAvatar} from "../js/components/storage.js";
 
 const loginEmail = document.querySelector('.loginEmail');
 const loginPassword = document.querySelector('.loginPassword');
@@ -53,6 +53,8 @@ async function doLogin(loginEmailValue,loginPasswordValue){
             saveUser(user);
             const credits = json.credits;
             saveCredits(credits);
+            const avatar = json.avatar;
+            saveAvatar(avatar);
             logLink.innerHTML = "Logout";
         }
         if(json.error){

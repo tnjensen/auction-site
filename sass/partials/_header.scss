@@ -37,6 +37,7 @@
         padding-right: 10px;
         
     }
+
     .profile-details{
         font-size: 14px;
 
@@ -82,6 +83,9 @@
                 transform-origin: left;
                 transition: all 1s ease;
             }
+        }
+        .profileMenuLink{
+            display: none;
         }
     }
     &.active{
@@ -129,6 +133,7 @@
                 top: 70px;
                 right: 0;
                 padding: 0 20px 20px 20px;
+
             }
             li a{
                 color: $textColor;
@@ -137,7 +142,9 @@
                 &:hover{
                     font-weight: 600;
                 }
+
             }
+            
         }
     }
 }

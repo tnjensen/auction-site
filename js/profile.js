@@ -1,5 +1,7 @@
 import { baseUrl } from "./components/settings.js";
 import displayMessage from "../js/components/displayMessage.js";
+import { openMenu } from "./components/menuButton.js";
+import { saveAvatar } from "./components/storage.js";
 const profileUser = document.querySelector('.profileUser');
 const profileCredits = document.querySelector('.profileCredits');
 const editButton = document.querySelector('.editButton');
@@ -8,22 +10,25 @@ const token = JSON.parse(localStorage.getItem('token'));
 const avatar = JSON.parse(localStorage.getItem('avatar'));
 const profileAvatarLink = document.querySelector('.profileAvatarLink');
 const profileAvatar = document.querySelector('.profileAvatar');
-import { openMenu } from "./components/menuButton.js";
 const menuButton = document.querySelector('.bars');
 const credits = JSON.parse(localStorage.getItem('credits'));
 const form = document.querySelector('.profileBox');
 const logLink = document.querySelector('.logLink');
 const regLink = document.querySelector('.regLink');
 const divider = document.querySelector('.profile-divider');
+const message = document.querySelector('.message-container');
 
-profileUser.innerHTML = user;
-profileCredits.innerHTML = "NOK " + credits;
-logLink.innerHTML = "Logout";
-divider.style = "display:none";
+if(user){
+    profileUser.innerHTML = user;
+    profileCredits.innerHTML = "NOK " + credits;
+    logLink.innerHTML = "Logout";
+    divider.style = "display:none";
+}
+
 
 menuButton.onclick = openMenu;
 
-async function getProfile(){
+/* async function getProfile(){
 
     const options = {
         headers: {
@@ -46,13 +51,12 @@ async function getProfile(){
     }
    
 }
-getProfile();
+getProfile(); */
 
 profileAvatar.src = avatar;
-profileAvatar.style = "width:80px; border-radius:50%; margin-left:10px";
-profileAvatarLink.innerHTML = avatar;
+profileAvatar.style = "width:80px; border-radius:50%; margin-left:10px"; 
 regLink.innerHTML = `<img src=${avatar} style="width:40px; border-radius:50% "/>`;
-
+profileAvatarLink.value = `${avatar}`;
 
 form.addEventListener('submit', submitForm);
 
@@ -61,20 +65,28 @@ function submitForm(event){
 
     message.innerHTML = "";
 
-    const avatarValue = user.name;
+    let profileAvatarLinkValue = profileAvatarLink.value;
+    console.log(profileAvatarLinkValue);
+    
+    if(profileAvatarLinkValue.length === 0){
+        profileAvatarLinkValue = "";    
+    }
+   
 
-    doUpdate(nameValue);
+    doUpdate(profileAvatarLinkValue);
 }
-async function doUpdate(){
-    const url = baseUrl + `profile/${user}/media`;
+async function doUpdate(profileAvatarLinkValue){
+    const url = baseUrl + `profiles/${user}/media`;
 
-    const data = JSON.stringify({name:nameValue});
-
+    const data = JSON.stringify({avatar:profileAvatarLinkValue});
+    console.log(profileAvatarLinkValue);
+    
     const options = {
         method: "PUT",
         body: data,
         headers : {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + token,
         }
     };
 
@@ -85,8 +97,10 @@ async function doUpdate(){
         
         if(response.ok){
             displayMessage("success", "Successfully updated avatar for " + json.name, ".message-container");
-            const user = json.name;
-            saveUser(user);
+            const avatar = json.avatar;
+            saveAvatar(avatar);
+            console.log(avatar);
+            
         }
         if(json.error){
             displayMessage("warning", json.error.message, ".message-container");
