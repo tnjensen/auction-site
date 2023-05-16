@@ -37,7 +37,7 @@
     <div class="profile">
         <div class="wrapper">
             <div class="profileLeft">
-                <h3 class="profileHeader">Profile area</h3>
+                <h3 class="profileHeader">Profile details</h3>
                 <p>Username: <span class="profileUser"></span></p>
                 <p>Credits: <span class="profileCredits"></span></p>
             </div>
@@ -48,9 +48,27 @@
                         Avatar
                         <img src="" class="profileAvatar" alt="avatar" />
                     </span>
-                    <span>Edit URL:</span>
+                    <span>Change avatar, edit URL:</span>
                     <input type="text" class="profileAvatarLink" />
                     <button class="editButton" type="submit">Update</button>
+                </form>           
+            </div>
+        </div>
+    </div>
+    <div class="bid">
+        <div class="wrapper">
+            <div class="bidLeft">
+                <h3 class="bidHeader">Bid area</h3>
+                <p>Item: <span class="bidItem"></span></p>
+                <p>Description: <span class="bidDesc"></span></p>
+                <p>Bids: <span class="bidsOnItem"></span></p>
+            </div>
+            <div class="bidRight">
+                <div class="bid-message-container"></div>
+                <form class="bidBox" id="bid">
+                    <span>Enter your bid:</span>
+                    <input type="text" class="bidAmount" />
+                    <button class="bidButton" type="submit">Submit</button>
                 </form>           
             </div>
         </div>

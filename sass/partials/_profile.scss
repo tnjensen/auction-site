@@ -1,6 +1,7 @@
-.profile{
+.profile, .bid{
     width: 100vw;
-    height: 100vh;
+    height: 100%;
+    padding: 40px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,7 +19,7 @@
             display: flex;
         }
     }
-    .profileRight, .profileLeft{
+    .profileRight, .profileLeft, .bidLeft, .bidRight{
         flex: 1;
         display: flex;
         flex-direction: column;
@@ -28,17 +29,19 @@
        width: 40px;
 
     }
-    .profileHeader{
+    .profileHeader, .bidHeader{
         color: $primary;
+        padding-bottom: 10px;
     }
     .profileDesc{
         font-size: 18px;
     }
-    .profileUser, .profileCredits{
+    .profileUser, .profileCredits, .bidDesc, .bidItem, .bidsOnItem{
         background-color: $textColor;
-        padding: 5px 10px;
+        padding: 3px 6px;
+        box-decoration-break: clone;
     }
-    .profileBox{
+    .profileBox, .bidBox{
         height: 300px;
         padding: 20px;
         background-color: white;
@@ -47,7 +50,16 @@
         justify-content: space-around;
         flex-direction: column;
     }
-    .editButton{
+    .bid-message-container{
+        padding: 10px 0;
+
+        .warning{
+            background-color: $primary;
+            color: $textColor;
+            padding: 5px;
+        }
+    }
+    .editButton, .bidButton{
         height: 50px;
         border-radius: 10px;
         border: none;

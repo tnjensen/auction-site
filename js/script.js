@@ -20,6 +20,8 @@ if(user){
     credits.innerHTML = "Credits: NOK " + userCredits;
     divider.style = "display:none";
     profileMenuLink.style = "display:block";
+    /* bidButton.innerHTML = "Make a bid"; */
+    
 }
 
 menuButton.onclick = openMenu;
@@ -32,14 +34,16 @@ async function getItems(){
     let index = response.indexOf(currentSlide);
 
     for(let i = 0; i < response.length; i++){
+        let bidLink = `<a href="profile.html?id=${currentSlide.id}#bid" class="bidLink">Make a bid</a>`;
+        let viewBids = `<a href="profile.html?id=${currentSlide.id}#bids" class="viewBidsLink">View bids</a>`;
         slider.innerHTML = `<div class='container'>
         <div class='item'>
           <div class="left">
             <div class="leftContainer">
               <h2>${currentSlide.title}</h2>
               <p>${currentSlide.description}</p>
-              <span>Bids: ${currentSlide._count.bids}</span>
-            </div>
+              <p>${bidLink}</p>
+              </div>
           </div>
           <div class="right">
             <img src=${currentSlide.media[0]} alt='no image'/>
@@ -72,13 +76,15 @@ async function getItems(){
 getItems();
 
 function moveCarousel(index, currentSlide){
+  let bidLink = `<a href="profile.html?id=${currentSlide.id}#bid" class="bidLink">Make a bid</a>`;
+  let viewBids = `<a href="profile.html?id=${currentSlide.id}#bids" class="viewBidsLink">View bids</a>`;
     slider.innerHTML = `<div class='container'>
     <div class='item'>
       <div class="left">
         <div class="leftContainer">
           <h2>${currentSlide.title}</h2>
           <p>${currentSlide.description}</p>
-          <span>Bids: ${currentSlide._count.bids}</span>
+          <p>${bidLink}</p>
         </div>
       </div>
       <div class="right">

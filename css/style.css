@@ -10885,9 +10885,6 @@ body h1, body .h1 {
   text-decoration: none;
   cursor: pointer;
 }
-.header .profile-details a:hover {
-  text-decoration: underline;
-}
 .header .credits {
   color: #f3a086;
 }
@@ -11087,7 +11084,6 @@ body h1, body .h1 {
 }
 .showcase .slider .container .item .left .leftContainer p {
   font-size: 14px;
-  overflow: hidden;
 }
 @media (min-width: 768px) {
   .showcase .slider .container .item .left .leftContainer p {
@@ -11102,6 +11098,19 @@ body h1, body .h1 {
   .showcase .slider .container .item .left .leftContainer span {
     font-size: 18px;
   }
+}
+.showcase .slider .container .item .left .leftContainer .viewBidsLink {
+  text-decoration: none;
+  font-family: "Roboto Flex", sans-serif;
+  letter-spacing: 0.05rem;
+}
+.showcase .slider .container .item .left .leftContainer .bidLink {
+  background-color: #1546e6;
+  color: #fffefe;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  text-decoration: none;
 }
 .showcase .slider .container .item .right {
   height: 100%;
@@ -11271,9 +11280,10 @@ body h1, body .h1 {
   margin-top: 15px;
 }
 
-.profile {
+.profile, .bid {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
+  padding: 40px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11281,39 +11291,42 @@ body h1, body .h1 {
   background-color: #eee;
 }
 @media (min-width: 768px) {
-  .profile {
+  .profile, .bid {
     flex-direction: row;
   }
 }
-.profile .wrapper {
+.profile .wrapper, .bid .wrapper {
   width: 70%;
   height: 70%;
 }
 @media (min-width: 768px) {
-  .profile .wrapper {
+  .profile .wrapper, .bid .wrapper {
     display: flex;
   }
 }
-.profile .profileRight, .profile .profileLeft {
+.profile .profileRight, .profile .profileLeft, .profile .bidLeft, .profile .bidRight, .bid .profileRight, .bid .profileLeft, .bid .bidLeft, .bid .bidRight {
   flex: 1;
   display: flex;
   flex-direction: column;
   margin: 0 20px;
 }
-.profile .profileAvatar {
+.profile .profileAvatar, .bid .profileAvatar {
   width: 40px;
 }
-.profile .profileHeader {
+.profile .profileHeader, .profile .bidHeader, .bid .profileHeader, .bid .bidHeader {
   color: #f3a086;
+  padding-bottom: 10px;
 }
-.profile .profileDesc {
+.profile .profileDesc, .bid .profileDesc {
   font-size: 18px;
 }
-.profile .profileUser, .profile .profileCredits {
+.profile .profileUser, .profile .profileCredits, .profile .bidDesc, .profile .bidItem, .profile .bidsOnItem, .bid .profileUser, .bid .profileCredits, .bid .bidDesc, .bid .bidItem, .bid .bidsOnItem {
   background-color: #fffefe;
-  padding: 5px 10px;
+  padding: 3px 6px;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
 }
-.profile .profileBox {
+.profile .profileBox, .profile .bidBox, .bid .profileBox, .bid .bidBox {
   height: 300px;
   padding: 20px;
   background-color: white;
@@ -11322,7 +11335,15 @@ body h1, body .h1 {
   justify-content: space-around;
   flex-direction: column;
 }
-.profile .editButton {
+.profile .bid-message-container, .bid .bid-message-container {
+  padding: 10px 0;
+}
+.profile .bid-message-container .warning, .bid .bid-message-container .warning {
+  background-color: #f3a086;
+  color: #fffefe;
+  padding: 5px;
+}
+.profile .editButton, .profile .bidButton, .bid .editButton, .bid .bidButton {
   height: 50px;
   border-radius: 10px;
   border: none;
