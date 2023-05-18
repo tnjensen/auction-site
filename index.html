@@ -35,15 +35,36 @@
             </ul>
         </div>
     </div>
-    <div class="wrapper">
-        <div class="container">
-            <div class='showcase'>
-                <div class='slider'></div>
-                <img src='assets/arrow-01.svg' class='arrow left' alt='arrow image' />
-                <img src='assets/arrow-01.svg' class='arrow right' alt='arrow image' />
-            </div> 
+    <div class='showcase'>
+        <div class="wrapper">
+            <h1 class="showcase-heading">Auction listings</h1>
+            <p>Please <a href="register.html">register</a> to get your credit, and start bidding.</p>
+            <div class='slider'></div>
+            <img src='assets/arrow-01.svg' class='arrow left' alt='arrow image' />
+            <img src='assets/arrow-01.svg' class='arrow right' alt='arrow image' />
         </div>
     </div>
+    <div class="listing">
+        <div class="wrapper">
+            <div class="message-container"></div>
+            <form class="inputForm">
+                <div class="form-left">
+                    <h3 class="inputHeading">Add a listing</h3>
+                    <label for="inputTitle">Item</label>
+                    <input type="text" class="inputTitle" name="inputTitle" placeholder="Title">
+                    <label for="inputDesc">Description</label>
+                    <input type="text" class="inputDesc" name="inputDesc" placeholder="About the item">
+                    <label for="inputEndsAt">Ends at</label>
+                    <input type="date" class="inputEndsAt" name="inputEndsAt" placeholder="Closing date">
+                </div>
+                <div class="form-right">
+                   <!--  <label for="inputImage">Upload image:</label>
+                    <input type="file" class="inputImage" name="filename"> -->
+                    <input type="submit" class="submitButton" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div> 
     <script src="js/script.js" type="module"></script>
     <script src="js/logout.js" type="module"></script>
 </body>

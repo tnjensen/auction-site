@@ -1,13 +1,15 @@
 import displayMessage from "../js/components/displayMessage.js";
 import { baseUrl } from "../js/components/settings.js";
 import { saveCredits, saveToken, saveUser, saveAvatar} from "../js/components/storage.js";
-
+const menuButton = document.querySelector('.bars');
 const loginEmail = document.querySelector('.loginEmail');
 const loginPassword = document.querySelector('.loginPassword');
 const submitButton = document.querySelector('.loginButton');
 const form = document.querySelector('.loginBox');
 const message = document.querySelector('.message-container');
 const logLink = document.querySelector('.logLink');
+
+menuButton.style = "display:none";
 
 form.addEventListener('submit', submitForm);
 

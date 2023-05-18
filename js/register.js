@@ -1,7 +1,7 @@
 import displayMessage from "../js/components/displayMessage.js";
 import { baseUrl } from "../js/components/settings.js";
 import { saveCredits, saveUser, saveAvatar } from "../js/components/storage.js";
-
+const menuButton = document.querySelector('.bars');
 const registerName = document.querySelector('.registerName');
 const registerEmail = document.querySelector('.registerEmail');
 const registerPassword = document.querySelector('.registerPassword');
@@ -9,6 +9,8 @@ const registerAvatar = document.querySelector('.registerAvatar');
 const submitButton = document.querySelector('.signUpButton');
 const form = document.querySelector('.registerBox');
 const message = document.querySelector('.message-container');
+
+menuButton.style = "display:none";
 
 form.addEventListener('submit', submitForm);
 

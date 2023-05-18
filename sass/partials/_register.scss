@@ -9,6 +9,11 @@
         width: 70%;
         height: 70%;
         display: flex;
+        flex-direction: column;
+
+        @include tablet{
+            flex-direction: row;
+        }
     }
     .registerRight, .registerLeft{
         flex: 1;
@@ -18,13 +23,13 @@
         margin: 0 20px;
     }
     .registerLogo{
-        font-size: 48px;
-        font-weight: 800;
+        font-weight: 600;
         color: $primary;
-        margin-bottom: 10px;
+        margin: 20px 0 10px 0;
     }
     .registerDesc{
         font-size: 22px;
+        margin-bottom: 10px;
     }
     .registerBox{
         height: 300px;

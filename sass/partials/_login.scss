@@ -9,6 +9,11 @@
         width: 70%;
         height: 70%;
         display: flex;
+        flex-direction: column;
+
+        @include tablet{
+            flex-direction: row;
+        }
     }
     .loginRight, .loginLeft{
         flex: 1;
@@ -18,18 +23,18 @@
         margin: 0 20px;
     }
     .loginLogo{
-        font-size: 48px;
-        font-weight: 800;
+        font-weight: 600;
         color: $primary;
-        margin-bottom: 10px;
+        margin: 20px 0 10px 0;
     }
     .loginDesc{
         font-size: 22px;
+        margin-bottom: 10px;
     }
     .loginBox{
         height: 300px;
         padding: 20px;
-        background-color: white;
+        background-color: $textColor;
         border-radius: 10px;
         display: flex;
         justify-content: space-between;
@@ -63,7 +68,7 @@
     .loginButton:disabled{
         cursor: not-allowed;
     }
-    .forgotPassword{
+    .registerUser{
         margin-top: 10px;
         text-align: center;
         color: $secondary;

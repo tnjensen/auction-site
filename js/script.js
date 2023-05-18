@@ -1,4 +1,5 @@
 import { openMenu } from "./components/menuButton.js";
+import displayMessage from "./components/displayMessage.js";
 const menuButton = document.querySelector('.bars');
 const baseUrl = 'https://api.noroff.dev/api/v1/auction/';
 const listings = 'listings';
@@ -12,6 +13,12 @@ const profileMenuLink = document.querySelector('.profileMenuLink');
 const user = JSON.parse(localStorage.getItem('user'));
 const userCredits = JSON.parse(localStorage.getItem('credits'));
 const userAvatar = JSON.parse(localStorage.getItem('avatar'));
+const userToken = JSON.parse(localStorage.getItem('token'));
+const inputForm = document.querySelector('.inputForm');
+const inputTitle = document.querySelector('.inputTitle');
+const inputDesc = document.querySelector('.inputDesc');
+const inputEndsAt = document.querySelector('.inputEndsAt');
+const inputImage = document.querySelector('.inputImage');
 
 if(user){
     console.log(user);
@@ -20,8 +27,6 @@ if(user){
     credits.innerHTML = "Credits: NOK " + userCredits;
     divider.style = "display:none";
     profileMenuLink.style = "display:block";
-    /* bidButton.innerHTML = "Make a bid"; */
-    
 }
 
 menuButton.onclick = openMenu;
@@ -34,22 +39,16 @@ async function getItems(){
     let index = response.indexOf(currentSlide);
 
     for(let i = 0; i < response.length; i++){
-        let bidLink = `<a href="profile.html?id=${currentSlide.id}#bid" class="bidLink">Make a bid</a>`;
-        let viewBids = `<a href="profile.html?id=${currentSlide.id}#bids" class="viewBidsLink">View bids</a>`;
-        slider.innerHTML = `<div class='container'>
-        <div class='item'>
-          <div class="left">
-            <div class="leftContainer">
-              <h2>${currentSlide.title}</h2>
-              <p>${currentSlide.description}</p>
-              <p>${bidLink}</p>
-              </div>
-          </div>
-          <div class="right">
-            <img src=${currentSlide.media[0]} alt='no image'/>
-          </div>
-        </div>
-      </div>`
+      let bidLink = `<a href="login.html" class="guestBidLink">Log in to make a bid</a>`;
+        if(user){
+          bidLink = `<a href="profile.html?id=${currentSlide.id}#bid" class="bidLink">Make a bid</a>`;
+        }
+        slider.innerHTML = `<div class='item'>
+          <h2>${currentSlide.title}</h2>
+          <img src=${currentSlide.media[0]} alt='no image'/>
+          <p>${currentSlide.description}</p>
+          <p>${bidLink}</p>
+    </div>`
     }
     arrows.forEach(element => {
         element.onclick = function(){
@@ -76,20 +75,61 @@ async function getItems(){
 getItems();
 
 function moveCarousel(index, currentSlide){
-  let bidLink = `<a href="profile.html?id=${currentSlide.id}#bid" class="bidLink">Make a bid</a>`;
-  let viewBids = `<a href="profile.html?id=${currentSlide.id}#bids" class="viewBidsLink">View bids</a>`;
-    slider.innerHTML = `<div class='container'>
-    <div class='item'>
-      <div class="left">
-        <div class="leftContainer">
+  let bidLink = `<a href="login.html" class="guestBidLink">Log in to make a bid</a>`;
+        if(user){
+          bidLink = `<a href="profile.html?id=${currentSlide.id}#bid" class="bidLink">Make a bid</a>`;
+        }
+        slider.innerHTML = `<div class='item'>
           <h2>${currentSlide.title}</h2>
+          <img src=${currentSlide.media[0]} alt='no image'/>
           <p>${currentSlide.description}</p>
           <p>${bidLink}</p>
-        </div>
-      </div>
-      <div class="right">
-        <img src=${currentSlide.media[0]} alt='no image'/>
-      </div>
-    </div>
-  </div>`
+        </div>`
 }
+
+inputForm.addEventListener('submit', handleSubmit);
+
+function handleSubmit(event){
+  event.preventDefault();
+
+  const inputTitleValue = inputTitle.value.trim();
+  const inputDescValue = inputDesc.value.trim();
+  const inputEndsAtValue = inputEndsAt.value.trim();
+  const inputMediaValues = [
+        "https://i.pravatar.cc/150?u=a042581f4e29026704d",
+        "http://www.gravatar.com/avatar/34bf7beba6a1cd62123ffe496779fb18.jpg"
+      ]
+    
+    if(inputTitleValue.length === 0 && inputEndsAtValue.length === 0){
+      return displayMessage("warning", "Please add a title and end date", 
+      ".message-container");
+    }
+    addListing(inputTitleValue, inputDescValue, inputEndsAtValue, inputMediaValues);
+}
+
+async function addListing(inputTitleValue,inputDescValue,inputEndsAtValue,
+  inputMediaValues){
+  const url = baseUrl + listings;
+
+  const data = JSON.stringify({title:inputTitleValue, description:inputDescValue,
+    endsAt:inputEndsAtValue, media:inputMediaValues});
+
+  const options = {
+      method: "POST",
+      body: data,
+      headers : {
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + userToken,
+      }
+  };
+  console.log(data);
+
+      fetch(url, options)
+      .then( response => {
+        if (response.status === 201)
+        displayMessage("success", "Successfully added new listing " , ".message-container");
+        console.log(response);
+      })
+      .catch(error =>  displayMessage("warning", json.errors[0].message, ".message-container"));
+  }
+    

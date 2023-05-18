@@ -1,0 +1,204 @@
+.showcase{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .wrapper{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        .showcase-heading{
+            margin-top: 40px;
+            color: $primary;
+        }
+        h2{
+            font-size: 18px;
+            
+            @include tablet{
+                font-size: 22px;     
+            }
+        }
+        p{
+            font-size: 14px;
+
+            @include tablet{
+                font-size: 16px;     
+            }
+        }
+        .slider{
+            width: 400px;
+            
+            @include tablet{
+                margin-top: 20px;
+                display: flex;
+                justify-content: center;
+                transition: all 1s ease-out;
+            }
+            
+            .item{
+                display: flex;
+                width: 400px;
+                flex-direction: column;
+                background-color: $textColor;
+                border-radius: 20px;
+                padding: 15px;
+                margin: 30px 0 60px 0;
+
+                h2{
+                    font-size: 18px;
+                    
+                    @include tablet{
+                        font-size: 22px;     
+                    }
+                }
+                p{
+                    font-size: 14px;
+
+                    @include tablet{
+                        font-size: 16px;     
+                    }
+                }
+                span{
+                    font-size: 16px;
+                    font-weight: 600;
+                    
+                    @include tablet{
+                        font-size: 18px;     
+                    }
+                }
+                .guestBidLink{
+                    text-decoration: none;
+                    font-family: "Roboto Flex", sans-serif;
+                }
+                .bidLink{
+                    background-color: $secondary;
+                    color: $textColor;
+                    border: none;
+                    border-radius: 5px;
+                    padding: 10px 15px;
+                    text-decoration: none;
+                } 
+                img{
+                    border-radius: 10px;
+                    max-width: 100%;
+                    max-height: auto;
+                    
+
+                    @include tablet{
+                        width: 230px;
+                        overflow: hidden;
+                    }
+                    
+                    @include desktop{
+                        width: 350px;  
+                    }
+                }
+            }
+        }
+    }
+}
+.arrow{
+    height: 80px;
+    position: absolute;           
+    top: 180px;
+    cursor: pointer;
+
+    &.left{
+        right: -45px;
+        top: 250px;
+        transform: rotate(-360deg);
+    }
+    &.right{
+        top: 250px;
+        left: -45px;
+        transform: rotate(180deg);
+    }
+
+    @include tablet{     
+        top: 200px;
+        
+        &.left{
+           
+            right: -50px;
+            transform: rotate(-360deg);
+        }
+        &.right{
+            left: -50px;
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.listing{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .wrapper{
+        background-color: $textColor;
+        width: 400px;
+        border-radius: 10px;
+        
+        .message-container{
+            padding: 10px 0;
+    
+            .warning{
+                background-color: $primary;
+                color: $textColor;
+                padding: 5px;
+            }
+            .success{
+                background-color: $secondary;
+                color: $textColor;
+                padding: 5px;
+            }
+        }
+        .inputForm{
+            padding: 20px;
+            
+            @include tablet{
+                font-size: 20px;
+            }
+            .form-left, .form-right{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: 0 20px;
+            }
+            .inputDesc, .inputTitle, .inputEndsAt{
+                font-size: 18px;
+                height: 40px;
+                border-radius: 5px;
+                border: 1px solid gray;
+                padding-left: 10px;
+                margin: 5px 0;
+
+                @include tablet{
+                    font-size: 20px;
+                }
+            }
+            input:focus{
+                outline: none;
+            }
+            .submitButton{
+                height: 50px;
+                border-radius: 10px;
+                border: none;
+                background-color: $primary;
+                color: $textColor;
+                font-weight: 500;
+                font-size: 20px;
+                cursor: pointer;
+                margin-top: 15px;
+            
+            }
+            .submitButton:focus{
+                outline:none;
+            }
+        }
+    }
+}
