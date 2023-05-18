@@ -1,6 +1,7 @@
 import { openMenu } from "./components/menuButton.js";
 import displayMessage from "./components/displayMessage.js";
 const menuButton = document.querySelector('.bars');
+const registerHeading = document.querySelector('.register-heading');
 const baseUrl = 'https://api.noroff.dev/api/v1/auction/';
 const listings = 'listings';
 const slider = document.querySelector('.slider');
@@ -27,6 +28,7 @@ if(user){
     credits.innerHTML = "Credits: NOK " + userCredits;
     divider.style = "display:none";
     profileMenuLink.style = "display:block";
+    registerHeading.style = "display:none";
 }
 
 menuButton.onclick = openMenu;
