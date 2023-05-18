@@ -23,6 +23,23 @@
         margin: 0 20px;
         
     }
+    .profileRight{
+
+        .message-container{
+            padding: 10px 0;
+    
+            .warning{
+                background-color: $primary;
+                color: $textColor;
+                padding: 5px;
+            }
+            .success{
+                background-color: $secondary;
+                color: $textColor;
+                padding: 5px;
+            }
+        }
+    }
     .profileAvatar{
        width: 40px;
 

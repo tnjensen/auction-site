@@ -47,7 +47,7 @@ async function doLogin(loginEmailValue,loginPasswordValue){
         console.log(json);
         
         if(response.ok){
-            displayMessage("success", "Successfully logged in as " + json.name, ".message-container");
+           /*  displayMessage("success", "Successfully logged in as " + json.name, ".message-container"); */
             console.log(json.accessToken);
             const token = json.accessToken;
             saveToken(token);
@@ -64,10 +64,10 @@ async function doLogin(loginEmailValue,loginPasswordValue){
         }
         else{
         //Redirect to homepage if successful login
-             submitButton.innerHTML = "Home page";
-             submitButton.onclick = function(){
+             /* submitButton.innerHTML = "Home page";
+             submitButton.onclick = function(){ */
                 location.href = "/";
-             }   
+           /*   }    */
            
         }
         
