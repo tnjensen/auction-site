@@ -12,5 +12,15 @@ body{
     h1{
         color: $primary;
     }
+    .warning{
+        background-color: $primary;
+        color: $textColor;
+        padding: 5px;
+    }
+    .success{
+        background-color: $secondary;
+        color: $textColor;
+        padding: 5px;
+    }
 
 }

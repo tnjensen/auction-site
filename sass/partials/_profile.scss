@@ -2,42 +2,44 @@
     width: 100vw;
     height: 100%;
     padding: 40px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: $backgroundColor;
 
-    @include tablet{
-        flex-direction: row;
-    }
     .wrapper{
-        width: 70%;
-        height: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
        
+        @include tablet{
+            flex-direction: row;
+        }
     }
     .profileRight, .profileLeft, .bidLeft, .bidRight{
         flex: 1;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         margin: 0 20px;
         
+    }
+    .profileLeft, .bidLeft{
+
+        @include tablet{
+            position: relative;
+            left: 25%;
+            transform: translateX(-25%);
+        }
+        @include desktop{
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+       
     }
     .profileRight{
 
         .message-container{
             padding: 10px 0;
-    
-            .warning{
-                background-color: $primary;
-                color: $textColor;
-                padding: 5px;
-            }
-            .success{
-                background-color: $secondary;
-                color: $textColor;
-                padding: 5px;
-            }
         }
     }
     .profileAvatar{
@@ -58,26 +60,24 @@
     }
     .profileBox, .bidBox{
         height: 300px;
+        width: 250px;
         padding: 20px;
         background-color: white;
         border-radius: 10px;
         display: flex;
         justify-content: space-around;
         flex-direction: column;
+
+        @include tablet{
+            width: 300px;
+        }
+        @include desktop{
+            width: 400px;
+        }
     }
     .bid-message-container{
         padding: 10px 0;
 
-        .warning{
-            background-color: $primary;
-            color: $textColor;
-            padding: 5px;
-        }
-        .success{
-            background-color: $secondary;
-            color: $textColor;
-            padding: 5px;
-        }
     }
     .editButton, .bidButton{
         height: 50px;
@@ -89,6 +89,5 @@
         font-size: 18px;
         cursor: pointer;
         margin-top: 10px;
-    }
-    
+    } 
 }

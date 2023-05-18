@@ -10833,6 +10833,16 @@ body h1, body .h1, body h2, body .h2, body h3, body .h3, body h4, body .h4, body
 body h1, body .h1 {
   color: #f3a086;
 }
+body .warning {
+  background-color: #f3a086;
+  color: #fffefe;
+  padding: 5px;
+}
+body .success {
+  background-color: #1546e6;
+  color: #fffefe;
+  padding: 5px;
+}
 
 .header {
   width: 100%;
@@ -11315,39 +11325,42 @@ body h1, body .h1 {
   width: 100vw;
   height: 100%;
   padding: 40px 0;
+  background-color: #eee;
+}
+.profile .wrapper, .bid .wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #eee;
 }
 @media (min-width: 768px) {
-  .profile, .bid {
+  .profile .wrapper, .bid .wrapper {
     flex-direction: row;
   }
-}
-.profile .wrapper, .bid .wrapper {
-  width: 70%;
-  height: 70%;
 }
 .profile .profileRight, .profile .profileLeft, .profile .bidLeft, .profile .bidRight, .bid .profileRight, .bid .profileLeft, .bid .bidLeft, .bid .bidRight {
   flex: 1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin: 0 20px;
+}
+@media (min-width: 768px) {
+  .profile .profileLeft, .profile .bidLeft, .bid .profileLeft, .bid .bidLeft {
+    position: relative;
+    left: 25%;
+    transform: translateX(-25%);
+  }
+}
+@media (min-width: 992px) {
+  .profile .profileLeft, .profile .bidLeft, .bid .profileLeft, .bid .bidLeft {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 .profile .profileRight .message-container, .bid .profileRight .message-container {
   padding: 10px 0;
-}
-.profile .profileRight .message-container .warning, .bid .profileRight .message-container .warning {
-  background-color: #f3a086;
-  color: #fffefe;
-  padding: 5px;
-}
-.profile .profileRight .message-container .success, .bid .profileRight .message-container .success {
-  background-color: #1546e6;
-  color: #fffefe;
-  padding: 5px;
 }
 .profile .profileAvatar, .bid .profileAvatar {
   width: 40px;
@@ -11367,6 +11380,7 @@ body h1, body .h1 {
 }
 .profile .profileBox, .profile .bidBox, .bid .profileBox, .bid .bidBox {
   height: 300px;
+  width: 250px;
   padding: 20px;
   background-color: white;
   border-radius: 10px;
@@ -11374,18 +11388,18 @@ body h1, body .h1 {
   justify-content: space-around;
   flex-direction: column;
 }
+@media (min-width: 768px) {
+  .profile .profileBox, .profile .bidBox, .bid .profileBox, .bid .bidBox {
+    width: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .profile .profileBox, .profile .bidBox, .bid .profileBox, .bid .bidBox {
+    width: 400px;
+  }
+}
 .profile .bid-message-container, .bid .bid-message-container {
   padding: 10px 0;
-}
-.profile .bid-message-container .warning, .bid .bid-message-container .warning {
-  background-color: #f3a086;
-  color: #fffefe;
-  padding: 5px;
-}
-.profile .bid-message-container .success, .bid .bid-message-container .success {
-  background-color: #1546e6;
-  color: #fffefe;
-  padding: 5px;
 }
 .profile .editButton, .profile .bidButton, .bid .editButton, .bid .bidButton {
   height: 50px;
