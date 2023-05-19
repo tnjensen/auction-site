@@ -81,6 +81,15 @@
                     padding: 10px 15px;
                     text-decoration: none;
                 } 
+                .deleteLink{
+                    background-color: $primary;
+                    float: right;
+                    color: $textColor;
+                    border: none;
+                    border-radius: 5px;
+                    padding: 10px 15px;
+                    text-decoration: none;
+                } 
                 img{
                     border-radius: 10px;
                     max-width: 100%;

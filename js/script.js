@@ -98,8 +98,10 @@ function handleSubmit(event){
   const inputDescValue = inputDesc.value.trim();
   const inputEndsAtValue = inputEndsAt.value.trim();
   const inputMediaValues = [
+        "https://admirable-concha-83ef4e.netlify.app/images/kitchen3.png",
         "https://i.pravatar.cc/150?u=a042581f4e29026704d",
-        "http://www.gravatar.com/avatar/34bf7beba6a1cd62123ffe496779fb18.jpg"
+        "http://www.gravatar.com/avatar/34bf7beba6a1cd62123ffe496779fb18.jpg",
+        "https://admirable-concha-83ef4e.netlify.app/images/kitchen3.png"
       ]
     
     if(inputTitleValue.length === 0 && inputEndsAtValue.length === 0){
@@ -133,5 +135,5 @@ async function addListing(inputTitleValue,inputDescValue,inputEndsAtValue,
         console.log(response);
       })
       .catch(error =>  displayMessage("warning", json.errors[0].message, ".message-container"));
-  }
+}
     

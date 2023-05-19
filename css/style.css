@@ -11052,6 +11052,15 @@ body .success {
   padding: 10px 15px;
   text-decoration: none;
 }
+.showcase .wrapper .slider .item .deleteLink {
+  background-color: #f3a086;
+  float: right;
+  color: #fffefe;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  text-decoration: none;
+}
 .showcase .wrapper .slider .item img {
   border-radius: 10px;
   max-width: 100%;
