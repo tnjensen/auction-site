@@ -26,15 +26,19 @@
 
         @include tablet{
             position: relative;
-            left: 25%;
-            transform: translateX(-25%);
+            left: 10%;
+            transform: translateX(-10%);
+            
         }
         @include desktop{
             position: relative;
-            left: 50%;
-            transform: translateX(-50%);
+            left: 15%;
+            transform: translateX(-15%);
         }
        
+    }
+    .bidDesc{
+        word-wrap: break-word;
     }
     .profileRight{
 

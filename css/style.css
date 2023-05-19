@@ -11357,18 +11357,18 @@ body .success {
 @media (min-width: 768px) {
   .profile .profileLeft, .profile .bidLeft, .bid .profileLeft, .bid .bidLeft {
     position: relative;
-    left: 25%;
-    transform: translateX(-25%);
+    left: 10%;
+    transform: translateX(-10%);
   }
 }
 @media (min-width: 992px) {
   .profile .profileLeft, .profile .bidLeft, .bid .profileLeft, .bid .bidLeft {
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 15%;
+    transform: translateX(-15%);
   }
 }
-.profile .profileRight .message-container, .bid .profileRight .message-container {
+.profile .bidDesc .profileRight .message-container, .bid .bidDesc .profileRight .message-container {
   padding: 10px 0;
 }
 .profile .profileAvatar, .bid .profileAvatar {
