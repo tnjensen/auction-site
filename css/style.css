@@ -12488,12 +12488,12 @@ body .success {
 .arrow.left {
   color: #ef653b;
   right: -45px;
-  top: 180px;
+  top: 150px;
   -webkit-transform: rotate(-360deg);
           transform: rotate(-360deg);
 }
 .arrow.right {
-  top: 180px;
+  top: 150px;
   left: -45px;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
