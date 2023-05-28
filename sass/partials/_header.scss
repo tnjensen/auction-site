@@ -14,7 +14,7 @@
             text-decoration: none;
             cursor: pointer;
             font-family: "Roboto Flex", sans-serif;
-            font-size: 22px;
+            font-size: 26px;
 
             @include tablet{
                 font-size: 32px;
@@ -68,7 +68,7 @@
             flex-direction: column;
             justify-content: space-between;
             cursor: pointer;
-
+            
             @include tablet{
                 display: none;
             }
@@ -78,6 +78,7 @@
                 background-color: $primary;
                 transform-origin: left;
                 transition: all 1s ease;
+
             }
         }
         .profileMenuLink{
