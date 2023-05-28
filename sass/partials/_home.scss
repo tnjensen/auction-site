@@ -43,8 +43,8 @@
                 width: 400px;
                 flex-direction: column;
                 background-color: $textColor;
-                border-radius: 20px;
-                padding: 15px;
+                border-radius: 10px;
+                padding: 20px;
                 margin: 30px 0 60px 0;
 
                 h2{
@@ -75,12 +75,23 @@
                     font-family: "Roboto Flex", sans-serif;
                 }
                 .bidLink{
-                    background-color: $secondary;
+                    font-family: "Roboto Flex", sans-serif;
+                    background: linear-gradient(to right, $secondary, $secondary-hover);
                     color: $textColor;
+                    text-transform: uppercase;
                     border: none;
+                    font-size: 16px;
+                    font-weight: 600;
+                    letter-spacing: .1rem;
+                    font-style: oblique;
                     border-radius: 5px;
                     padding: 10px 15px;
                     text-decoration: none;
+
+                    &:hover{
+                        font-size: 17px;
+                        border: none;
+                    }
                 } 
                 .deleteLink{
                     background-color: $primary;

@@ -12387,8 +12387,8 @@ body .success {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #fffefe;
-  border-radius: 20px;
-  padding: 15px;
+  border-radius: 10px;
+  padding: 20px;
   margin: 30px 0 60px 0;
 }
 .showcase .wrapper .slider .item h2, .showcase .wrapper .slider .item .h2 {
@@ -12422,12 +12422,23 @@ body .success {
   font-family: "Roboto Flex", sans-serif;
 }
 .showcase .wrapper .slider .item .bidLink {
-  background-color: #1546e6;
+  font-family: "Roboto Flex", sans-serif;
+  background: -webkit-gradient(linear, left top, right top, from(#1546e6), to(#0731bb));
+  background: linear-gradient(to right, #1546e6, #0731bb);
   color: #fffefe;
+  text-transform: uppercase;
   border: none;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  font-style: oblique;
   border-radius: 5px;
   padding: 10px 15px;
   text-decoration: none;
+}
+.showcase .wrapper .slider .item .bidLink:hover {
+  font-size: 17px;
+  border: none;
 }
 .showcase .wrapper .slider .item .deleteLink {
   background-color: #f3a086;
@@ -12907,4 +12918,7 @@ body .success {
   font-size: 18px;
   cursor: pointer;
   margin-top: 10px;
+}
+.profile .editButton:hover, .profile .bidButton:hover, .bid .editButton:hover, .bid .bidButton:hover {
+  background-color: #0731bb;
 }
