@@ -216,14 +216,16 @@
                 cursor: pointer;
                 margin: 15px 0 10px 0;
             
+                &:hover{
+                    background-color: $bs-link-hover-color;
+                    opacity: .7;
+                }
+
                 @include tablet{
                     font-size: 21px;
                     margin-bottom: 15px;
                 }
 
-                &:hover{
-                    background-color:$primary-hover;
-                }
             }
             .submitButton:focus{
                 outline:none;

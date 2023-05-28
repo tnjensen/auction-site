@@ -12,6 +12,9 @@ body{
     h1{
         color: $primary;
     }
+    a:hover{
+        color: $bs-link-hover-color;
+    }
     .warning{
         background-color: $primary;
         color: $textColor;

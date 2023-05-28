@@ -12166,6 +12166,9 @@ body h1, body .h1, body h2, body .h2, body h3, body .h3, body h4, body .h4, body
 body h1, body .h1 {
   color: #f3a086;
 }
+body a:hover {
+  color: #E9582C;
+}
 body .warning {
   background-color: #f3a086;
   color: #fffefe;
@@ -12179,7 +12182,7 @@ body .success {
 
 .header {
   width: 100%;
-  height: 70px;
+  min-height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12196,7 +12199,12 @@ body .success {
   text-decoration: none;
   cursor: pointer;
   font-family: "Roboto Flex", sans-serif;
-  font-size: 24px;
+  font-size: 22px;
+  margin: 0 20px 0 10px;
+}
+.header .left .logo:hover {
+  color: #E9582C;
+  opacity: 0.8;
 }
 @media (min-width: 768px) {
   .header .left .logo {
@@ -12234,6 +12242,9 @@ body .success {
 .header .profile-details a {
   text-decoration: none;
   cursor: pointer;
+}
+.header .profile-details img {
+  margin-bottom: 5px;
 }
 .header .credits {
   color: #f3a086;
@@ -12276,7 +12287,9 @@ body .success {
 }
 .header.active .logo {
   color: #fffefe;
-  font-size: 22px;
+}
+.header.active .credits {
+  color: #fffefe;
 }
 .header.active .bars span:first-child {
   background-color: #fffefe;
@@ -12580,14 +12593,15 @@ body .success {
   cursor: pointer;
   margin: 15px 0 10px 0;
 }
+.listing .wrapper .inputForm .submitButton:hover {
+  background-color: #E9582C;
+  opacity: 0.7;
+}
 @media (min-width: 768px) {
   .listing .wrapper .inputForm .submitButton {
     font-size: 21px;
     margin-bottom: 15px;
   }
-}
-.listing .wrapper .inputForm .submitButton:hover {
-  background-color: #c2806b;
 }
 .listing .wrapper .inputForm .submitButton:focus {
   outline: none;
@@ -12686,7 +12700,8 @@ body .success {
   margin-top: 10px;
 }
 .login .loginButton:hover {
-  background-color: #c2806b;
+  background-color: #E9582C;
+  opacity: 0.7;
 }
 .login .loginButton:focus {
   outline: none;

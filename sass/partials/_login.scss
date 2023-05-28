@@ -62,7 +62,8 @@
         margin-top: 10px;
         
         &:hover{
-            background-color:$primary-hover;
+            background-color:$bs-link-hover-color;
+            opacity: .7;
         }
     }
     .loginButton:focus{
