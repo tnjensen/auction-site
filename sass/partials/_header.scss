@@ -15,32 +15,15 @@
             cursor: pointer;
             font-family: "Roboto Flex", sans-serif;
             font-size: 22px;
-            margin:0 20px 0 10px;
+            margin: 0 20px 0 10px;
 
             &:hover{
                 color: $bs-link-hover-color;
-                opacity: .8;
             }
             @include tablet{
                 font-size: 32px;
             }
         }
-    }
-    ul{
-        list-style: none;
-        display: none;
-
-        @include tablet{
-            display: inline-flex;
-            margin-bottom: 0;
-        }
-
-    }
-    li a{
-        text-decoration: none;
-        cursor: pointer;
-        padding-right: 10px;
-        
     }
 
     .profile-details{
@@ -52,11 +35,12 @@
         }
 
         .profile-divider{
-            color: $primary;
+            color: $secondary;
         }
 
         a{
         text-decoration:none;
+        color: $secondary;
         cursor: pointer;
         }
         img{
@@ -64,9 +48,27 @@
         }
     }
     .credits{
-        color:$primary;
+        color:$secondary;
     }
     .right{
+
+        ul{
+            list-style: none;
+            display: none;
+    
+            @include tablet{
+                display: inline-flex;
+                margin-bottom: 0;
+            }
+    
+        }
+        li a{
+            text-decoration: none;
+            color: $secondary;
+            cursor: pointer;
+            padding-right: 10px;
+            
+        }
 
         .bars{
             width: 32px;

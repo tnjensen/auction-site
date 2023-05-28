@@ -127,6 +127,7 @@
     cursor: pointer;
 
     &.left{
+       color: $primary;
         right: -45px;
         top: 210px;
         transform: rotate(-360deg);
@@ -142,12 +143,10 @@
         &.left{
             top: 250px;
             right: 50px;
-            transform: rotate(-360deg);
         }
         &.right{
             top: 250px;
             left: 50px;
-            transform: rotate(180deg);
         }
     }
 }
@@ -218,7 +217,6 @@
             
                 &:hover{
                     background-color: $bs-link-hover-color;
-                    opacity: .7;
                 }
 
                 @include tablet{
