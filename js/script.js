@@ -49,7 +49,7 @@ async function getItems(){
           <h2>${currentSlide.title}</h2>
           <img src=${currentSlide.media[0]} alt='no image'/>
           <p>${currentSlide.description}</p>
-          <p>${bidLink}</p>
+          <h3>${bidLink}</h3>
     </div>`
     }
     arrows.forEach(element => {
@@ -85,7 +85,7 @@ function moveCarousel(index, currentSlide){
           <h2>${currentSlide.title}</h2>
           <img src=${currentSlide.media[0]} alt='no image'/>
           <p>${currentSlide.description}</p>
-          <p>${bidLink}</p>
+          <h3>${bidLink}</h3>
         </div>`
 }
 

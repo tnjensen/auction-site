@@ -48,25 +48,26 @@
                 margin: 30px 0 60px 0;
 
                 h2{
-                    font-size: 18px;
+                    font-size: 20px;
                     
                     @include tablet{
                         font-size: 22px;     
                     }
                 }
                 p{
-                    font-size: 14px;
+                    font-size: 15px;
+                    margin-top: 5px;
 
                     @include tablet{
-                        font-size: 16px;     
+                        font-size: 17px;     
                     }
                 }
-                span{
-                    font-size: 16px;
+                h3{
+                    font-size: 19px;
                     font-weight: 600;
                     
                     @include tablet{
-                        font-size: 18px;     
+                        font-size: 21px;     
                     }
                 }
                 .guestBidLink{
@@ -166,7 +167,7 @@
             }
         }
         .inputForm{
-            padding: 20px;
+            padding: 15px;
             
             @include tablet{
                 font-size: 20px;
@@ -178,7 +179,7 @@
                 margin: 0 20px;
             }
             .inputDesc, .inputTitle, .inputEndsAt{
-                font-size: 18px;
+                font-size: 16px;
                 height: 40px;
                 border-radius: 5px;
                 border: 1px solid gray;
@@ -199,10 +200,19 @@
                 background-color: $primary;
                 color: $textColor;
                 font-weight: 500;
-                font-size: 20px;
+                font-size: 19px;
+                text-transform: uppercase;
                 cursor: pointer;
-                margin-top: 15px;
+                margin: 15px 0 10px 0;
             
+                @include tablet{
+                    font-size: 21px;
+                    margin-bottom: 15px;
+                }
+
+                &:hover{
+                    background-color:$primary-hover;
+                }
             }
             .submitButton:focus{
                 outline:none;
