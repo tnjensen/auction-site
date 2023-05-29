@@ -12166,6 +12166,9 @@ body h1, body .h1, body h2, body .h2, body h3, body .h3, body h4, body .h4, body
 body h1, body .h1 {
   color: #ef653b;
 }
+body a {
+  color: #1546e6;
+}
 body a:hover {
   color: #f3a086;
 }
@@ -12202,9 +12205,6 @@ body .success {
   font-size: 22px;
   margin: 0 20px 0 10px;
 }
-.header .left .logo:hover {
-  color: #f3a086;
-}
 @media (min-width: 768px) {
   .header .left .logo {
     font-size: 32px;
@@ -12223,7 +12223,6 @@ body .success {
 }
 .header .profile-details a {
   text-decoration: none;
-  color: #1546e6;
   cursor: pointer;
 }
 .header .profile-details img {
@@ -12246,7 +12245,6 @@ body .success {
 }
 .header .right li a {
   text-decoration: none;
-  color: #1546e6;
   cursor: pointer;
   padding-right: 10px;
 }
@@ -12283,7 +12281,7 @@ body .success {
   display: none;
 }
 .header.active {
-  background-color: #ef653b;
+  background-color: #1546e6;
   color: #fffefe;
 }
 .header.active .logo {
@@ -12314,7 +12312,7 @@ body .success {
 .header.active .right ul {
   display: block;
   width: 150px;
-  background-color: #ef653b;
+  background-color: #1546e6;
   position: absolute;
   top: 70px;
   right: 0;
@@ -12357,7 +12355,7 @@ body .success {
 }
 .showcase .wrapper .showcase-heading {
   margin-top: 40px;
-  color: #ef653b;
+  color: #1546e6;
 }
 .showcase .wrapper h2, .showcase .wrapper .h2 {
   font-size: 18px;
@@ -12652,7 +12650,7 @@ body .success {
 }
 .login .loginLogo {
   font-weight: 600;
-  color: #ef653b;
+  color: #1546e6;
   margin: 20px 0 10px 0;
 }
 .login .loginDesc {
@@ -12689,7 +12687,7 @@ body .success {
   height: 50px;
   border-radius: 10px;
   border: none;
-  background-color: #ef653b;
+  background-color: #1546e6;
   color: #fffefe;
   font-weight: 500;
   font-size: 18px;
@@ -12698,7 +12696,6 @@ body .success {
 }
 .login .loginButton:hover {
   background-color: #f3a086;
-  opacity: 0.7;
 }
 .login .loginButton:focus {
   outline: none;
@@ -12709,7 +12706,6 @@ body .success {
 .login .registerUser {
   margin-top: 10px;
   text-align: center;
-  color: #1546e6;
   cursor: pointer;
 }
 
@@ -12761,7 +12757,7 @@ body .success {
 }
 .register .registerLogo {
   font-weight: 600;
-  color: #ef653b;
+  color: #1546e6;
   margin: 20px 0 10px 0;
 }
 .register .registerDesc {
@@ -12805,7 +12801,7 @@ body .success {
   margin-top: 10px;
 }
 .register .signUpButton:hover {
-  background-color: #0731bb;
+  background-color: #f3a086;
 }
 
 .profile, .bid {

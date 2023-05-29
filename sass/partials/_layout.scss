@@ -12,6 +12,9 @@ body{
     h1{
         color: $primary;
     }
+    a{
+        color: $secondary;
+    }
     a:hover{
         color: $bs-link-hover-color;
     }

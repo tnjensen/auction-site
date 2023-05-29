@@ -17,9 +17,6 @@
             font-size: 22px;
             margin: 0 20px 0 10px;
 
-            &:hover{
-                color: $bs-link-hover-color;
-            }
             @include tablet{
                 font-size: 32px;
             }
@@ -40,7 +37,6 @@
 
         a{
         text-decoration:none;
-        color: $secondary;
         cursor: pointer;
         }
         img{
@@ -64,7 +60,6 @@
         }
         li a{
             text-decoration: none;
-            color: $secondary;
             cursor: pointer;
             padding-right: 10px;
             
@@ -95,7 +90,7 @@
         }
     }
     &.active{
-        background-color: $primary;
+        background-color: $secondary;
         color: $textColor;
 
         .logo{
@@ -135,7 +130,7 @@
             ul{
                 display: block;
                 width: 150px;
-                background-color: $primary;
+                background-color: $secondary;
                 position: absolute;
                 top: 70px;
                 right: 0;

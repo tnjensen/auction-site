@@ -24,7 +24,7 @@
     }
     .loginLogo{
         font-weight: 600;
-        color: $primary;
+        color: $secondary;
         margin: 20px 0 10px 0;
     }
     .loginDesc{
@@ -54,7 +54,7 @@
         height: 50px;
         border-radius: 10px;
         border: none;
-        background-color: $primary;
+        background-color: $secondary;
         color: $textColor;
         font-weight: 500;
         font-size: 18px;
@@ -63,7 +63,6 @@
         
         &:hover{
             background-color:$bs-link-hover-color;
-            opacity: .7;
         }
     }
     .loginButton:focus{
@@ -75,7 +74,6 @@
     .registerUser{
         margin-top: 10px;
         text-align: center;
-        color: $secondary;
         cursor: pointer;
     }
 }

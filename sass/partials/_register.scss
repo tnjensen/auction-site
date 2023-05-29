@@ -24,7 +24,7 @@
     }
     .registerLogo{
         font-weight: 600;
-        color: $primary;
+        color: $secondary;
         margin: 20px 0 10px 0;
     }
     .registerDesc{
@@ -62,7 +62,7 @@
         margin-top: 10px;
 
         &:hover{
-            background-color:$secondary-hover;
+            background-color:$bs-link-hover-color;
         }
     }
 }
