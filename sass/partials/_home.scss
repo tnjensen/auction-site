@@ -30,6 +30,8 @@
         }
         .slider{
             width: 400px;
+            display: flex;
+
             
             @include tablet{
                 margin-top: 20px;
@@ -120,33 +122,39 @@
             }
         }
     }
-}
-.arrow{
-    height: 60px;
-   /*  position: absolute; */           
-    cursor: pointer;
+    .arrows{
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-    &.left{
-       color: $primary;
-        right: 0;
-        top: 100px;
-        transform: rotate(-360deg);
-    }
-    &.right{
-        top: 100px;
-        left: 0;
-        transform: rotate(180deg);
-    }
-
-    @include tablet{     
+        .arrow{
+            height: 60px;
+            position: absolute;           
+            cursor: pointer;
         
-        &.left{
-            top: 150px;
-            right: 50px;
-        }
-        &.right{
-            top: 150px;
-            left: 50px;
+            &.left{
+               color: $primary;
+                right: 0;
+                top: 100px;
+                transform: rotate(-360deg);
+            }
+            &.right{
+                top: 100px;
+                left: 0;
+                transform: rotate(180deg);
+            }
+        
+            @include tablet{     
+                
+                &.left{
+                    top: 150px;
+                    right: 50px;
+                }
+                &.right{
+                    top: 150px;
+                    left: 50px;
+                }
+            }
         }
     }
 }
