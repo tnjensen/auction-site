@@ -12480,19 +12480,19 @@ body .success {
 
 .arrow {
   height: 60px;
-  position: absolute;
+  /*  position: absolute; */
   cursor: pointer;
 }
 .arrow.left {
   color: #ee7e5c;
-  right: -50px;
+  right: 0;
   top: 100px;
   -webkit-transform: rotate(-360deg);
           transform: rotate(-360deg);
 }
 .arrow.right {
   top: 100px;
-  left: -50px;
+  left: 0;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }

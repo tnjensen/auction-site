@@ -123,18 +123,18 @@
 }
 .arrow{
     height: 60px;
-    position: absolute;           
+   /*  position: absolute; */           
     cursor: pointer;
 
     &.left{
        color: $primary;
-        right: -50px;
+        right: 0;
         top: 100px;
         transform: rotate(-360deg);
     }
     &.right{
         top: 100px;
-        left: -50px;
+        left: 0;
         transform: rotate(180deg);
     }
 
