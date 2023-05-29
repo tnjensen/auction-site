@@ -12311,7 +12311,7 @@ body .success {
 }
 .header.active .right ul {
   display: block;
-  width: 150px;
+  width: 120px;
   background-color: #1546e6;
   position: absolute;
   top: 70px;
@@ -12479,7 +12479,7 @@ body .success {
 }
 
 .arrow {
-  height: 80px;
+  height: 60px;
   position: absolute;
   cursor: pointer;
 }
