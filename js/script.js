@@ -19,7 +19,10 @@ const inputForm = document.querySelector('.inputForm');
 const inputTitle = document.querySelector('.inputTitle');
 const inputDesc = document.querySelector('.inputDesc');
 const inputEndsAt = document.querySelector('.inputEndsAt');
-const inputImage = document.querySelector('.inputImage');
+const messageContainer = document.querySelector('.message-container');
+
+messageContainer.style = "display:none";
+inputForm.style = "display:none";
 
 if(user){
     console.log(user);
@@ -29,6 +32,8 @@ if(user){
     divider.style = "display:none";
     profileMenuLink.style = "display:block";
     registerHeading.style = "display:none";
+    inputForm.style = "display:block";
+    messageContainer.style = "display:block";
 }
 
 menuButton.onclick = openMenu;
