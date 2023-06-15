@@ -5,6 +5,7 @@
 body{
     font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
     background-color: $backgroundColor;
+    overflow-x: hidden;
 
     h1,h2,h3,h4,h5,h6{
         font-family: Lora, Georgia, 'Times New Roman', Times, serif;
@@ -28,10 +29,4 @@ body{
         color: $textColor;
         padding: 5px;
     }
-
-}
-.footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }

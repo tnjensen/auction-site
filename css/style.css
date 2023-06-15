@@ -12159,6 +12159,7 @@ textarea.form-control-lg {
 body {
   font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
   background-color: #eee;
+  overflow-x: hidden;
 }
 body h1, body .h1, body h2, body .h2, body h3, body .h3, body h4, body .h4, body h5, body .h5, body h6, body .h6 {
   font-family: Lora, Georgia, "Times New Roman", Times, serif;
@@ -12184,7 +12185,7 @@ body .success {
 }
 
 .header {
-  width: 100%;
+  /* width: 100vw; */
   min-height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12326,6 +12327,11 @@ body .success {
   font-weight: 600;
 }
 
+.showcase-heading {
+  text-align: center;
+  margin: 40px 0 20px 0;
+}
+
 .showcase {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12338,7 +12344,6 @@ body .success {
           justify-content: center;
 }
 .showcase .wrapper {
-  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12352,10 +12357,6 @@ body .success {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-.showcase .wrapper .showcase-heading {
-  margin-top: 40px;
-  color: #1546e6;
 }
 .showcase .wrapper h2, .showcase .wrapper .h2 {
   font-size: 18px;
@@ -12534,6 +12535,7 @@ body .success {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 40px;
 }
 .listing .wrapper {
   background-color: #fffefe;
@@ -12613,6 +12615,21 @@ body .success {
 }
 .listing .wrapper .inputForm .submitButton:focus {
   outline: none;
+}
+
+.footer {
+  width: 100vw;
+  height: 50px;
+  background-color: #0731bb;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .login {
@@ -12818,8 +12835,8 @@ body .success {
 }
 
 .profile, .bid {
-  width: 100vw;
-  height: 100%;
+  /*  width: 100vw;
+   height: 100%; */
   padding: 40px 0;
   background-color: #eee;
 }
