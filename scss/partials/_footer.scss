@@ -6,4 +6,10 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    .footer-social{
+        display: flex;
+        gap: 10px;
+        cursor: pointer;
+    }
 }

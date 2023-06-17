@@ -12331,6 +12331,9 @@ body .success {
   text-align: center;
   margin: 40px 0 20px 0;
 }
+.showcase-heading h1, .showcase-heading .h1 {
+  color: #1546e6;
+}
 
 .showcase {
   display: -webkit-box;
@@ -12631,6 +12634,13 @@ body .success {
       -ms-flex-align: center;
           align-items: center;
 }
+.footer .footer-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
 
 .login {
   width: 100vw;
@@ -12835,8 +12845,6 @@ body .success {
 }
 
 .profile, .bid {
-  /*  width: 100vw;
-   height: 100%; */
   padding: 40px 0;
   background-color: #eee;
 }
@@ -12959,4 +12967,10 @@ body .success {
 }
 .profile .editButton:hover, .profile .bidButton:hover, .bid .editButton:hover, .bid .bidButton:hover {
   background-color: #0731bb;
+}
+.profile .bidButton, .bid .bidButton {
+  background-color: #ee7e5c;
+}
+.profile .bidButton:hover, .bid .bidButton:hover {
+  background-color: #f3a086;
 }
