@@ -1,7 +1,8 @@
 import { openMenu } from "./components/menuButton.js";
 import displayMessage from "./components/displayMessage.js";
 const menuButton = document.querySelector('.bars');
-const registerHeading = document.querySelector('.register-heading');
+const registerInfo = document.querySelector('.register-info');
+const listingInfo = document.querySelector('.listing-info');
 const baseUrl = 'https://api.noroff.dev/api/v1/auction/';
 const listings = 'listings';
 const slider = document.querySelector('.slider');
@@ -31,7 +32,8 @@ if(user){
     credits.innerHTML = "Credits: NOK " + userCredits;
     divider.style = "display:none";
     profileMenuLink.style = "display:block";
-    registerHeading.style = "display:none";
+    registerInfo.style = "display:none";
+    listingInfo.style = "display:none";
     inputForm.style = "display:block";
     messageContainer.style = "display:block";
 }
@@ -41,7 +43,7 @@ menuButton.onclick = openMenu;
 async function getItems(){
     const results = await fetch(baseUrl + listings);
     const response = await results.json();
-    console.log(response);
+    /* console.log(response); */
     let currentSlide = response[0];
     let index = response.indexOf(currentSlide);
 

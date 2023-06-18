@@ -17,13 +17,6 @@
         align-items: center;
         justify-content: center;
         
-        h2{
-            font-size: 18px;
-            
-            @include tablet{
-                font-size: 22px;     
-            }
-        }
         p{
             font-size: 14px;
 
@@ -76,8 +69,17 @@
                     }
                 }
                 .guestBidLink{
+                    background: linear-gradient(to right, $primary, $bs-link-hover-color);
+                    color: $textColor;
+                    padding: 10px 15px;
+                    border-radius: 10px;
                     text-decoration: none;
                     font-family: "Roboto Flex", sans-serif;
+
+                    &:hover{
+                        font-size: 22px;
+                        border: none;
+                    }
                 }
                 .bidLink{
                     font-family: "Roboto Flex", sans-serif;
@@ -146,6 +148,9 @@
                 left: 0;
                 transform: rotate(180deg);
             }
+            &:hover{
+                border: $primary;
+            }
         
             @include tablet{     
                 
@@ -169,11 +174,17 @@
     align-items: center;
     margin-bottom: 40px;
 
+     
+    h2{
+        color: $secondary;
+        margin-bottom: 20px;
+    }
+
     .wrapper{
         background-color: $textColor;
         width: 400px;
         border-radius: 10px;
-        
+       
         .message-container{
             padding: 10px 0;
     

@@ -12171,7 +12171,7 @@ body a {
   color: #1546e6;
 }
 body a:hover {
-  color: #f3a086;
+  color: #f79577;
 }
 body .warning {
   background-color: #ee7e5c;
@@ -12272,7 +12272,7 @@ body .success {
 .header .right .bars span {
   width: 100%;
   height: 3px;
-  background-color: #f3a086;
+  background-color: #f79577;
   -webkit-transform-origin: left;
           transform-origin: left;
   -webkit-transition: all 1s ease;
@@ -12361,14 +12361,6 @@ body .success {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.showcase .wrapper h2, .showcase .wrapper .h2 {
-  font-size: 18px;
-}
-@media (min-width: 768px) {
-  .showcase .wrapper h2, .showcase .wrapper .h2 {
-    font-size: 22px;
-  }
-}
 .showcase .wrapper p {
   font-size: 14px;
 }
@@ -12437,8 +12429,17 @@ body .success {
   }
 }
 .showcase .wrapper .slider .item .guestBidLink {
+  background: -webkit-gradient(linear, left top, right top, from(#ee7e5c), to(#f79577));
+  background: linear-gradient(to right, #ee7e5c, #f79577);
+  color: #fffefe;
+  padding: 10px 15px;
+  border-radius: 10px;
   text-decoration: none;
   font-family: "Roboto Flex", sans-serif;
+}
+.showcase .wrapper .slider .item .guestBidLink:hover {
+  font-size: 22px;
+  border: none;
 }
 .showcase .wrapper .slider .item .bidLink {
   font-family: "Roboto Flex", sans-serif;
@@ -12513,6 +12514,9 @@ body .success {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
+.showcase .arrows .arrow:hover {
+  border: #ee7e5c;
+}
 @media (min-width: 768px) {
   .showcase .arrows .arrow.left {
     top: 150px;
@@ -12539,6 +12543,10 @@ body .success {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 40px;
+}
+.listing h2, .listing .h2 {
+  color: #1546e6;
+  margin-bottom: 20px;
 }
 .listing .wrapper {
   background-color: #fffefe;
@@ -12608,7 +12616,7 @@ body .success {
   margin: 15px 0 10px 0;
 }
 .listing .wrapper .inputForm .submitButton:hover {
-  background-color: #f3a086;
+  background-color: #f79577;
 }
 @media (min-width: 768px) {
   .listing .wrapper .inputForm .submitButton {
@@ -12735,7 +12743,7 @@ body .success {
   margin-top: 10px;
 }
 .login .loginButton:hover {
-  background-color: #f3a086;
+  background-color: #0731bb;
 }
 .login .loginButton:focus {
   outline: none;
@@ -12833,7 +12841,7 @@ body .success {
   height: 50px;
   border-radius: 10px;
   border: none;
-  background-color: #1546e6;
+  background-color: #ee7e5c;
   color: #fffefe;
   font-weight: 500;
   font-size: 18px;
@@ -12841,7 +12849,7 @@ body .success {
   margin-top: 10px;
 }
 .register .signUpButton:hover {
-  background-color: #f3a086;
+  background-color: #f79577;
 }
 
 .profile, .bid {
@@ -12972,5 +12980,5 @@ body .success {
   background-color: #ee7e5c;
 }
 .profile .bidButton:hover, .bid .bidButton:hover {
-  background-color: #f3a086;
+  background-color: #f79577;
 }
