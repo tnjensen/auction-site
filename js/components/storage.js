@@ -32,7 +32,7 @@ export function getUser(){
     const user = getFromStorage(userKey);
 
     if(user){
-        return user.username;
+        return user.email;
     }
     return null;
 }
