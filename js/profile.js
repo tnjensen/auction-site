@@ -11,7 +11,8 @@ const avatar = JSON.parse(localStorage.getItem('avatar'));
 const profileAvatarLink = document.querySelector('.profileAvatarLink');
 const profileAvatar = document.querySelector('.profileAvatar');
 const menuButton = document.querySelector('.bars');
-const credits = JSON.parse(localStorage.getItem('credits'));
+const userCredits = JSON.parse(localStorage.getItem('credits'));
+const credits = document.querySelector('.credits');
 const profileForm = document.querySelector('.profileBox');
 const logLink = document.querySelector('.logLink');
 const regLink = document.querySelector('.regLink');
@@ -24,13 +25,25 @@ const bidItem = document.querySelector('.bidItem');
 const bidDescription = document.querySelector('.bidDesc');
 const bidForm = document.querySelector('.bidBox');
 const bidAmount = document.querySelector('.bidAmount');
+const bidAmountText = document.querySelector('.bidAmountText');
+const avatarText = document.querySelector('.avatarText');
 const bidsOnItem = document.querySelector('.bidsOnItem');
+
+credits.style = "display:none";
+bidAmountText.innerHTML = "Please log in to make a bid";
+avatarText.innerHTML = "Please log in to edit avatar";
+profileUser.innerHTML = "Not logged in";
+profileCredits.innerHTML = 0;
 
 if(user){
     profileUser.innerHTML = user;
-    profileCredits.innerHTML = "NOK " + credits;
+    credits.style = "display:block";
+    profileCredits.innerHTML = "NOK " + userCredits;
     logLink.innerHTML = "Logout";
     divider.style = "display:none";
+    credits.innerHTML = "Credits: NOK " + userCredits; 
+    bidAmountText.innerHTML = "Enter your bid";
+    avatarText.innerHTML = "To change avatar, edit URL:";
 }
 
 
@@ -77,12 +90,22 @@ else{
     }
 }
 
-
-profileAvatar.src = avatar;
-profileAvatar.style = "width:80px; border-radius:50%; margin-left:10px"; 
-regLink.innerHTML = `<img src=${avatar} style="width:40px; border-radius:50% "/>`;
-profileAvatarLink.value = `${avatar}`;
-
+if(user){
+    profileAvatar.src = avatar;
+    profileAvatar.style = "width:80px; border-radius:50%; margin-left:10px";    
+}else{
+    profileAvatar.alt = "";
+}
+if(user){
+    regLink.innerHTML = `<img src=${avatar} style="width:40px; border-radius:50% "/>`;
+}else{
+    regLink.innerHTML = "Register";
+}
+if(user){
+    profileAvatarLink.value = `${avatar}`;
+}else{
+    profileAvatarLink.value = "";
+}
 
 profileForm.addEventListener('submit', submitProfileForm);
 

@@ -66,8 +66,8 @@
         }
 
         .bars{
-            width: 32px;
-            height: 25px;
+            width: 30px;
+            height: 22px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -77,7 +77,7 @@
                 display: none;
             }
             span{
-                width: 100%;
+                width: 90%;
                 height: 3px;
                 background-color: $bs-link-hover-color;
                 transform-origin: left;

@@ -24,11 +24,13 @@ const messageContainer = document.querySelector('.message-container');
 
 messageContainer.style = "display:none";
 inputForm.style = "display:none";
+credits.style = "display:none";
 
 if(user){
     console.log(user);
     logLink.innerHTML = "Logout";
     regLink.innerHTML = `<img src=${userAvatar} class="avatarHeaderImg" style="width:40px; border-radius:50% "/>`;
+    credits.style = "display:block";
     credits.innerHTML = "Credits: NOK " + userCredits;
     divider.style = "display:none";
     profileMenuLink.style = "display:block";
@@ -48,13 +50,13 @@ async function getItems(){
     let index = response.indexOf(currentSlide);
 
     for(let i = 0; i < response.length; i++){
-      let bidLink = `<a href="login.html" class="guestBidLink">Log in to make a bid</a>`;
+      let bidLink = `<a href="profile.html?id=${currentSlide.id}#bid" class="guestBidLink">View bids</a>`;
         if(user){
           bidLink = `<a href="profile.html?id=${currentSlide.id}#bid" class="bidLink">Make a bid</a>`;
         }
         slider.innerHTML = `<div class='item'>
           <h2>${currentSlide.title}</h2>
-          <img src=${currentSlide.media[0]} alt='no image'/>
+          <img src=${currentSlide.media[0]}  alt=''/>
           <p>${currentSlide.description}</p>
           <h3>${bidLink}</h3>
     </div>`
@@ -84,13 +86,13 @@ async function getItems(){
 getItems();
 
 function moveCarousel(index, currentSlide){
-  let bidLink = `<a href="login.html" class="guestBidLink">Log in to make a bid</a>`;
+  let bidLink = `<a href="login.html" class="guestBidLink">View bids</a>`;
         if(user){
           bidLink = `<a href="profile.html?id=${currentSlide.id}#bid" class="bidLink">Make a bid</a>`;
         }
         slider.innerHTML = `<div class='item'>
           <h2>${currentSlide.title}</h2>
-          <img src=${currentSlide.media[0]} alt='no image'/>
+          <img src=${currentSlide.media[0]} alt=''/> 
           <p>${currentSlide.description}</p>
           <h3>${bidLink}</h3>
         </div>`

@@ -71,7 +71,7 @@
                 .guestBidLink{
                     background: linear-gradient(to right, $primary, $bs-link-hover-color);
                     color: $textColor;
-                    padding: 10px 15px;
+                    padding: 8px 12px;
                     border-radius: 10px;
                     text-decoration: none;
                     font-family: "Roboto Flex", sans-serif;
@@ -81,6 +81,7 @@
                         border: none;
 
                         @include tablet{
+                            padding: 10px 15px;
                             font-size: 22px;
                         }
                     }
