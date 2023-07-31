@@ -51,12 +51,12 @@
         }
         .left{
             position: absolute;
-            top: 0px;
+            top: 30px;
             left: 10px;
         }
         .right{
             position: absolute;
-            top: 0px;
+            top: 30px;
             right: 10px;
         } 
         .fa-angle-left, .fa-angle-right{
@@ -79,9 +79,9 @@
         }
         .slider{
             display: flex;
+            margin-top: 40px;
             
             @include tablet{
-                margin-top: 20px;
                 display: flex;
                 justify-content: center;
                 transition: all 1s ease-out;
@@ -89,7 +89,7 @@
             
             .item{
                 display: flex;
-                width: 350px;
+                width: 90vw;
                 flex-direction: column;
                 background-color: $textColor;
                 border-radius: 10px;

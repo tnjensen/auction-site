@@ -32,7 +32,7 @@ let postsPerPage = 0;
 let postResult = [];
 let pageResult = [];
 let postPage = 0;
-let mobile = 520;
+let mobile = 480;
 let tablet = 768;
 /* let height = 575.98; */
 let height = 275.98;
@@ -244,7 +244,7 @@ async function addListing(inputTitleValue,inputDescValue,inputEndsAtValue,
 }
     
 function detectViewport(){
-  if(window.innerWidth <= mobile){
+  if(window.innerWidth < mobile){
       postsPerPage = 1; 
   }
   if(window.innerWidth <= tablet && window.innerWidth > mobile){

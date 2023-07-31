@@ -12366,12 +12366,12 @@ body .success {
 }
 .showcase .wrapper .left {
   position: absolute;
-  top: 0px;
+  top: 30px;
   left: 10px;
 }
 .showcase .wrapper .right {
   position: absolute;
-  top: 0px;
+  top: 30px;
   right: 10px;
 }
 .showcase .wrapper .fa-angle-left, .showcase .wrapper .fa-angle-right {
@@ -12396,10 +12396,10 @@ body .success {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 40px;
 }
 @media (min-width: 768px) {
   .showcase .wrapper .slider {
-    margin-top: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -12414,7 +12414,7 @@ body .success {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 350px;
+  width: 90vw;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
