@@ -34,8 +34,7 @@ let pageResult = [];
 let postPage = 0;
 let mobile = 480;
 let tablet = 768;
-/* let height = 575.98; */
-let height = 275.98;
+let height = 575.98; 
 let desktop = 1024;
 
 const year = document.getElementById('year');
@@ -62,6 +61,8 @@ if(user){
     listingInfo.style = "display:none";
     inputForm.style = "display:block";
     messageContainer.style = "display:block";
+    circleLeft.style = "top:-20px";
+    circleRight.style = "top:-20px";
 }
 
 menuButton.onclick = openMenu;

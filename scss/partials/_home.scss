@@ -51,12 +51,12 @@
         }
         .left{
             position: absolute;
-            top: 30px;
+            top: 20px;
             left: 10px;
         }
         .right{
             position: absolute;
-            top: 30px;
+            top: 20px;
             right: 10px;
         } 
         .fa-angle-left, .fa-angle-right{
@@ -79,7 +79,7 @@
         }
         .slider{
             display: flex;
-            margin-top: 40px;
+            margin-top: 20px;
             
             @include tablet{
                 display: flex;
