@@ -6,17 +6,36 @@
         color: $secondary;
     }
 }
+.loading-indicator{
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    margin: 10px;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite;
+}
+@keyframes spin{
+    0%{ transform: rotate(0deg);}
+    100%{ transform: rotate(360deg);}
+}
 .showcase{
     display: flex;
     align-items: center;
     justify-content: center;
     
     .wrapper{
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin-bottom: 20px;
         
+        @include tablet{
+            margin-bottom: 30px;
+        }
+
         p{
             font-size: 14px;
 
@@ -24,10 +43,42 @@
                 font-size: 16px;     
             }
         }
+        .circle-icon{
+            background-color: $primary;
+            min-width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .left{
+            position: absolute;
+            top: 0px;
+            left: 10px;
+        }
+        .right{
+            position: absolute;
+            top: 0px;
+            right: 10px;
+        } 
+        .fa-angle-left, .fa-angle-right{
+            position: relative;
+            top: 4px;
+        }
+        .fa-angle-left{
+            left: 13px;
+        }
+        .fa-angle-right{
+            right: -16px;
+        }
+        .fa-angle-left, .fa-angle-right{
+            color: #fffefe;
+            font-size: 2em;
+        }
+        .left:hover, .right:hover{
+            cursor: pointer;
+            color: $bs-link-hover-color;
+        }
         .slider{
-            width: 400px;
             display: flex;
-
             
             @include tablet{
                 margin-top: 20px;
@@ -43,13 +94,20 @@
                 background-color: $textColor;
                 border-radius: 10px;
                 padding: 20px;
-                margin: 30px 0 60px 0;
+                margin: 10px 20px;
 
+                @include mobile{
+                    width: 200px;
+                }
+                @include tablet{
+                    width: 230px;
+                    margin: 10px 15px 20px 10px; 
+                }
                 h2{
                     font-size: 20px;
                     
                     @include tablet{
-                        font-size: 22px;     
+                        font-size: 22px;    
                     }
                 }
                 p{
@@ -145,11 +203,11 @@
             &.left{
                color: $primary;
                 right: 0;
-                top: 100px;
+                top: 250px;
                 transform: rotate(-360deg);
             }
             &.right{
-                top: 100px;
+                top: 250px;
                 left: 0;
                 transform: rotate(180deg);
             }
@@ -160,11 +218,11 @@
             @include tablet{     
                 
                 &.left{
-                    top: 150px;
+                    top: 300px;
                     right: 50px;
                 }
                 &.right{
-                    top: 150px;
+                    top: 300px;
                     left: 50px;
                 }
             }

@@ -5,9 +5,15 @@ $secondary-hover: #0731bb;
 $textColor: #fffefe;
 $backgroundColor: #eee;
 
+$mobile-width: 480px;
 $tablet-width: 768px;
 $desktop-width: 992px;
 
+@mixin mobile{
+    @media (min-width:#{$mobile-width}){
+        @content
+    }
+}
 @mixin tablet{
     @media (min-width:#{$tablet-width}){
         @content

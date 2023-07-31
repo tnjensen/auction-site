@@ -10,6 +10,15 @@ const submitButton = document.querySelector('.signUpButton');
 const form = document.querySelector('.registerBox');
 const message = document.querySelector('.message-container');
 
+const year = document.getElementById('year');
+
+let date = new Date().getFullYear();
+if( date > 2023){
+  year.innerHTML = `2023 - `+ date;
+}else{
+  year.innerHTML = date;
+}
+
 menuButton.style = "display:none";
 
 form.addEventListener('submit', submitForm);

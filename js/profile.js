@@ -11,8 +11,7 @@ const avatar = JSON.parse(localStorage.getItem('avatar'));
 const profileAvatarLink = document.querySelector('.profileAvatarLink');
 const profileAvatar = document.querySelector('.profileAvatar');
 const menuButton = document.querySelector('.bars');
-const userCredits = JSON.parse(localStorage.getItem('credits'));
-const credits = document.querySelector('.credits');
+const credits = JSON.parse(localStorage.getItem('credits'));
 const profileForm = document.querySelector('.profileBox');
 const logLink = document.querySelector('.logLink');
 const regLink = document.querySelector('.regLink');
@@ -29,7 +28,15 @@ const bidAmountText = document.querySelector('.bidAmountText');
 const avatarText = document.querySelector('.avatarText');
 const bidsOnItem = document.querySelector('.bidsOnItem');
 
-credits.style = "display:none";
+const year = document.getElementById('year');
+
+let date = new Date().getFullYear();
+if( date > 2023){
+  year.innerHTML = `2023 - `+ date;
+}else{
+  year.innerHTML = date;
+}
+
 bidAmountText.innerHTML = "Please log in to make a bid";
 avatarText.innerHTML = "Please log in to edit avatar";
 profileUser.innerHTML = "Not logged in";
@@ -37,16 +44,17 @@ profileCredits.innerHTML = 0;
 
 if(user){
     profileUser.innerHTML = user;
-    credits.style = "display:block";
-    profileCredits.innerHTML = "NOK " + userCredits;
+    profileCredits.innerHTML = "NOK " + credits;
     logLink.innerHTML = "Logout";
     divider.style = "display:none";
-    credits.innerHTML = "Credits: NOK " + userCredits; 
-    bidAmountText.innerHTML = "Enter your bid";
+    if(!window.location.search){
+        bidAmountText.innerHTML = "Please select an item to place your bid";
+    }else{
+        bidAmountText.innerHTML = "Enter your bid";
+    }
+    
     avatarText.innerHTML = "To change avatar, edit URL:";
 }
-
-
 menuButton.onclick = openMenu;
 
 async function getBidItem(){
