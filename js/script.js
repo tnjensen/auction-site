@@ -61,8 +61,6 @@ if(user){
     listingInfo.style = "display:none";
     inputForm.style = "display:block";
     messageContainer.style = "display:block";
-    circleLeft.style = "top:-20px";
-    circleRight.style = "top:-20px";
 }
 
 menuButton.onclick = openMenu;
@@ -112,15 +110,17 @@ function buildPage(results){
 function createHTML(results){ 
     if(maxPages == postPage){
         rightAngle.style = "display:none";
-        circleRight.style.display = "none";
+        circleRight.style = "display:none";
         leftAngle.style = "display:block";
-        circleLeft.style.display = "block";
+        circleLeft.style = "display:block";
+        circleLeft.style = "top:-20px";
 
     }else if(counter == 0){
         rightAngle.style = "display:block";
-        circleRight.style.display = "block";
+        circleRight.style = "display:block";
+        circleRight.style = "top:-20px";
         leftAngle.style = "display:none";
-        circleLeft.style.display = "none";
+        circleLeft.style = "display:none";
     }   
     for(let i = 0; i < postsPerPage; i++){ 
         if(!results[i]){
