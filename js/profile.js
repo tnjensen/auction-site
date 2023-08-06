@@ -41,12 +41,14 @@ bidAmountText.innerHTML = "Please log in to make a bid";
 avatarText.innerHTML = "Please log in to edit avatar";
 profileUser.innerHTML = "Not logged in";
 profileCredits.innerHTML = 0;
+profileAvatar.style = "display:none";
 
 if(user){
     profileUser.innerHTML = user;
     profileCredits.innerHTML = "NOK " + credits;
     logLink.innerHTML = "Logout";
     divider.style = "display:none";
+    profileAvatar.style = "display:block";
     if(!window.location.search){
         bidAmountText.innerHTML = "Please select an item to place your bid";
     }else{
@@ -68,8 +70,6 @@ async function getBidItem(){
         const result = await fetch(baseUrl + "listings/" + itemId, options);
         const response = await result.json();
         
-        console.log(response);
-
         bidItem.innerHTML = response.title;
         
         bidDescription.innerHTML = response.description;
