@@ -66,7 +66,6 @@ if(user){
 menuButton.onclick = openMenu;
 
 document.onload = detectViewport();
-console.log(postsPerPage);
 
 async function getItems(){
     try{
