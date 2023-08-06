@@ -46,7 +46,7 @@
 
         .fa-angle-left, .fa-angle-right{
             position: absolute;
-            top: 0;
+            top: 7px;
             cursor: pointer;
         }
 
@@ -100,6 +100,7 @@
                 p{
                     font-size: 15px;
                     margin-top: 5px;
+                    overflow-x: hidden;
 
                     @include tablet{
                         font-size: 17px;     
