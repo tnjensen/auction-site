@@ -25,8 +25,8 @@ const rightAngle = document.querySelector('.fa-angle-right');
 const loader = document.querySelector('.loader');
 const circleLeft = document.querySelector('.left.circle-icon');
 const circleRight = document.querySelector('.right.circle-icon');
-
-let counter = 0;
+const angles = document.querySelectorAll('i');
+let index = 0;
 let maxPages = 0;
 let postsPerPage = 0;
 let postResult = [];
@@ -76,23 +76,35 @@ async function getItems(){
         loader.innerHTML = "";
         postResult = results;
         loader.classList.remove('loading-indicator');
-        leftAngle.style = "display:none";
-        circleLeft.style = "display:none";
+        circleLeft.style = "top:-20px";
+        circleRight.style = "top:-20px";
+        let currentSlide = results[0];
+        index = results.indexOf(currentSlide);
         getMaxPages(results);
         createHTML(results);
         
-        circleRight.addEventListener('click', function(){
-          slider.innerHTML = "";
-          counter++;
-          postPage = counter + 1;
-          buildPage(postResult);
-      })
-        circleLeft.addEventListener('click', function(){  
-          slider.innerHTML = "";
-          counter--;
-          postPage = counter + 1;
-          buildPage(postResult);
-      })
+        angles.forEach(element => {
+          element.onclick = function(){
+            if(element.classList.contains('fa-angle-right')){
+                slider.innerHTML = "";
+                index += 1;
+                if(index >= results.length/postsPerPage) {
+                    index -= 1;
+                }
+                postPage = index + 1;
+                buildPage(postResult);
+            }
+            else{
+                slider.innerHTML = "";
+                index -= 1;
+                if(index < 0) {
+                    index = 0;
+                }
+                postPage = index + 1;
+                buildPage(postResult);
+            }
+        }
+    })
     }
     catch(error){
       slider.innerHTML = "Error: " + error;
@@ -101,27 +113,13 @@ async function getItems(){
 getItems();
 
 function buildPage(results){
-    let indexStart = counter * postsPerPage;
+    let indexStart = index * postsPerPage;
     let indexEnd = indexStart + postsPerPage;
     pageResult = results.slice(indexStart, indexEnd);
     createHTML(pageResult);
 }
 
 function createHTML(results){ 
-    if(maxPages == postPage){
-        rightAngle.style = "display:none";
-        circleRight.style = "display:none";
-        leftAngle.style = "display:block";
-        circleLeft.style = "display:block";
-        circleLeft.style = "top:-20px";
-
-    }else if(counter == 0){
-        rightAngle.style = "display:block";
-        circleRight.style = "display:block";
-        circleRight.style = "top:-20px";
-        leftAngle.style = "display:none";
-        circleLeft.style = "display:none";
-    }   
     for(let i = 0; i < postsPerPage; i++){ 
         if(!results[i]){
             break;
@@ -140,62 +138,7 @@ function createHTML(results){
     }
     
 }
-/* async function getItems(){
-    const results = await fetch(baseUrl + listings);
-    const response = await results.json();
-  
-    let currentSlide = response[0];
-    let index = response.indexOf(currentSlide);
 
-    for(let i = 0; i < response.length; i++){
-      let bidLink = `<a href="profile.html?id=${currentSlide.id}#bid" class="guestBidLink">View bids</a>`;
-        if(user){
-          bidLink = `<a href="profile.html?id=${currentSlide.id}#bid" class="bidLink">Make a bid</a>`;
-        }
-        slider.innerHTML = `<div class='item'>
-          <h2>${currentSlide.title}</h2>
-          <img src=${currentSlide.media[0]}  alt=''/>
-          <p>${currentSlide.description}</p>
-          <h3>${bidLink}</h3>
-    </div>`
-    }
-    arrows.forEach(element => {
-        element.onclick = function(){
-            if(element.classList.contains('left')){
-                index += 1;
-                if(index > response.length) {
-                    index = response.length - 1;
-                }
-                currentSlide = response[index];
-                moveCarousel(index, currentSlide);
-                
-            }
-            else{
-                index -= 1;
-                if(index < 0) {
-                    index = 0;
-                }
-                currentSlide = response[index];
-                moveCarousel(index, currentSlide);
-            }
-        }
-    })
-};
-getItems();
-
-function moveCarousel(index, currentSlide){
-  let bidLink = `<a href="login.html" class="guestBidLink">View bids</a>`;
-        if(user){
-          bidLink = `<a href="profile.html?id=${currentSlide.id}#bid" class="bidLink">Make a bid</a>`;
-        }
-        slider.innerHTML = `<div class='item'>
-          <h2>${currentSlide.title}</h2>
-          <img src=${currentSlide.media[0]} alt=''/> 
-          <p>${currentSlide.description}</p>
-          <h3>${bidLink}</h3>
-        </div>`
-}
- */
 inputForm.addEventListener('submit', handleSubmit);
 
 function handleSubmit(event){
@@ -233,15 +176,14 @@ async function addListing(inputTitleValue,inputDescValue,inputEndsAtValue,
         Authorization: "Bearer " + userToken,
       }
   };
-  console.log(data);
 
-      fetch(url, options)
-      .then( response => {
-        if (response.status === 201)
-        displayMessage("success", "Successfully added new listing " , ".message-container");
-        console.log(response);
-      })
-      .catch(error =>  displayMessage("warning", json.errors[0].message, ".message-container"));
+  fetch(url, options)
+  .then( response => {
+    if (response.status === 201)
+    displayMessage("success", "Successfully added new listing " , ".message-container");
+    console.log(response);
+  })
+  .catch(error =>  displayMessage("warning", json.errors[0].message, ".message-container"));
 }
     
 function detectViewport(){
