@@ -12358,39 +12358,21 @@ body .success {
     font-size: 16px;
   }
 }
-.showcase .wrapper .circle-icon {
-  background-color: #ee7e5c;
-  min-width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-.showcase .wrapper .left {
+.showcase .wrapper .fa-angle-left, .showcase .wrapper .fa-angle-right {
   position: absolute;
-  top: 20px;
-  left: 10px;
-}
-.showcase .wrapper .right {
-  position: absolute;
-  top: 20px;
-  right: 10px;
+  top: 0;
+  cursor: pointer;
 }
 .showcase .wrapper .fa-angle-left, .showcase .wrapper .fa-angle-right {
-  position: relative;
-  top: 4px;
+  color: #ee7e5c;
+  opacity: 0.9;
+  font-size: 4em;
 }
 .showcase .wrapper .fa-angle-left {
-  left: 13px;
+  left: 10px;
 }
 .showcase .wrapper .fa-angle-right {
-  right: -16px;
-}
-.showcase .wrapper .fa-angle-left, .showcase .wrapper .fa-angle-right {
-  color: #fffefe;
-  font-size: 2em;
-}
-.showcase .wrapper .left:hover, .showcase .wrapper .right:hover {
-  cursor: pointer;
-  color: #f79577;
+  right: 10px;
 }
 .showcase .wrapper .slider {
   display: -webkit-box;

@@ -43,40 +43,27 @@
                 font-size: 16px;     
             }
         }
-        .circle-icon{
-            background-color: $primary;
-            min-width: 40px;
-            height: 40px;
-            border-radius: 50%;
-        }
-        .left{
+
+        .fa-angle-left, .fa-angle-right{
             position: absolute;
-            top: 20px;
+            top: 0;
+            cursor: pointer;
+        }
+
+        .fa-angle-left, .fa-angle-right{
+            color: $primary;
+            opacity: .9;
+            font-size: 4em;
+        }
+
+        .fa-angle-left{
             left: 10px;
         }
-        .right{
-            position: absolute;
-            top: 20px;
-            right: 10px;
-        } 
-        .fa-angle-left, .fa-angle-right{
-            position: relative;
-            top: 4px;
-        }
-        .fa-angle-left{
-            left: 13px;
-        }
+
         .fa-angle-right{
-            right: -16px;
+            right: 10px;
         }
-        .fa-angle-left, .fa-angle-right{
-            color: #fffefe;
-            font-size: 2em;
-        }
-        .left:hover, .right:hover{
-            cursor: pointer;
-            color: $bs-link-hover-color;
-        }
+
         .slider{
             display: flex;
             margin-top: 20px;
