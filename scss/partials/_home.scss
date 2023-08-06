@@ -46,22 +46,30 @@
 
         .fa-angle-left, .fa-angle-right{
             position: absolute;
-            top: 7px;
+            top: 100px;
             cursor: pointer;
         }
 
         .fa-angle-left, .fa-angle-right{
-            color: $primary;
-            opacity: .9;
+            color: $secondary;
+            opacity: .7;
             font-size: 4em;
         }
 
         .fa-angle-left{
-            left: 10px;
+            left: -10px;
+
+            @include tablet{
+                left: -20px;
+            }
         }
 
         .fa-angle-right{
-            right: 10px;
+            right: -10px;
+
+            @include tablet{
+                right: -20px;
+            }
         }
 
         .slider{
@@ -76,7 +84,7 @@
             
             .item{
                 display: flex;
-                width: 90vw;
+                width: 80vw;
                 flex-direction: column;
                 background-color: $textColor;
                 border-radius: 10px;
@@ -87,7 +95,7 @@
                     width: 200px;
                 }
                 @include tablet{
-                    width: 230px;
+                    width: 220px;
                     margin: 10px 15px 20px 10px; 
                 }
                 h2{

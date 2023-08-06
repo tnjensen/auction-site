@@ -12135,7 +12135,6 @@ body .success {
 }
 
 .header {
-  /* width: 100vw; */
   min-height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12153,7 +12152,7 @@ body .success {
   text-decoration: none;
   cursor: pointer;
   font-family: "Roboto Flex", sans-serif;
-  font-size: 22px;
+  font-size: 24px;
   margin: 0 20px 0 10px;
 }
 @media (min-width: 768px) {
@@ -12162,11 +12161,11 @@ body .success {
   }
 }
 .header .profile-details {
-  font-size: 14px;
+  font-size: 16px;
 }
 @media (min-width: 768px) {
   .header .profile-details {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 .header .profile-details .profile-divider {
@@ -12360,19 +12359,29 @@ body .success {
 }
 .showcase .wrapper .fa-angle-left, .showcase .wrapper .fa-angle-right {
   position: absolute;
-  top: 7px;
+  top: 100px;
   cursor: pointer;
 }
 .showcase .wrapper .fa-angle-left, .showcase .wrapper .fa-angle-right {
-  color: #ee7e5c;
-  opacity: 0.9;
+  color: #1546e6;
+  opacity: 0.7;
   font-size: 4em;
 }
 .showcase .wrapper .fa-angle-left {
-  left: 10px;
+  left: -10px;
+}
+@media (min-width: 768px) {
+  .showcase .wrapper .fa-angle-left {
+    left: -20px;
+  }
 }
 .showcase .wrapper .fa-angle-right {
-  right: 10px;
+  right: -10px;
+}
+@media (min-width: 768px) {
+  .showcase .wrapper .fa-angle-right {
+    right: -20px;
+  }
 }
 .showcase .wrapper .slider {
   display: -webkit-box;
@@ -12396,7 +12405,7 @@ body .success {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 90vw;
+  width: 80vw;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -12413,7 +12422,7 @@ body .success {
 }
 @media (min-width: 768px) {
   .showcase .wrapper .slider .item {
-    width: 230px;
+    width: 220px;
     margin: 10px 15px 20px 10px;
   }
 }
