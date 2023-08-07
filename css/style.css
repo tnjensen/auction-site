@@ -12688,7 +12688,7 @@ body .success {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 10px;
+  gap: 20px;
   cursor: pointer;
 }
 
