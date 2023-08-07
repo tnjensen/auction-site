@@ -12704,7 +12704,7 @@ body .success {
   background-color: #eee;
 }
 .login .wrapper {
-  height: calc(100vh - 50px);
+  height: calc(100vh - 70px);
   width: 70%;
   height: 70%;
   display: -webkit-box;
