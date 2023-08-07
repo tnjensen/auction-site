@@ -12231,9 +12231,6 @@ body .success {
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
-.header .right .profileMenuLink {
-  display: none;
-}
 .header.active {
   background-color: #1546e6;
   color: #fffefe;
@@ -12463,7 +12460,7 @@ body .success {
 .showcase .slider .item .guestBidLink {
   background: -webkit-gradient(linear, left top, right top, from(#ee7e5c), to(#f79577));
   background: linear-gradient(to right, #ee7e5c, #f79577);
-  color: #fffefe;
+  color: #1546e6;
   padding: 8px 12px;
   border-radius: 10px;
   text-decoration: none;
@@ -12884,10 +12881,13 @@ body .success {
   height: 50px;
   border-radius: 10px;
   border: none;
-  background-color: #ee7e5c;
-  color: #fffefe;
-  font-weight: 500;
-  font-size: 18px;
+  background: -webkit-gradient(linear, left top, right top, from(#ee7e5c), to(#f79577));
+  background: linear-gradient(to right, #ee7e5c, #f79577);
+  color: #1546e6;
+  text-transform: uppercase;
+  padding: 8px 12px;
+  text-decoration: none;
+  font-family: "Roboto Flex", sans-serif;
   cursor: pointer;
   margin-top: 10px;
 }
@@ -12895,11 +12895,17 @@ body .success {
   background-color: #f79577;
 }
 
-.profile, .bid {
-  padding: 40px 0;
-  background-color: #eee;
+.wrapper {
+  height: 100%;
 }
-.profile .wrapper, .bid .wrapper {
+@media (min-width: 768px) {
+  .wrapper {
+    height: calc(100vh - 70px);
+  }
+}
+.wrapper .profile, .wrapper .bid {
+  margin: 60px 0;
+  background-color: #eee;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12915,17 +12921,14 @@ body .success {
           align-items: center;
 }
 @media (min-width: 768px) {
-  .profile .wrapper, .bid .wrapper {
+  .wrapper .profile, .wrapper .bid {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
 }
-.profile .profileRight, .profile .profileLeft, .profile .bidLeft, .profile .bidRight, .bid .profileRight, .bid .profileLeft, .bid .bidLeft, .bid .bidRight {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+.wrapper .profile .profileRight, .wrapper .profile .profileLeft, .wrapper .profile .bidLeft, .wrapper .profile .bidRight, .wrapper .bid .profileRight, .wrapper .bid .profileLeft, .wrapper .bid .bidLeft, .wrapper .bid .bidRight {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12933,13 +12936,17 @@ body .success {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin: 0 20px;
 }
 @media (min-width: 768px) {
-  .profile .profileLeft, .profile .bidLeft, .bid .profileLeft, .bid .bidLeft {
+  .wrapper .profile .profileRight, .wrapper .profile .profileLeft, .wrapper .profile .bidLeft, .wrapper .profile .bidRight, .wrapper .bid .profileRight, .wrapper .bid .profileLeft, .wrapper .bid .bidLeft, .wrapper .bid .bidRight {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+@media (min-width: 768px) {
+  .wrapper .profile .profileLeft, .wrapper .profile .bidLeft, .wrapper .bid .profileLeft, .wrapper .bid .bidLeft {
     position: relative;
     left: 10%;
     -webkit-transform: translateX(-10%);
@@ -12947,36 +12954,36 @@ body .success {
   }
 }
 @media (min-width: 992px) {
-  .profile .profileLeft, .profile .bidLeft, .bid .profileLeft, .bid .bidLeft {
+  .wrapper .profile .profileLeft, .wrapper .profile .bidLeft, .wrapper .bid .profileLeft, .wrapper .bid .bidLeft {
     position: relative;
     left: 15%;
     -webkit-transform: translateX(-15%);
             transform: translateX(-15%);
   }
 }
-.profile .bidDesc, .bid .bidDesc {
+.wrapper .profile .bidDesc, .wrapper .bid .bidDesc {
   word-wrap: break-word;
 }
-.profile .profileRight .message-container, .bid .profileRight .message-container {
+.wrapper .profile .profileRight .message-container, .wrapper .bid .profileRight .message-container {
   padding: 10px 0;
 }
-.profile .profileAvatar, .bid .profileAvatar {
+.wrapper .profile .profileAvatar, .wrapper .bid .profileAvatar {
   width: 40px;
 }
-.profile .profileHeader, .profile .bidHeader, .bid .profileHeader, .bid .bidHeader {
-  color: #ee7e5c;
+.wrapper .profile .profileHeader, .wrapper .profile .bidHeader, .wrapper .bid .profileHeader, .wrapper .bid .bidHeader {
+  color: #1546e6;
   padding-bottom: 10px;
 }
-.profile .profileDesc, .bid .profileDesc {
+.wrapper .profile .profileDesc, .wrapper .bid .profileDesc {
   font-size: 18px;
 }
-.profile .profileUser, .profile .profileCredits, .profile .bidDesc, .profile .bidItem, .profile .bidsOnItem, .bid .profileUser, .bid .profileCredits, .bid .bidDesc, .bid .bidItem, .bid .bidsOnItem {
+.wrapper .profile .profileUser, .wrapper .profile .profileCredits, .wrapper .profile .bidDesc, .wrapper .profile .bidItem, .wrapper .profile .bidsOnItem, .wrapper .bid .profileUser, .wrapper .bid .profileCredits, .wrapper .bid .bidDesc, .wrapper .bid .bidItem, .wrapper .bid .bidsOnItem {
   background-color: #fffefe;
   padding: 3px 6px;
   -webkit-box-decoration-break: clone;
           box-decoration-break: clone;
 }
-.profile .profileBox, .profile .bidBox, .bid .profileBox, .bid .bidBox {
+.wrapper .profile .profileBox, .wrapper .profile .bidBox, .wrapper .bid .profileBox, .wrapper .bid .bidBox {
   height: 300px;
   width: 250px;
   padding: 20px;
@@ -12993,19 +13000,19 @@ body .success {
           flex-direction: column;
 }
 @media (min-width: 768px) {
-  .profile .profileBox, .profile .bidBox, .bid .profileBox, .bid .bidBox {
+  .wrapper .profile .profileBox, .wrapper .profile .bidBox, .wrapper .bid .profileBox, .wrapper .bid .bidBox {
     width: 300px;
   }
 }
 @media (min-width: 992px) {
-  .profile .profileBox, .profile .bidBox, .bid .profileBox, .bid .bidBox {
+  .wrapper .profile .profileBox, .wrapper .profile .bidBox, .wrapper .bid .profileBox, .wrapper .bid .bidBox {
     width: 400px;
   }
 }
-.profile .bid-message-container, .bid .bid-message-container {
+.wrapper .profile .bid-message-container, .wrapper .bid .bid-message-container {
   padding: 10px 0;
 }
-.profile .editButton, .profile .bidButton, .bid .editButton, .bid .bidButton {
+.wrapper .profile .editButton, .wrapper .profile .bidButton, .wrapper .bid .editButton, .wrapper .bid .bidButton {
   height: 50px;
   border-radius: 10px;
   border: none;
@@ -13016,12 +13023,19 @@ body .success {
   cursor: pointer;
   margin-top: 10px;
 }
-.profile .editButton:hover, .profile .bidButton:hover, .bid .editButton:hover, .bid .bidButton:hover {
+.wrapper .profile .editButton:hover, .wrapper .profile .bidButton:hover, .wrapper .bid .editButton:hover, .wrapper .bid .bidButton:hover {
   background-color: #0731bb;
 }
-.profile .bidButton, .bid .bidButton {
-  background-color: #ee7e5c;
+.wrapper .profile .bidButton, .wrapper .bid .bidButton {
+  background: -webkit-gradient(linear, left top, right top, from(#ee7e5c), to(#f79577));
+  background: linear-gradient(to right, #ee7e5c, #f79577);
+  color: #1546e6;
+  text-transform: uppercase;
+  padding: 8px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-family: "Roboto Flex", sans-serif;
 }
-.profile .bidButton:hover, .bid .bidButton:hover {
+.wrapper .profile .bidButton:hover, .wrapper .bid .bidButton:hover {
   background-color: #f79577;
 }

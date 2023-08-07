@@ -54,10 +54,12 @@
         height: 50px;
         border-radius: 10px;
         border: none;
-        background-color:$primary;
-        color: $textColor;
-        font-weight: 500;
-        font-size: 18px;
+        background: linear-gradient(to right, $primary, $bs-link-hover-color);
+        color: $secondary;
+        text-transform: uppercase;
+        padding: 8px 12px;
+        text-decoration: none;
+        font-family: "Roboto Flex", sans-serif;
         cursor: pointer;
         margin-top: 10px;
 
