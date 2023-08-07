@@ -19,212 +19,215 @@
     0%{ transform: rotate(0deg);}
     100%{ transform: rotate(360deg);}
 }
+    
 .showcase{
+    position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 20px;
     
-    .wrapper{
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 20px;
-        
+    @include tablet{
+        margin-bottom: 30px;
+    }
+
+    p{
+        font-size: 14px;
+
         @include tablet{
-            margin-bottom: 30px;
-        }
-
-        p{
-            font-size: 14px;
-
-            @include tablet{
-                font-size: 16px;     
-            }
-        }
-
-        .fa-angle-left, .fa-angle-right{
-            position: absolute;
-            top: 100px;
-            cursor: pointer;
-        }
-
-        .fa-angle-left, .fa-angle-right{
-            color: $secondary;
-            opacity: .7;
-            font-size: 4em;
-        }
-
-        .fa-angle-left{
-            left: -10px;
-
-            @include tablet{
-                left: -20px;
-            }
-        }
-
-        .fa-angle-right{
-            right: -10px;
-
-            @include tablet{
-                right: -20px;
-            }
-        }
-
-        .slider{
-            display: flex;
-            margin-top: 20px;
-            
-            @include tablet{
-                display: flex;
-                justify-content: center;
-                transition: all 1s ease-out;
-            }
-            
-            .item{
-                display: flex;
-                width: 80vw;
-                flex-direction: column;
-                background-color: $textColor;
-                border-radius: 10px;
-                padding: 20px;
-                margin: 10px 20px;
-
-                @include mobile{
-                    width: 200px;
-                }
-                @include tablet{
-                    width: 220px;
-                    margin: 10px 15px 20px 10px; 
-                }
-                h2{
-                    font-size: 20px;
-                    
-                    @include tablet{
-                        font-size: 22px;    
-                    }
-                }
-                p{
-                    font-size: 15px;
-                    margin-top: 5px;
-                    overflow-x: hidden;
-
-                    @include tablet{
-                        font-size: 17px;     
-                    }
-                }
-                h3{
-                    font-size: 19px;
-                    font-weight: 600;
-                    
-                    @include tablet{
-                        font-size: 21px;     
-                    }
-                }
-                .guestBidLink{
-                    background: linear-gradient(to right, $primary, $bs-link-hover-color);
-                    color: $textColor;
-                    padding: 8px 12px;
-                    border-radius: 10px;
-                    text-decoration: none;
-                    font-family: "Roboto Flex", sans-serif;
-
-                    &:hover{
-                        font-size: 20px;
-                        border: none;
-
-                        @include tablet{
-                            padding: 10px 15px;
-                            font-size: 22px;
-                        }
-                    }
-                }
-                .bidLink{
-                    font-family: "Roboto Flex", sans-serif;
-                    background: linear-gradient(to right, $secondary, $secondary-hover);
-                    color: $textColor;
-                    text-transform: uppercase;
-                    border: none;
-                    font-size: 16px;
-                    font-weight: 600;
-                    letter-spacing: .1rem;
-                    font-style: oblique;
-                    border-radius: 5px;
-                    padding: 10px 15px;
-                    text-decoration: none;
-
-                    &:hover{
-                        font-size: 17px;
-                        border: none;
-                    }
-                } 
-                .deleteLink{
-                    background-color: $primary;
-                    float: right;
-                    color: $textColor;
-                    border: none;
-                    border-radius: 5px;
-                    padding: 10px 15px;
-                    text-decoration: none;
-                } 
-                img{
-                    border-radius: 10px;
-                    max-width: 100%;
-                    max-height: auto;
-                    
-
-                    @include tablet{
-                        width: 230px;
-                        overflow: hidden;
-                    }
-                    
-                    @include desktop{
-                        width: 350px;  
-                    }
-                }
-            }
+            font-size: 16px;     
         }
     }
-    .arrows{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .fa-angle-left, .fa-angle-right{
+        position: absolute;
+        top: 100px;
+        cursor: pointer;
+    }
 
-        .arrow{
-            height: 60px;
-            position: absolute;           
-            cursor: pointer;
+    .fa-angle-left, .fa-angle-right{
+        color: $secondary;
+        opacity: .7;
+        font-size: 4em;
+    }
+
+    .fa-angle-left{
+        left: 10px;
+
+        @include tablet{
+            left: 20px;
+        }
+        @include desktop{
+            left: 30px;
+        }
+    }
+
+    .fa-angle-right{
+        right: 10px;
+
+        @include tablet{
+            right: 20px;
+        }
+        @include desktop{
+            right: 30px;
+        }
+    }
+
+    .slider{
+        display: flex;
+        margin-top: 15px;
         
-            &.left{
-               color: $primary;
-                right: 0;
-                top: 250px;
-                transform: rotate(-360deg);
-            }
-            &.right{
-                top: 250px;
-                left: 0;
-                transform: rotate(180deg);
-            }
-            &:hover{
-                border: $primary;
-            }
+        @include tablet{
+            display: flex;
+            justify-content: center;
+            transition: all 1s ease-out;
+        }
         
-            @include tablet{     
+        .item{
+            display: flex;
+            flex-direction: column;
+            background-color: $textColor;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px 20px;
+
+            @include mobile{
+                width: 180px;
+            }
+            @include tablet{
+                width: 200px;
+                margin: 10px 15px 20px 10px; 
+            }
+            @include desktop{
+                width: 220px;
+            }
+            h2{
+                font-size: 20px;
                 
-                &.left{
-                    top: 300px;
-                    right: 50px;
+                @include tablet{
+                    font-size: 22px;    
                 }
-                &.right{
-                    top: 300px;
-                    left: 50px;
+            }
+            p{
+                font-size: 15px;
+                margin-top: 5px;
+                overflow-x: hidden;
+
+                @include tablet{
+                    font-size: 17px;     
+                }
+            }
+            h3{
+                font-size: 19px;
+                font-weight: 600;
+                
+                @include tablet{
+                    font-size: 21px;     
+                }
+            }
+            .guestBidLink{
+                background: linear-gradient(to right, $primary, $bs-link-hover-color);
+                color: $textColor;
+                padding: 8px 12px;
+                border-radius: 10px;
+                text-decoration: none;
+                font-family: "Roboto Flex", sans-serif;
+
+                &:hover{
+                    font-size: 20px;
+                    border: none;
+
+                    @include tablet{
+                        padding: 10px 15px;
+                        font-size: 22px;
+                    }
+                }
+            }
+            .bidLink{
+                font-family: "Roboto Flex", sans-serif;
+                background: linear-gradient(to right, $secondary, $secondary-hover);
+                color: $textColor;
+                text-transform: uppercase;
+                border: none;
+                font-size: 16px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                font-style: oblique;
+                border-radius: 5px;
+                padding: 10px 15px;
+                text-decoration: none;
+
+                &:hover{
+                    font-size: 17px;
+                    border: none;
+                }
+            } 
+            .deleteLink{
+                background-color: $primary;
+                float: right;
+                color: $textColor;
+                border: none;
+                border-radius: 5px;
+                padding: 10px 15px;
+                text-decoration: none;
+            } 
+            img{
+                border-radius: 10px;
+                max-width: 100%;
+                max-height: auto;
+                
+
+                @include tablet{
+                    width: 230px;
+                    overflow: hidden;
+                }
+                
+                @include desktop{
+                    width: 350px;  
                 }
             }
         }
     }
 }
+.arrows{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .arrow{
+        height: 60px;
+        position: absolute;           
+        cursor: pointer;
+    
+        &.left{
+            color: $primary;
+            right: 0;
+            top: 250px;
+            transform: rotate(-360deg);
+        }
+        &.right{
+            top: 250px;
+            left: 0;
+            transform: rotate(180deg);
+        }
+        &:hover{
+            border: $primary;
+        }
+    
+        @include tablet{     
+            
+            &.left{
+                top: 300px;
+                right: 50px;
+            }
+            &.right{
+                top: 300px;
+                left: 50px;
+            }
+        }
+    }
+}
+
 
 .listing{
     display: flex;
