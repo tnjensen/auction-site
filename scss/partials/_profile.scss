@@ -10,7 +10,7 @@
         background-color: $backgroundColor;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
        
         @include tablet{
@@ -29,14 +29,19 @@
     
             @include tablet{
                 position: relative;
-                left: 10%;
-                transform: translateX(-10%);
+                left: 12%;
+                transform: translateX(-12%);
                 
             }
             @include desktop{
                 position: relative;
-                left: 15%;
-                transform: translateX(-15%);
+                left: 17%;
+                transform: translateX(-17%);
+            }
+            @include large{
+                position: relative;
+                left: 23%;
+                transform: translateX(-23%);
             }
            
         }

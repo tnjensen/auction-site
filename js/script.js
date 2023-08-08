@@ -31,7 +31,8 @@ let postPage = 0;
 let mobile = 480;
 let tablet = 768;
 let height = 575.98; 
-let desktop = 1024;
+let desktop = 992;
+let large = 1280;
 
 const year = document.getElementById('year');
 
@@ -192,6 +193,10 @@ function detectViewport(){
   if(window.innerWidth > desktop){
       postsPerPage = 4;
   }
+  if(window.innerWidth >= large){
+      postsPerPage = 5;
+  }
+  
   if(window.innerHeight <= height){
       postsPerPage = 2; 
   }

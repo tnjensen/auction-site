@@ -11,7 +11,8 @@ const avatar = JSON.parse(localStorage.getItem('avatar'));
 const profileAvatarLink = document.querySelector('.profileAvatarLink');
 const profileAvatar = document.querySelector('.profileAvatar');
 const menuButton = document.querySelector('.bars');
-const credits = JSON.parse(localStorage.getItem('credits'));
+const credits = document.querySelector('.credits');
+const userCredits = JSON.parse(localStorage.getItem('credits'));
 const profileForm = document.querySelector('.profileBox');
 const logLink = document.querySelector('.logLink');
 const regLink = document.querySelector('.regLink');
@@ -41,11 +42,12 @@ bidAmountText.innerHTML = "Please log in to make a bid";
 avatarText.innerHTML = "Please log in to edit avatar";
 profileUser.innerHTML = "Not logged in";
 profileCredits.innerHTML = 0;
+credits.style = "display:none";
 profileAvatar.style = "display:none";
 
 if(user){
     profileUser.innerHTML = user;
-    profileCredits.innerHTML = "NOK " + credits;
+    profileCredits.innerHTML = "NOK " + userCredits;
     logLink.innerHTML = "Logout";
     divider.style = "display:none";
     profileAvatar.style = "display:block";

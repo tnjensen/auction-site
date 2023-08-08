@@ -12135,7 +12135,7 @@ body .success {
 }
 
 .wrapper {
-  height: calc(100vh - 70px);
+  min-height: 100vh;
 }
 
 .header {
@@ -12913,9 +12913,8 @@ body .success {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -12948,17 +12947,25 @@ body .success {
 @media (min-width: 768px) {
   .wrapper .profile .profileLeft, .wrapper .profile .bidLeft, .wrapper .bid .profileLeft, .wrapper .bid .bidLeft {
     position: relative;
-    left: 10%;
-    -webkit-transform: translateX(-10%);
-            transform: translateX(-10%);
+    left: 12%;
+    -webkit-transform: translateX(-12%);
+            transform: translateX(-12%);
   }
 }
 @media (min-width: 992px) {
   .wrapper .profile .profileLeft, .wrapper .profile .bidLeft, .wrapper .bid .profileLeft, .wrapper .bid .bidLeft {
     position: relative;
-    left: 15%;
-    -webkit-transform: translateX(-15%);
-            transform: translateX(-15%);
+    left: 17%;
+    -webkit-transform: translateX(-17%);
+            transform: translateX(-17%);
+  }
+}
+@media (min-width: 1280px) {
+  .wrapper .profile .profileLeft, .wrapper .profile .bidLeft, .wrapper .bid .profileLeft, .wrapper .bid .bidLeft {
+    position: relative;
+    left: 23%;
+    -webkit-transform: translateX(-23%);
+            transform: translateX(-23%);
   }
 }
 .wrapper .profile .bidDesc, .wrapper .bid .bidDesc {
