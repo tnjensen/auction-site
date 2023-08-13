@@ -71,6 +71,7 @@ async function getItems(){
         slider.innerHTML = "";
         loader.innerHTML = "";
         postResult = results;
+        console.log(results);
         loader.classList.remove('loading-indicator');
         let currentSlide = results[0];
         index = results.indexOf(currentSlide);

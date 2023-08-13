@@ -12465,14 +12465,14 @@ body .success {
   border-radius: 10px;
   text-decoration: none;
   font-family: "Roboto Flex", sans-serif;
-}
-.showcase .slider .item .guestBidLink:hover {
-  font-size: 20px;
-  border: none;
+  /*  &:hover{
+       font-size: 20px;
+       border: none;
+   } */
 }
 @media (min-width: 768px) {
-  .showcase .slider .item .guestBidLink:hover {
-    padding: 10px 15px;
+  .showcase .slider .item .guestBidLink {
+    padding: 9px 13px;
     font-size: 22px;
   }
 }

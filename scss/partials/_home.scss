@@ -133,14 +133,13 @@
                 text-decoration: none;
                 font-family: "Roboto Flex", sans-serif;
 
-                &:hover{
+               /*  &:hover{
                     font-size: 20px;
                     border: none;
-
-                    @include tablet{
-                        padding: 10px 15px;
-                        font-size: 22px;
-                    }
+                } */
+                @include tablet{
+                    padding: 9px 13px;
+                    font-size: 22px;
                 }
             }
             .bidLink{
