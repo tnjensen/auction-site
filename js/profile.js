@@ -28,6 +28,7 @@ const bidAmount = document.querySelector('.bidAmount');
 const bidAmountText = document.querySelector('.bidAmountText');
 const avatarText = document.querySelector('.avatarText');
 const bidsOnItem = document.querySelector('.bidsOnItem');
+const bidButton = document.querySelector('.bidButton');
 
 const year = document.getElementById('year');
 
@@ -44,6 +45,8 @@ profileUser.innerHTML = "Not logged in";
 profileCredits.innerHTML = 0;
 credits.style = "display:none";
 profileAvatar.style = "display:none";
+editButton.disabled = true;
+bidButton.disabled = true;
 
 if(user){
     profileUser.innerHTML = user;
@@ -51,6 +54,8 @@ if(user){
     logLink.innerHTML = "Logout";
     divider.style = "display:none";
     profileAvatar.style = "display:block";
+    editButton.disabled = false;
+    bidButton.disabled = false;
     if(!window.location.search){
         bidAmountText.innerHTML = "Please select an item to place your bid";
     }else{

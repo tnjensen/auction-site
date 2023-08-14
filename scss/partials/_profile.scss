@@ -2,7 +2,7 @@
     height: 100%;
 
     @include tablet{
-        height: calc(100vh - 70px);
+        height: 100vh;
     }
 
     .profile, .bid{

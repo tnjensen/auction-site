@@ -133,10 +133,6 @@
                 text-decoration: none;
                 font-family: "Roboto Flex", sans-serif;
 
-               /*  &:hover{
-                    font-size: 20px;
-                    border: none;
-                } */
                 @include tablet{
                     padding: 9px 13px;
                     font-size: 22px;
@@ -188,45 +184,6 @@
         }
     }
 }
-.arrows{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .arrow{
-        height: 60px;
-        position: absolute;           
-        cursor: pointer;
-    
-        &.left{
-            color: $primary;
-            right: 0;
-            top: 250px;
-            transform: rotate(-360deg);
-        }
-        &.right{
-            top: 250px;
-            left: 0;
-            transform: rotate(180deg);
-        }
-        &:hover{
-            border: $primary;
-        }
-    
-        @include tablet{     
-            
-            &.left{
-                top: 300px;
-                right: 50px;
-            }
-            &.right{
-                top: 300px;
-                left: 50px;
-            }
-        }
-    }
-}
-
 
 .listing{
     display: flex;
@@ -238,80 +195,76 @@
      
     h2{
         color: $secondary;
-        margin-bottom: 20px;
     }
 
-    .wrapper{
+    .message-container{
+        padding: 10px 0;
+
+        .warning{
+            background-color: $primary;
+            color: $textColor;
+            padding: 5px;
+        }
+        .success{
+            background-color: $secondary;
+            color: $textColor;
+            padding: 5px;
+        }
+    }
+    .inputForm{
         background-color: $textColor;
         width: 400px;
         border-radius: 10px;
-       
-        .message-container{
-            padding: 10px 0;
-    
-            .warning{
-                background-color: $primary;
-                color: $textColor;
-                padding: 5px;
-            }
-            .success{
-                background-color: $secondary;
-                color: $textColor;
-                padding: 5px;
-            }
+        padding: 15px;
+        
+        @include tablet{
+            font-size: 20px;
         }
-        .inputForm{
-            padding: 15px;
-            
+        .form-left, .form-right{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 20px;
+        }
+        .inputDesc, .inputTitle, .inputEndsAt{
+            font-size: 16px;
+            height: 40px;
+            border-radius: 5px;
+            border: 1px solid gray;
+            padding-left: 10px;
+            margin: 5px 0;
+
             @include tablet{
                 font-size: 20px;
             }
-            .form-left, .form-right{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                margin: 0 20px;
+        }
+        input:focus{
+            outline: none;
+        }
+        .submitButton{
+            height: 50px;
+            border-radius: 10px;
+            border: none;
+            background-color: $primary;
+            color: $textColor;
+            font-weight: 500;
+            font-size: 19px;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin: 15px 0 10px 0;
+        
+            &:hover{
+                background-color: $bs-link-hover-color;
             }
-            .inputDesc, .inputTitle, .inputEndsAt{
-                font-size: 16px;
-                height: 40px;
-                border-radius: 5px;
-                border: 1px solid gray;
-                padding-left: 10px;
-                margin: 5px 0;
 
-                @include tablet{
-                    font-size: 20px;
-                }
+            @include tablet{
+                font-size: 21px;
+                margin-bottom: 15px;
             }
-            input:focus{
-                outline: none;
-            }
-            .submitButton{
-                height: 50px;
-                border-radius: 10px;
-                border: none;
-                background-color: $primary;
-                color: $textColor;
-                font-weight: 500;
-                font-size: 19px;
-                text-transform: uppercase;
-                cursor: pointer;
-                margin: 15px 0 10px 0;
-            
-                &:hover{
-                    background-color: $bs-link-hover-color;
-                }
 
-                @include tablet{
-                    font-size: 21px;
-                    margin-bottom: 15px;
-                }
-
-            }
-            .submitButton:focus{
-                outline:none;
-            }
+        }
+        .submitButton:focus{
+            outline:none;
         }
     }
 }
