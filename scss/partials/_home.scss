@@ -126,16 +126,25 @@
                 }
             }
             .guestBidLink{
-                background: linear-gradient(to right, $primary, $bs-link-hover-color);
-                color: $secondary;
+                background:linear-gradient(to right, $secondary, $secondary-hover);
+                color: $textColor;
                 padding: 8px 12px;
                 border-radius: 10px;
                 text-decoration: none;
                 font-family: "Roboto Flex", sans-serif;
-
+                
+                &:hover{
+                    font-size: 20px;
+                    border: none;
+                }
                 @include tablet{
                     padding: 9px 13px;
                     font-size: 22px;
+
+                    &:hover{
+                        font-size: 23px;
+                        border: none;
+                    }
                 }
             }
             .bidLink{

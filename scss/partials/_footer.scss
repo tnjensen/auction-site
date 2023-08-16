@@ -26,8 +26,11 @@
         p{
             margin-bottom: 5px;
         }
-        h5{
+        p:first-of-type{
             margin-top: 10px;
+            text-transform: uppercase;
+            font-family: "Lora";
+            font-weight: bold;
         }
         .signup-form form{
             display: flex;

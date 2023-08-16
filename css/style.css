@@ -12460,18 +12460,26 @@ body .success {
   }
 }
 .showcase .slider .item .guestBidLink {
-  background: -webkit-gradient(linear, left top, right top, from(#ee7e5c), to(#f79577));
-  background: linear-gradient(to right, #ee7e5c, #f79577);
-  color: #1546e6;
+  background: -webkit-gradient(linear, left top, right top, from(#1546e6), to(#0731bb));
+  background: linear-gradient(to right, #1546e6, #0731bb);
+  color: #fffefe;
   padding: 8px 12px;
   border-radius: 10px;
   text-decoration: none;
   font-family: "Roboto Flex", sans-serif;
 }
+.showcase .slider .item .guestBidLink:hover {
+  font-size: 20px;
+  border: none;
+}
 @media (min-width: 768px) {
   .showcase .slider .item .guestBidLink {
     padding: 9px 13px;
     font-size: 22px;
+  }
+  .showcase .slider .item .guestBidLink:hover {
+    font-size: 23px;
+    border: none;
   }
 }
 .showcase .slider .item .bidLink {
@@ -12655,8 +12663,11 @@ body .success {
 .footer .footer-content p {
   margin-bottom: 5px;
 }
-.footer .footer-content h5, .footer .footer-content .h5 {
+.footer .footer-content p:first-of-type {
   margin-top: 10px;
+  text-transform: uppercase;
+  font-family: "Lora";
+  font-weight: bold;
 }
 .footer .footer-content .signup-form form {
   display: -webkit-box;
@@ -12797,6 +12808,10 @@ body .success {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #757578;
+}
+.login .loginBox a {
+  color: #fffefe;
 }
 .login .loginName, .login .loginEmail, .login .loginPassword {
   height: 50px;
@@ -12814,13 +12829,15 @@ body .success {
   border: none;
   background-color: #1546e6;
   color: #fffefe;
-  font-weight: 500;
-  font-size: 18px;
+  letter-spacing: 0.05rem;
+  font-weight: 600;
+  font-size: 20px;
   cursor: pointer;
+  text-transform: uppercase;
   margin-top: 10px;
 }
 .login .loginButton:hover {
-  background-color: #0731bb;
+  background-color: #f79577;
 }
 .login .loginButton:focus {
   outline: none;
@@ -12917,7 +12934,7 @@ body .success {
   height: 50px;
   border-radius: 10px;
   border: none;
-  background: #f79577;
+  background: #1546e6;
   color: #fffefe;
   text-transform: uppercase;
   padding: 8px 12px;
@@ -13067,14 +13084,14 @@ body .success {
   margin-top: 10px;
 }
 .wrapper .profile .editButton:hover, .wrapper .profile .bidButton:hover, .wrapper .bid .editButton:hover, .wrapper .bid .bidButton:hover {
-  background-color: #0731bb;
+  background-color: #f79577;
 }
 .wrapper .profile .editButton, .wrapper .bid .editButton {
-  background-color: #f79577;
+  background-color: #1546e6;
   text-transform: uppercase;
 }
 .wrapper .profile .bidButton, .wrapper .bid .bidButton {
-  background: #f79577;
+  background: #1546e6;
   color: #fffefe;
   text-transform: uppercase;
   padding: 8px 12px;

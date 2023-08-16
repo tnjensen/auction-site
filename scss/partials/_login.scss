@@ -38,6 +38,11 @@
         display: flex;
         justify-content: space-between;
         flex-direction: column;
+        background-color: $form-background;
+
+        a{
+            color: $textColor;
+        }
     }
     .loginName, .loginEmail, .loginPassword{
         height: 50px;
@@ -55,13 +60,15 @@
         border: none;
         background-color: $secondary;
         color: $textColor;
-        font-weight: 500;
-        font-size: 18px;
+        letter-spacing: .05rem;
+        font-weight: 600;
+        font-size: 20px;
         cursor: pointer;
+        text-transform: uppercase;
         margin-top: 10px;
         
         &:hover{
-            background-color:$secondary-hover;
+            background-color:$bs-link-hover-color;
         }
     }
     .loginButton:focus{

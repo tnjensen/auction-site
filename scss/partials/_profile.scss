@@ -104,15 +104,15 @@
             margin-top: 10px;
     
             &:hover{
-                background-color:$secondary-hover;
+                background-color:$bs-link-hover-color;
             }
         } 
         .editButton{
-            background-color: $bs-link-hover-color;
+            background-color: $secondary;
             text-transform: uppercase;
         }
          .bidButton{
-            background: $bs-link-hover-color;
+            background: $secondary;
             color: $textColor;
             text-transform: uppercase;
             padding: 8px 12px;
