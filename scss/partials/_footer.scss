@@ -1,19 +1,97 @@
 .footer{
     width: 100vw;
-    height: 50px;
-    background-color: $secondary-hover;
+    background-color: $footer-background;
     color: #fff;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    
+    .footer-content{
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        @include tablet{
+            flex-direction: row;
+            justify-content: space-around;
+            gap: 15px;
+        }
 
-    .footer-content p{
-        margin-bottom: 0;
+        a{
+            color: $textColor;
+            text-decoration: none;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+        p{
+            margin-bottom: 5px;
+        }
+        h5{
+            margin-top: 10px;
+        }
+        .signup-form form{
+            display: flex;
+            flex-direction: column;
+
+            input{
+                max-width: 250px;
+                margin: 5px 0;
+                border-radius: 5px;
+                padding: 5px;
+            }
+            input[type="submit"]{
+                background-color: $bs-link-hover-color;
+                border: none;
+                color: #fffefe;
+                border-radius: 5px;
+                padding: 5px 0;
+                text-transform: uppercase;
+            }
+        }
     }
     
-    .footer-social{
+    .footer-social-icons{
         display: flex;
-        gap: 20px;
-        cursor: pointer;
+        gap:10px;
     }
 }
+/* .footer {
+    background-color: #1d1d1e;
+
+    p {
+        margin: 5px 0;
+    }
+    a{
+        color: #fffefe;
+        text-decoration: none;
+    }
+    &:hover{
+        text-decoration: underline;
+    }
+    .footer-content{
+        margin: 0 25px 0 0;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        font-size: 0.9rem;
+        color: #fff;
+
+        .footer-category{
+            margin: 20px 0 7px 0;
+        }
+        .footer-nav{
+            margin: 20px 0;
+        }
+        .footer-nav a{
+            color: #fff;
+            margin-right: 5px;
+            margin-left: auto;
+            text-decoration: none;
+        }
+        .footer-nav a:hover{
+            text-decoration: underline;
+            color: $primary;
+        }
+    }
+}
+   */

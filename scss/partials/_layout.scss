@@ -22,12 +22,14 @@ body{
     .warning{
         background-color: $primary;
         color: $textColor;
-        padding: 5px;
+        padding: 10px;
+        width: 300px;
     }
     .success{
         background-color: $secondary;
         color: $textColor;
-        padding: 5px;
+        padding: 10px;
+        width: 300px;
     }
 }
 .wrapper{

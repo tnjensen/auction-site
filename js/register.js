@@ -1,3 +1,4 @@
+import { openMenu } from "./components/menuButton.js";
 import displayMessage from "../js/components/displayMessage.js";
 import { baseUrl } from "../js/components/settings.js";
 import { saveCredits, saveUser, saveAvatar } from "../js/components/storage.js";
@@ -19,7 +20,7 @@ if( date > 2023){
   year.innerHTML = date;
 }
 
-menuButton.style = "display:none";
+menuButton.onclick = openMenu;
 
 form.addEventListener('submit', submitForm);
 

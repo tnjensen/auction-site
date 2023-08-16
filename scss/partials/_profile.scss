@@ -74,7 +74,8 @@
             height: 300px;
             width: 250px;
             padding: 20px;
-            background-color: white;
+            color: $textColor;
+            background-color: $form-background;
             border-radius: 10px;
             display: flex;
             justify-content: space-around;
@@ -106,9 +107,13 @@
                 background-color:$secondary-hover;
             }
         } 
+        .editButton{
+            background-color: $bs-link-hover-color;
+            text-transform: uppercase;
+        }
          .bidButton{
-            background: linear-gradient(to right, $primary, $bs-link-hover-color);
-            color: $secondary;
+            background: $bs-link-hover-color;
+            color: $textColor;
             text-transform: uppercase;
             padding: 8px 12px;
             border-radius: 10px;

@@ -58,6 +58,7 @@ if(user){
     bidButton.disabled = false;
     if(!window.location.search){
         bidAmountText.innerHTML = "Please select an item to place your bid";
+        bidButton.disabled = true;
     }else{
         bidAmountText.innerHTML = "Enter your bid";
     }
@@ -135,8 +136,6 @@ function submitProfileForm(event){
     if(profileAvatarLinkValue.length === 0){
         profileAvatarLinkValue = "";    
     }
-   
-
     doUpdate(profileAvatarLinkValue);
 }
 async function doUpdate(profileAvatarLinkValue){
@@ -157,27 +156,21 @@ async function doUpdate(profileAvatarLinkValue){
     try{
         const response = await fetch(url, options);
         const json = await response.json();
-        console.log(json);
         
         if(response.ok){
             displayMessage("success", "Successfully updated avatar for " + json.name, ".message-container");
             const avatar = json.avatar;
             saveAvatar(avatar);
-            console.log(avatar);
-            
         }
         if(json.error){
             displayMessage("warning", json.error.message, ".message-container");
         }
         else{
-        //Redirect to homepage if successful update
              editButton.innerHTML = "Home page";
              editButton.onclick = function(){
                 location.href = "/";
-             }   
-           
+             }     
         }
-        
     }
     catch(error){
         return displayMessage("error", "Wrong username or password", ".message-container");
@@ -192,11 +185,10 @@ function submitBidForm(event){
     message.innerHTML = "";
 
     let bidAmountValue = bidAmount.value;
-    console.log(bidAmountValue);
     
-    if(bidAmountValue.length === 0){
+    /* if(bidAmountValue.length === 0){
         displayMessage("warning", "Please enter valid bid amount", ".bid-message-container"); 
-    }
+    } */
    
     placeBid(bidAmountValue);
 }
@@ -204,7 +196,6 @@ async function placeBid(bidAmountValue){
     const url = baseUrl + `listings/${itemId}/bids`;
 
     const data = JSON.stringify({amount:parseInt(bidAmountValue)});
-    console.log(bidAmountValue);
     
     const options = {
         method: "POST",
@@ -218,21 +209,17 @@ async function placeBid(bidAmountValue){
     try{
         const response = await fetch(url, options);
         const json = await response.json();
-        console.log(json);
         
         if(response.ok){
             displayMessage("success", "Successfully placed bid for " + json.title, ".bid-message-container");
             const bid = json.bids.amount;
             saveBid(bid);
-            console.log(bid);
-            
         }
         if(json.errors){
             displayMessage("warning", json.errors[0].message, ".bid-message-container");
             
         }
         else{
-        //Redirect to homepage if successful update
              bidButton.innerHTML = "Go back";
              bidButton.onclick = function(){
                 location.href = "/";
