@@ -12108,7 +12108,7 @@ textarea.form-control-lg {
 
 body {
   font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
-  background-color: white;
+  background-color: #fffefe;
   overflow-x: hidden;
 }
 body h1, body .h1, body h2, body .h2, body h3, body .h3, body h4, body .h4, body h5, body .h5, body h6, body .h6 {
@@ -12122,6 +12122,9 @@ body a {
 }
 body a:hover {
   color: #f79577;
+}
+body p {
+  color: #1d1d1e;
 }
 body .warning {
   background-color: #ee7e5c;
@@ -12613,8 +12616,7 @@ body .success {
 
 .footer {
   width: 100vw;
-  /* background-color: $footer-background; */
-  /* color: #fff; */
+  border-top: 1px solid rgba(74, 74, 77, 0.5);
 }
 .footer .footer-content {
   padding: 40px;
@@ -12641,7 +12643,7 @@ body .success {
   }
 }
 .footer .footer-content a {
-  /* color: $textColor; */
+  color: #4A4A4D;
   text-decoration: none;
 }
 .footer .footer-content a:hover {
@@ -12670,6 +12672,7 @@ body .success {
   margin: 5px 0;
   border-radius: 5px;
   padding: 5px;
+  border: 1px solid rgba(74, 74, 77, 0.5);
 }
 .footer .footer-content .signup-form form input[type=submit] {
   background-color: #f79577;
@@ -12685,6 +12688,12 @@ body .success {
   display: flex;
   gap: 10px;
 }
+.footer .footer-social-icons i {
+  color: #4A4A4D;
+}
+.footer .footer-social-icons i:hover {
+  color: #f79577;
+}
 
 .login {
   width: 100vw;
@@ -12695,7 +12704,7 @@ body .success {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: white;
+  background-color: #fffefe;
 }
 .login .wrapper {
   width: 70%;
@@ -12902,7 +12911,7 @@ body .success {
 }
 .wrapper .profile, .wrapper .bid {
   margin: 60px 0;
-  background-color: white;
+  background-color: #fffefe;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
