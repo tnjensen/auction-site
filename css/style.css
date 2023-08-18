@@ -12355,7 +12355,7 @@ body .success {
   cursor: pointer;
 }
 .showcase .fa-angle-left, .showcase .fa-angle-right {
-  color: #1546e6;
+  color: #ee7e5c;
   opacity: 0.7;
   font-size: 4em;
 }
@@ -12364,7 +12364,7 @@ body .success {
 }
 @media (min-width: 768px) {
   .showcase .fa-angle-left {
-    left: 20px;
+    left: 30px;
   }
 }
 @media (min-width: 992px) {
@@ -12377,7 +12377,7 @@ body .success {
 }
 @media (min-width: 768px) {
   .showcase .fa-angle-right {
-    right: 20px;
+    right: 30px;
   }
 }
 @media (min-width: 992px) {
@@ -12390,6 +12390,9 @@ body .success {
   display: -ms-flexbox;
   display: flex;
   margin-top: 15px;
+  background-color: #757578;
+  width: 80%;
+  padding: 20px 10px;
 }
 @media (min-width: 768px) {
   .showcase .slider {
@@ -12460,33 +12463,21 @@ body .success {
   }
 }
 .showcase .slider .item .guestBidLink {
-  background: -webkit-gradient(linear, left top, right top, from(#1546e6), to(#0731bb));
-  background: linear-gradient(to right, #1546e6, #0731bb);
-  color: #fffefe;
+  color: #1546e6;
   padding: 8px 12px;
   border-radius: 10px;
   text-decoration: none;
   font-family: "Roboto Flex", sans-serif;
-}
-.showcase .slider .item .guestBidLink:hover {
-  font-size: 20px;
-  border: none;
 }
 @media (min-width: 768px) {
   .showcase .slider .item .guestBidLink {
     padding: 9px 13px;
     font-size: 22px;
   }
-  .showcase .slider .item .guestBidLink:hover {
-    font-size: 23px;
-    border: none;
-  }
 }
 .showcase .slider .item .bidLink {
   font-family: "Roboto Flex", sans-serif;
-  background: -webkit-gradient(linear, left top, right top, from(#1546e6), to(#0731bb));
-  background: linear-gradient(to right, #1546e6, #0731bb);
-  color: #fffefe;
+  color: #1546e6;
   text-transform: uppercase;
   border: none;
   font-size: 16px;
@@ -12496,10 +12487,6 @@ body .success {
   border-radius: 5px;
   padding: 10px 15px;
   text-decoration: none;
-}
-.showcase .slider .item .bidLink:hover {
-  font-size: 17px;
-  border: none;
 }
 .showcase .slider .item .deleteLink {
   background-color: #ee7e5c;
@@ -12560,9 +12547,9 @@ body .success {
   padding: 5px;
 }
 .listing .inputForm {
-  background-color: #fffefe;
   width: 400px;
   border-radius: 10px;
+  border: 1px solid #757578;
   padding: 15px;
 }
 @media (min-width: 768px) {
@@ -12699,46 +12686,6 @@ body .success {
   gap: 10px;
 }
 
-/* .footer {
-    background-color: #1d1d1e;
-
-    p {
-        margin: 5px 0;
-    }
-    a{
-        color: #fffefe;
-        text-decoration: none;
-    }
-    &:hover{
-        text-decoration: underline;
-    }
-    .footer-content{
-        margin: 0 25px 0 0;
-        padding: 25px;
-        display: flex;
-        flex-direction: column;
-        font-size: 0.9rem;
-        color: #fff;
-
-        .footer-category{
-            margin: 20px 0 7px 0;
-        }
-        .footer-nav{
-            margin: 20px 0;
-        }
-        .footer-nav a{
-            color: #fff;
-            margin-right: 5px;
-            margin-left: auto;
-            text-decoration: none;
-        }
-        .footer-nav a:hover{
-            text-decoration: underline;
-            color: $primary;
-        }
-    }
-}
-   */
 .login {
   width: 100vw;
   height: 100vh;
@@ -12829,9 +12776,7 @@ body .success {
   border: none;
   background-color: #1546e6;
   color: #fffefe;
-  letter-spacing: 0.05rem;
-  font-weight: 600;
-  font-size: 20px;
+  font-family: "Roboto Flex", sans-serif;
   cursor: pointer;
   text-transform: uppercase;
   margin-top: 10px;
@@ -13097,7 +13042,6 @@ body .success {
   padding: 8px 12px;
   border-radius: 10px;
   text-decoration: none;
-  font-family: "Roboto Flex", sans-serif;
 }
 .wrapper .profile .bidButton:hover, .wrapper .bid .bidButton:hover {
   background-color: #f79577;
@@ -13106,6 +13050,12 @@ body .success {
 .main {
   padding: 40px 20px;
   margin: 0 auto;
+  max-width: 85%;
+}
+@media (min-width: 992px) {
+  .main {
+    max-width: 75%;
+  }
 }
 .main .content {
   margin-bottom: 40px;
@@ -13140,7 +13090,7 @@ body .success {
 .main .item {
   text-align: left;
   margin: 0 auto;
-  padding: 10px 0;
+  padding: 10px;
 }
 .main .item h2, .main .item .h2 {
   text-align: center;

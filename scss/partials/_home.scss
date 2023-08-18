@@ -46,7 +46,7 @@
     }
 
     .fa-angle-left, .fa-angle-right{
-        color: $secondary;
+        color: $primary;
         opacity: .7;
         font-size: 4em;
     }
@@ -55,7 +55,7 @@
         left: 10px;
 
         @include tablet{
-            left: 20px;
+            left: 30px;
         }
         @include desktop{
             left: 30px;
@@ -66,7 +66,7 @@
         right: 10px;
 
         @include tablet{
-            right: 20px;
+            right: 30px;
         }
         @include desktop{
             right: 30px;
@@ -76,6 +76,9 @@
     .slider{
         display: flex;
         margin-top: 15px;
+        background-color: $form-background;
+        width: 80%;
+        padding: 20px 10px;
         
         @include tablet{
             display: flex;
@@ -126,31 +129,21 @@
                 }
             }
             .guestBidLink{
-                background:linear-gradient(to right, $secondary, $secondary-hover);
-                color: $textColor;
+                color: $secondary;
                 padding: 8px 12px;
                 border-radius: 10px;
-                text-decoration: none;
+                text-decoration: none; 
                 font-family: "Roboto Flex", sans-serif;
                 
-                &:hover{
-                    font-size: 20px;
-                    border: none;
-                }
                 @include tablet{
                     padding: 9px 13px;
                     font-size: 22px;
 
-                    &:hover{
-                        font-size: 23px;
-                        border: none;
-                    }
                 }
             }
             .bidLink{
                 font-family: "Roboto Flex", sans-serif;
-                background: linear-gradient(to right, $secondary, $secondary-hover);
-                color: $textColor;
+                color: $secondary;
                 text-transform: uppercase;
                 border: none;
                 font-size: 16px;
@@ -161,10 +154,7 @@
                 padding: 10px 15px;
                 text-decoration: none;
 
-                &:hover{
-                    font-size: 17px;
-                    border: none;
-                }
+                
             } 
             .deleteLink{
                 background-color: $primary;
@@ -221,9 +211,9 @@
         }
     }
     .inputForm{
-        background-color: $textColor;
         width: 400px;
         border-radius: 10px;
+        border: 1px solid $form-background;
         padding: 15px;
         
         @include tablet{
