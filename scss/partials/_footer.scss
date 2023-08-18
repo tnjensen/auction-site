@@ -1,6 +1,6 @@
 .footer{
     width: 100vw;
-    background-color: $footer-background;
+    border-top: 1px solid rgba($footer-background, 0.5);
     color: #fff;
     
     .footer-content{
@@ -16,7 +16,7 @@
         }
 
         a{
-            color: $textColor;
+            color: $footer-background;
             text-decoration: none;
 
             &:hover{
@@ -41,6 +41,7 @@
                 margin: 5px 0;
                 border-radius: 5px;
                 padding: 5px;
+                border: 1px solid rgba($footer-background, 0.5);
             }
             input[type="submit"]{
                 background-color: $bs-link-hover-color;
@@ -56,5 +57,13 @@
     .footer-social-icons{
         display: flex;
         gap:10px;
+
+        i{
+            color: $footer-background;
+
+            &:hover{
+                color: $bs-link-hover-color;
+            }
+        }
     }
 }

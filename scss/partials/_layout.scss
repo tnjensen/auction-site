@@ -19,6 +19,9 @@ body{
     a:hover{
         color: $bs-link-hover-color;
     }
+    p{
+        color: $darkTextColor;
+    }
     .warning{
         background-color: $primary;
         color: $textColor;

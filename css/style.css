@@ -12613,8 +12613,8 @@ body .success {
 
 .footer {
   width: 100vw;
-  background-color: #4A4A4D;
-  color: #fff;
+  /* background-color: $footer-background; */
+  /* color: #fff; */
 }
 .footer .footer-content {
   padding: 40px;
@@ -12641,7 +12641,7 @@ body .success {
   }
 }
 .footer .footer-content a {
-  color: #fffefe;
+  /* color: $textColor; */
   text-decoration: none;
 }
 .footer .footer-content a:hover {
