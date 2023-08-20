@@ -12460,14 +12460,14 @@ body .success {
 }
 .showcase .slider .item .guestBidLink {
   color: #1546e6;
-  padding: 8px 12px;
+  padding: 8px 0;
   border-radius: 10px;
   text-decoration: none;
   font-family: "Roboto Flex", sans-serif;
 }
 @media (min-width: 768px) {
   .showcase .slider .item .guestBidLink {
-    padding: 9px 13px;
+    padding: 9px 0;
     font-size: 22px;
   }
 }
