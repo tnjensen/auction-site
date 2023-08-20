@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "mdb-ui-kit": "^6.4.1",
     "node-sass": "^8.0.0"
   },
   "name": "bs-auction-site",
