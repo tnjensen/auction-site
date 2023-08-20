@@ -22,6 +22,7 @@ const inputEndsAt = document.querySelector('.inputEndsAt');
 const messageContainer = document.querySelector('.message-container');
 const loader = document.querySelector('.loader');
 const angles = document.querySelectorAll('i');
+
 let index = 0;
 let maxPages = 0;
 let postsPerPage = 0;
@@ -123,9 +124,9 @@ function createHTML(results){
           if(user){
             bidLink = `<a href="profile.html?id=${results[i].id}#bid" class="bidLink">Make a bid</a>`;
           }
-          slider.innerHTML += `<div class='item'>
+          slider.innerHTML += `<div class="item">
             <h2>${results[i].title}</h2>
-            <img src=${results[i].media[0]}  alt=''/>
+            <img src=${results[i].media[0]} alt=''/>
             <p>${results[i].description}</p>
             <h3>${bidLink}</h3>
       </div>`

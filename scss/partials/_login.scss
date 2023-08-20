@@ -1,13 +1,10 @@
 .login{
     width: 100vw;
-    height: 100vh;
     display: flex;
     justify-content: center;
-    background-color: $backgroundColor;
 
     .wrapper{
-        width: 70%;
-        height: 70%;
+        width: 80%;
         display: flex;
         flex-direction: column;
 
@@ -16,11 +13,15 @@
         }
     }
     .loginRight, .loginLeft{
-        flex: 1;
+        /* flex: 1; */
         display: flex;
         flex-direction: column;
         justify-content: center;
         margin: 0 20px;
+
+        @include tablet{
+            justify-content: flex-start;
+        }
     }
     .loginLogo{
         font-weight: 600;

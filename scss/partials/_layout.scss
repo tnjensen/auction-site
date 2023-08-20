@@ -36,5 +36,6 @@ body{
     }
 }
 .wrapper{
-    min-height: 100vh;
+    min-height: calc(100vh - 300px);
+    margin: 60px 0;
 }
