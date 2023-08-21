@@ -97,8 +97,10 @@
             margin: 10px 20px;
 
             img{
-                min-height: 50%;
                 object-fit: cover;
+            }
+            p{
+                overflow-y: hidden;
             }
 
             @include mobile{

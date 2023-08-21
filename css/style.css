@@ -12420,9 +12420,11 @@ body .success {
   margin: 10px 20px;
 }
 .showcase .slider .item img {
-  min-height: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.showcase .slider .item p {
+  overflow-y: hidden;
 }
 @media (min-width: 480px) {
   .showcase .slider .item {
