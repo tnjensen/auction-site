@@ -12727,7 +12727,6 @@ body .success {
   }
 }
 .login .loginRight, .login .loginLeft {
-  /* flex: 1; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12742,6 +12741,9 @@ body .success {
 }
 @media (min-width: 768px) {
   .login .loginRight, .login .loginLeft {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
@@ -12839,7 +12841,6 @@ body .success {
   }
 }
 .register .registerRight, .register .registerLeft {
-  /* flex: 1; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12854,6 +12855,9 @@ body .success {
 }
 @media (min-width: 768px) {
   .register .registerRight, .register .registerLeft {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
