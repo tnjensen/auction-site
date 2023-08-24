@@ -12414,7 +12414,6 @@ body .success {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  max-width: 50%;
   height: 400px;
   /*  @include mobile{
        width: 180px;
@@ -12426,6 +12425,11 @@ body .success {
    @include desktop{
        width: 220px;
    } */
+}
+@media (min-width: 768px) {
+  .showcase .card {
+    max-width: 50%;
+  }
 }
 .showcase .card .card-img-top {
   height: 60%;

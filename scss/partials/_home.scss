@@ -94,9 +94,11 @@
         border-radius: 10px;
         margin: 0 10px;
         flex: 1;
-        max-width: 50%;
         height: 400px;
         
+        @include tablet{
+            max-width: 50%;
+        }
         .card-img-top{
             height: 60%;
             width: 100%;
