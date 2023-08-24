@@ -62,8 +62,11 @@ if(user){
 }
 
 menuButton.onclick = openMenu;
+window.onresize = detectViewport();
 
-document.onload = detectViewport();
+/* window.addEventListener('resize', getMaxPages); */
+
+/* document.onload = detectViewport(); */
 
 async function getItems(){
     try{
@@ -120,15 +123,17 @@ function createHTML(results){
         if(!results[i]){
             break;
         }else{
-          let bidLink = `<a href="profile.html?id=${results[i].id}#bid" class="guestBidLink">View bids</a>`;
+          let bidLink = `<a href="profile.html?id=${results[i].id}#bid" class="btn btn-secondary">View bids</a>`;
           if(user){
-            bidLink = `<a href="profile.html?id=${results[i].id}#bid" class="bidLink">Make a bid</a>`;
+            bidLink = `<a href="profile.html?id=${results[i].id}#bid" class="btn btn-secondary">Make a bid</a>`;
           }
-          slider.innerHTML += `<div class="item">
-            <h2>${results[i].title}</h2>
-            <img src=${results[i].media[0]} alt=''/>
-            <p>${results[i].description}</p>
-            <h3>${bidLink}</h3>
+          slider.innerHTML += `<div class="card" style="overflow:hidden;">
+          <img src=${results[i].media[0]} class="card-img-top" alt=''/>
+          <div class="card-body">
+              <h5 class="card-title">${results[i].title}</h5> 
+              <p class="card-text">${results[i].description}</p>
+              <h3>${bidLink}</h3>
+              </div>
       </div>`
         }
     }
