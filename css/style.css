@@ -12432,11 +12432,9 @@ body .success {
   }
 }
 .showcase .card .card-img-top {
-  min-height: 300px;
-  max-height: 300px;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  max-height: 30vh;
+  background-position: top center;
 }
 .showcase .card .card-body {
   display: -webkit-box;
