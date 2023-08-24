@@ -12155,7 +12155,6 @@ body .success {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  background-color: white;
   z-index: 10;
 }
 .header .left .logo {
@@ -12429,10 +12428,10 @@ body .success {
    } */
 }
 .showcase .card .card-img-top {
-  height: 40%;
+  height: 60%;
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .showcase .card .card-body {
   display: -webkit-box;

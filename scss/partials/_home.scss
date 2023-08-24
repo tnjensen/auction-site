@@ -98,9 +98,10 @@
         height: 400px;
         
         .card-img-top{
-            height: 40%;
+            height: 60%;
             width: 100%;
-            object-fit: contain;
+            object-fit: cover;
+            
         }
         .card-body{
             display: flex;
