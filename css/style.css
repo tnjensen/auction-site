@@ -12433,7 +12433,6 @@ body .success {
 }
 .showcase .card .card-img-top {
   width: 100%;
-  max-height: 30vh;
   background-position: top center;
 }
 .showcase .card .card-body {
