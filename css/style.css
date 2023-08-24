@@ -12434,6 +12434,7 @@ body .success {
 .showcase .card .card-img-top {
   width: 100%;
   background-position: top center;
+  max-height: 50%;
 }
 .showcase .card .card-body {
   display: -webkit-box;
