@@ -43,7 +43,7 @@
                 border: 1px solid rgba($footer-background, 0.5);
             }
             input[type="submit"]{
-                background-color: $secondary;
+                background-color: $bs-link-hover-color;
                 border: none;
                 color: #fffefe;
                 border-radius: 5px;
@@ -51,7 +51,7 @@
                 text-transform: uppercase;
 
                 &:hover{
-                    background-color: $bs-link-hover-color;
+                    background-color: $primary;
                 }
             }
         }
