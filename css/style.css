@@ -12414,16 +12414,6 @@ body .success {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  /*  @include mobile{
-       width: 180px;
-   }
-   @include tablet{
-       width: 200px;
-       margin: 10px 15px 20px 10px; 
-   }
-   @include desktop{
-       width: 220px;
-   } */
 }
 @media (min-width: 768px) {
   .showcase .card {
@@ -13024,7 +13014,7 @@ body .success {
   margin-top: 10px;
 }
 .profile .editButton:hover, .profile .bidButton:hover, .bid .editButton:hover, .bid .bidButton:hover {
-  background-color: #f79577;
+  background-color: #0731bb;
 }
 .profile .editButton, .bid .editButton {
   background-color: #1546e6;
@@ -13039,7 +13029,7 @@ body .success {
   text-decoration: none;
 }
 .profile .bidButton:hover, .bid .bidButton:hover {
-  background-color: #f79577;
+  background-color: #0731bb;
 }
 
 .main {
