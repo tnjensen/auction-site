@@ -12588,7 +12588,9 @@ body .success {
 
 .footer {
   width: 100vw;
-  border-top: 1px solid rgba(74, 74, 77, 0.5);
+  border-top: 3px solid #4A4A4D;
+  -o-border-image: linear-gradient(45deg, rgba(74, 74, 77, 0.7), rgba(74, 74, 77, 0.4)) 1;
+     border-image: linear-gradient(45deg, rgba(74, 74, 77, 0.7), rgba(74, 74, 77, 0.4)) 1;
 }
 .footer .footer-content {
   padding: 40px;
@@ -12647,7 +12649,7 @@ body .success {
   border: 1px solid rgba(74, 74, 77, 0.5);
 }
 .footer .footer-content .signup-form form input[type=submit] {
-  background-color: #f79577;
+  background-color: #ee7e5c;
   border: none;
   color: #fffefe;
   border-radius: 5px;
@@ -12655,7 +12657,7 @@ body .success {
   text-transform: uppercase;
 }
 .footer .footer-content .signup-form form input[type=submit]:hover {
-  background-color: #ee7e5c;
+  background-color: #f79577;
 }
 .footer .footer-social-icons {
   display: -webkit-box;
@@ -12743,7 +12745,8 @@ body .success {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #757578;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(74, 74, 77, 0.8)), to(rgba(74, 74, 77, 0.7)));
+  background: linear-gradient(to right, rgba(74, 74, 77, 0.8), rgba(74, 74, 77, 0.7));
 }
 .login .loginBox a {
   color: #fffefe;
@@ -12770,7 +12773,7 @@ body .success {
   margin-top: 10px;
 }
 .login .loginButton:hover {
-  background-color: #f79577;
+  background-color: #0731bb;
 }
 .login .loginButton:focus {
   outline: none;
@@ -12846,7 +12849,8 @@ body .success {
 .register .registerBox {
   height: 300px;
   padding: 20px;
-  background-color: #757578;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(74, 74, 77, 0.8)), to(rgba(74, 74, 77, 0.7)));
+  background: linear-gradient(to right, rgba(74, 74, 77, 0.8), rgba(74, 74, 77, 0.7));
   border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12882,7 +12886,7 @@ body .success {
   margin-top: 10px;
 }
 .register .signUpButton:hover {
-  background-color: #f79577;
+  background-color: #0731bb;
 }
 
 .profile, .bid {
@@ -12977,7 +12981,8 @@ body .success {
   width: 250px;
   padding: 20px;
   color: #fffefe;
-  background-color: #757578;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(74, 74, 77, 0.8)), to(rgba(74, 74, 77, 0.7)));
+  background: linear-gradient(to right, rgba(74, 74, 77, 0.8), rgba(74, 74, 77, 0.7));
   border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;

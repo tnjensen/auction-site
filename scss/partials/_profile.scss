@@ -68,7 +68,7 @@
         width: 250px;
         padding: 20px;
         color: $textColor;
-        background-color: $form-background;
+        background: linear-gradient(to right, rgba($footer-background, 0.8), rgba($footer-background, 0.7));
         border-radius: 10px;
         display: flex;
         justify-content: space-around;

@@ -1,7 +1,8 @@
 .footer{
     width: 100vw;
-    border-top: 1px solid rgba($footer-background, 0.5);
-    
+    border-top: 3px solid $footer-background; 
+    border-image: linear-gradient(45deg, rgba($footer-background, 0.7), rgba($footer-background, 0.4)) 1;
+
     .footer-content{
         padding: 40px;
         display: flex;
@@ -43,7 +44,7 @@
                 border: 1px solid rgba($footer-background, 0.5);
             }
             input[type="submit"]{
-                background-color: $bs-link-hover-color;
+                background-color: $primary;
                 border: none;
                 color: #fffefe;
                 border-radius: 5px;
@@ -51,7 +52,7 @@
                 text-transform: uppercase;
 
                 &:hover{
-                    background-color: $primary;
+                    background-color: $bs-link-hover-color;
                 }
             }
         }
