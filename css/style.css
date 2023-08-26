@@ -12414,7 +12414,6 @@ body .success {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  height: 450px;
   /*  @include mobile{
        width: 180px;
    }
@@ -12434,7 +12433,6 @@ body .success {
 .showcase .card .card-img-top {
   width: 100%;
   background-position: top center;
-  max-height: 70%;
 }
 .showcase .card .card-body {
   display: -webkit-box;
@@ -12447,7 +12445,7 @@ body .success {
   word-wrap: normal;
 }
 .showcase .card .card-body .card-text {
-  height: 18%;
+  height: 80%;
   overflow: hidden;
 }
 .showcase .card h2, .showcase .card .h2 {
