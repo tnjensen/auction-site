@@ -12659,12 +12659,15 @@ body .success {
   border: 1px solid rgba(74, 74, 77, 0.5);
 }
 .footer .footer-content .signup-form form input[type=submit] {
-  background-color: #f79577;
+  background-color: #1546e6;
   border: none;
   color: #fffefe;
   border-radius: 5px;
   padding: 5px 0;
   text-transform: uppercase;
+}
+.footer .footer-content .signup-form form input[type=submit]:hover {
+  background-color: #f79577;
 }
 .footer .footer-social-icons {
   display: -webkit-box;
