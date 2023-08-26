@@ -35,7 +35,7 @@
     .registerBox{
         height: 300px;
         padding: 20px;
-        background: linear-gradient(to right, rgba($footer-background, 0.8), rgba($footer-background, 0.7));
+        background-color: $form-background;
         border-radius: 10px;
         display: flex;
         justify-content: space-around;

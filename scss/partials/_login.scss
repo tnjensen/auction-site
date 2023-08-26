@@ -39,7 +39,7 @@
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        background: linear-gradient(to right, rgba($footer-background, 0.8), rgba($footer-background, 0.7));
+        background-color: $form-background;
 
         a{
             color: $textColor;
@@ -80,5 +80,9 @@
         margin-top: 10px;
         text-align: center;
         cursor: pointer;
+
+        &:hover{
+            color: rgba($textColor, 0.7);
+        }
     }
 }
