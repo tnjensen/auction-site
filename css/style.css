@@ -12588,9 +12588,7 @@ body .success {
 
 .footer {
   width: 100vw;
-  border-top: 3px solid #4A4A4D;
-  -o-border-image: linear-gradient(45deg, rgba(74, 74, 77, 0.7), rgba(74, 74, 77, 0.4)) 1;
-     border-image: linear-gradient(45deg, rgba(74, 74, 77, 0.7), rgba(74, 74, 77, 0.4)) 1;
+  border-top: 3px solid rgba(74, 74, 77, 0.3);
 }
 .footer .footer-content {
   padding: 40px;

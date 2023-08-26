@@ -1,8 +1,7 @@
 .footer{
     width: 100vw;
-    border-top: 3px solid $footer-background; 
-    border-image: linear-gradient(45deg, rgba($footer-background, 0.7), rgba($footer-background, 0.4)) 1;
-
+    border-top: 3px solid rgba($footer-background, 0.3); 
+    
     .footer-content{
         padding: 40px;
         display: flex;
