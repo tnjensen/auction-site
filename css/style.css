@@ -30,7 +30,7 @@
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
   --bs-primary: #ee7e5c;
-  --bs-secondary: #1546e6;
+  --bs-secondary: #0731bb;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
@@ -38,7 +38,7 @@
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
   --bs-primary-rgb: 238, 126, 92;
-  --bs-secondary-rgb: 21, 70, 230;
+  --bs-secondary-rgb: 7, 49, 187;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
   --bs-warning-rgb: 255, 193, 7;
@@ -2087,13 +2087,13 @@ progress {
 
 .table-secondary {
   --bs-table-color: #000;
-  --bs-table-bg: #d0dafa;
-  --bs-table-border-color: #bbc4e1;
-  --bs-table-striped-bg: #c6cfee;
+  --bs-table-bg: #cdd6f1;
+  --bs-table-border-color: #b9c1d9;
+  --bs-table-striped-bg: #c3cbe5;
   --bs-table-striped-color: #000;
-  --bs-table-active-bg: #bbc4e1;
+  --bs-table-active-bg: #b9c1d9;
   --bs-table-active-color: #000;
-  --bs-table-hover-bg: #c0cae7;
+  --bs-table-hover-bg: #bec6df;
   --bs-table-hover-color: #000;
   color: var(--bs-table-color);
   border-color: var(--bs-table-border-color);
@@ -3241,19 +3241,19 @@ textarea.form-control-lg {
 
 .btn-secondary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #1546e6;
-  --bs-btn-border-color: #1546e6;
+  --bs-btn-bg: #0731bb;
+  --bs-btn-border-color: #0731bb;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #123cc4;
-  --bs-btn-hover-border-color: #1138b8;
-  --bs-btn-focus-shadow-rgb: 56, 98, 234;
+  --bs-btn-hover-bg: #062a9f;
+  --bs-btn-hover-border-color: #062796;
+  --bs-btn-focus-shadow-rgb: 44, 80, 197;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #1138b8;
-  --bs-btn-active-border-color: #1035ad;
+  --bs-btn-active-bg: #062796;
+  --bs-btn-active-border-color: #05258c;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #1546e6;
-  --bs-btn-disabled-border-color: #1546e6;
+  --bs-btn-disabled-bg: #0731bb;
+  --bs-btn-disabled-border-color: #0731bb;
 }
 
 .btn-success {
@@ -3376,19 +3376,19 @@ textarea.form-control-lg {
 }
 
 .btn-outline-secondary {
-  --bs-btn-color: #1546e6;
-  --bs-btn-border-color: #1546e6;
+  --bs-btn-color: #0731bb;
+  --bs-btn-border-color: #0731bb;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #1546e6;
-  --bs-btn-hover-border-color: #1546e6;
-  --bs-btn-focus-shadow-rgb: 21, 70, 230;
+  --bs-btn-hover-bg: #0731bb;
+  --bs-btn-hover-border-color: #0731bb;
+  --bs-btn-focus-shadow-rgb: 7, 49, 187;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #1546e6;
-  --bs-btn-active-border-color: #1546e6;
+  --bs-btn-active-bg: #0731bb;
+  --bs-btn-active-border-color: #0731bb;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #1546e6;
+  --bs-btn-disabled-color: #0731bb;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #1546e6;
+  --bs-btn-disabled-border-color: #0731bb;
   --bs-gradient: none;
 }
 
@@ -5241,12 +5241,12 @@ textarea.form-control-lg {
 }
 
 .alert-secondary {
-  --bs-alert-color: #0d2a8a;
-  --bs-alert-bg: #d0dafa;
-  --bs-alert-border-color: #b9c8f8;
+  --bs-alert-color: #041d70;
+  --bs-alert-bg: #cdd6f1;
+  --bs-alert-border-color: #b5c1eb;
 }
 .alert-secondary .alert-link {
-  color: #0a226e;
+  color: #03175a;
 }
 
 .alert-success {
@@ -5652,17 +5652,17 @@ textarea.form-control-lg {
 }
 
 .list-group-item-secondary {
-  color: #0d2a8a;
-  background-color: #d0dafa;
+  color: #041d70;
+  background-color: #cdd6f1;
 }
 .list-group-item-secondary.list-group-item-action:hover, .list-group-item-secondary.list-group-item-action:focus {
-  color: #0d2a8a;
-  background-color: #bbc4e1;
+  color: #041d70;
+  background-color: #b9c1d9;
 }
 .list-group-item-secondary.list-group-item-action.active {
   color: #fff;
-  background-color: #0d2a8a;
-  border-color: #0d2a8a;
+  background-color: #041d70;
+  border-color: #041d70;
 }
 
 .list-group-item-success {
@@ -7451,7 +7451,7 @@ textarea.form-control-lg {
 
 .text-bg-secondary {
   color: #fff !important;
-  background-color: RGBA(21, 70, 230, var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(7, 49, 187, var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-success {
@@ -7492,10 +7492,10 @@ textarea.form-control-lg {
 }
 
 .link-secondary {
-  color: #1546e6 !important;
+  color: #0731bb !important;
 }
 .link-secondary:hover, .link-secondary:focus {
-  color: #1138b8 !important;
+  color: #062796 !important;
 }
 
 .link-success {
@@ -12115,10 +12115,10 @@ body h1, body .h1, body h2, body .h2, body h3, body .h3, body h4, body .h4, body
   font-family: Lora, Georgia, "Times New Roman", Times, serif;
 }
 body h1, body .h1 {
-  color: #1546e6;
+  color: #0731bb;
 }
 body a {
-  color: #1546e6;
+  color: #0731bb;
 }
 body a:hover {
   color: #f79577;
@@ -12133,7 +12133,7 @@ body .warning {
   width: 300px;
 }
 body .success {
-  background-color: #1546e6;
+  background-color: #0731bb;
   color: #fffefe;
   padding: 10px;
   width: 300px;
@@ -12170,7 +12170,7 @@ body .success {
   }
 }
 .header .profile-details .profile-divider {
-  color: #1546e6;
+  color: #0731bb;
 }
 .header .profile-details a {
   text-decoration: none;
@@ -12180,7 +12180,7 @@ body .success {
   margin-bottom: 5px;
 }
 .header .credits {
-  color: #1546e6;
+  color: #0731bb;
 }
 .header .right ul {
   list-style: none;
@@ -12229,7 +12229,7 @@ body .success {
   transition: all 1s ease;
 }
 .header.active {
-  background-color: #1546e6;
+  background-color: #0731bb;
   color: #fffefe;
 }
 .header.active .logo {
@@ -12260,7 +12260,7 @@ body .success {
 .header.active .right ul {
   display: block;
   width: 120px;
-  background-color: #1546e6;
+  background-color: #0731bb;
   position: absolute;
   top: 70px;
   right: 0;
@@ -12279,7 +12279,7 @@ body .success {
   margin: 20px 0;
 }
 .showcase-heading h1, .showcase-heading .h1 {
-  color: #1546e6;
+  color: #0731bb;
 }
 
 .loading-indicator {
@@ -12533,7 +12533,7 @@ body .success {
   margin-bottom: 40px;
 }
 .listing h2, .listing .h2 {
-  color: #1546e6;
+  color: #0731bb;
 }
 .listing .message-container {
   padding: 10px 0;
@@ -12544,7 +12544,7 @@ body .success {
   padding: 5px;
 }
 .listing .message-container .success {
-  background-color: #1546e6;
+  background-color: #0731bb;
   color: #fffefe;
   padding: 5px;
 }
@@ -12749,7 +12749,7 @@ body .success {
 }
 .login .loginLogo {
   font-weight: 600;
-  color: #1546e6;
+  color: #0731bb;
   margin: 20px 0 10px 0;
 }
 .login .loginDesc {
@@ -12789,7 +12789,7 @@ body .success {
   height: 50px;
   border-radius: 10px;
   border: none;
-  background-color: #1546e6;
+  background-color: #0731bb;
   color: #fffefe;
   font-family: "Roboto Flex", sans-serif;
   cursor: pointer;
@@ -12797,7 +12797,7 @@ body .success {
   margin-top: 10px;
 }
 .login .loginButton:hover {
-  background-color: #0731bb;
+  background-color: #1546e6;
 }
 .login .loginButton:focus {
   outline: none;
@@ -12866,7 +12866,7 @@ body .success {
 }
 .register .registerLogo {
   font-weight: 600;
-  color: #1546e6;
+  color: #0731bb;
   margin: 20px 0 10px 0;
 }
 .register .registerDesc {
@@ -12902,7 +12902,7 @@ body .success {
   height: 50px;
   border-radius: 10px;
   border: none;
-  background: #1546e6;
+  background: #0731bb;
   color: #fffefe;
   text-transform: uppercase;
   padding: 8px 12px;
@@ -12912,7 +12912,7 @@ body .success {
   margin-top: 10px;
 }
 .register .signUpButton:hover {
-  background-color: #0731bb;
+  background-color: #1546e6;
 }
 
 .profile, .bid {
@@ -12990,7 +12990,7 @@ body .success {
   width: 40px;
 }
 .profile .profileHeader, .profile .bidHeader, .bid .profileHeader, .bid .bidHeader {
-  color: #1546e6;
+  color: #0731bb;
   padding-bottom: 10px;
 }
 .profile .profileDesc, .bid .profileDesc {
@@ -13036,7 +13036,7 @@ body .success {
   height: 50px;
   border-radius: 10px;
   border: none;
-  background-color: #1546e6;
+  background-color: #0731bb;
   color: #fffefe;
   font-weight: 500;
   font-size: 18px;
@@ -13044,14 +13044,14 @@ body .success {
   margin-top: 10px;
 }
 .profile .editButton:hover, .profile .bidButton:hover, .bid .editButton:hover, .bid .bidButton:hover {
-  background-color: #0731bb;
+  background-color: #1546e6;
 }
 .profile .editButton, .bid .editButton {
-  background-color: #1546e6;
+  background-color: #0731bb;
   text-transform: uppercase;
 }
 .profile .bidButton, .bid .bidButton {
-  background: #1546e6;
+  background: #0731bb;
   color: #fffefe;
   text-transform: uppercase;
   padding: 8px 12px;
@@ -13059,7 +13059,7 @@ body .success {
   text-decoration: none;
 }
 .profile .bidButton:hover, .bid .bidButton:hover {
-  background-color: #0731bb;
+  background-color: #1546e6;
 }
 
 .main {
