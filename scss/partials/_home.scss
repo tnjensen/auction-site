@@ -95,28 +95,29 @@
         border-radius: 10px;
         margin: 0 10px;
         flex: 1;
-        max-height: 70vh;
-        
+        height: 400px;
+      
         @include tablet{
             max-width: 50%;
         }
         .card-img-top{
             height: 220px;
-            background-position: top;
             
         }
         .card-body{
             display: flex;
             flex-direction: column;
+            position: relative;
             word-wrap: normal;
 
             .card-text{
-                min-height: 20%;
-                max-height: 20%;
+                min-height: 15%;
+                max-height: 15%;
                 overflow: hidden;
             }
             .btn{
-                margin-bottom: 10px;
+                position: absolute;
+                top: 120px;
             }
         }
         

@@ -12414,7 +12414,7 @@ body .success {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  max-height: 70vh;
+  height: 400px;
 }
 @media (min-width: 768px) {
   .showcase .card {
@@ -12423,7 +12423,6 @@ body .success {
 }
 .showcase .card .card-img-top {
   height: 220px;
-  background-position: top;
 }
 .showcase .card .card-body {
   display: -webkit-box;
@@ -12433,15 +12432,17 @@ body .success {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
   word-wrap: normal;
 }
 .showcase .card .card-body .card-text {
-  min-height: 20%;
-  max-height: 20%;
+  min-height: 15%;
+  max-height: 15%;
   overflow: hidden;
 }
 .showcase .card .card-body .btn {
-  margin-bottom: 10px;
+  position: absolute;
+  top: 120px;
 }
 .showcase .card h2, .showcase .card .h2 {
   font-size: 20px;
