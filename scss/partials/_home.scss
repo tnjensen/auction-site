@@ -95,13 +95,15 @@
         border-radius: 10px;
         margin: 0 10px;
         flex: 1;
-        height: 400px;
+        height: 450px;
       
         @include tablet{
             max-width: 50%;
         }
         .card-img-top{
-            height: 220px;
+            min-height: 60%;
+            max-height: 60%;
+            object-fit: cover;
             
         }
         .card-body{
@@ -111,8 +113,9 @@
             word-wrap: normal;
 
             .card-text{
-                min-height: 15%;
+                min-height: 12%;
                 max-height: 15%;
+                margin: 0;
                 overflow: hidden;
             }
             .btn{
