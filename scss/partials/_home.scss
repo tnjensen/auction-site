@@ -1,6 +1,6 @@
 .showcase-heading{
     text-align: center;
-    margin: 40px 0 20px 0;
+    margin: 20px 0;
     
     h1{
         color: $secondary;
@@ -99,6 +99,7 @@
       
         @include tablet{
             max-width: 50%;
+            height: 500px;
         }
         .card-img-top{
             min-height: 60%;
@@ -113,14 +114,23 @@
             word-wrap: normal;
 
             .card-text{
-                min-height: 12%;
+                min-height: 15%;
                 max-height: 15%;
                 margin: 0;
                 overflow: hidden;
+
+                @include desktop{
+                    min-height: 20%;
+                    max-height: 20%;
+                }
             }
             .btn{
                 position: absolute;
                 top: 120px;
+
+                @include desktop{
+                    top: 140px;
+                }
             }
         }
         
