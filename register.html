@@ -1,113 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto+Flex:wght@500;600&family=Roboto:wght@100;300;700;900&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto+Flex:wght@500;600&family=Roboto:wght@100;300;700;900&display=swap"
+      rel="stylesheet"
+    />
     <title>Auction App</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <div class="header">
-        <div class="left">
-            <a href="index.html" class="logo">BidCove</a>
+      <div class="left">
+        <a href="index.html" class="logo">BidCove</a>
+      </div>
+      <div class="profile-details">
+        <a href="login.html" class="logLink">Login</a>
+        <span class="profile-divider">|</span>
+        <a href="register.html" class="regLink">Register</a>
+      </div>
+      <div class="right">
+        <div class="bars">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
         </div>
-        <div class="profile-details">
-            <a href="login.html" class="logLink">Login</a>
-            <span class="profile-divider">|</span>
-            <a href="register.html" class="regLink">Register</a>
-        </div>
-        <div class="right">
-            <div class="bars">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
     </div>
     <div class="register">
-        <div class="wrapper">
-            <div class="registerLeft">
-                <h1 class="registerLogo">BidCove</h1>
-                    <span class="registerDesc">
-                Register and gain NOK 1000 to bid on our auctions</span>
-            </div>
-            <div class="registerRight">
-                <div class="message-container"></div>
-                <form class="registerBox">
-                    <input placeholder="username" required class="registerName">
-                    <input placeholder="email" required class="registerEmail" type="email">
-                    <input placeholder='password' required class="registerPassword" type="password" minLength="6">
-                    <input placeholder="avatar-link optional" type="text" class="registerAvatar">
-                    <button class="signUpButton" type="submit">Sign up</button>
-                </form>           
-            </div>
+      <div class="wrapper">
+        <div class="registerLeft">
+          <h1 class="registerLogo">BidCove</h1>
+          <span class="registerDesc">
+            Register and gain NOK 1000 to bid on our auctions
+          </span>
         </div>
+        <div class="registerRight">
+          <div class="message-container"></div>
+          <form class="registerBox">
+            <label class="lblUsername">Username</label>
+            <input placeholder="username" required class="registerName">
+            <label class="lblEmail">Email</label>
+            <input
+              placeholder="email"
+              required
+              class="registerEmail"
+              type="email"
+            >
+            <label class="lblPassword">Password</label>
+            <input
+              placeholder="password"
+              required
+              class="registerPassword"
+              type="password"
+              minlength="6"
+            >
+            <label class="lblAvatarLink">Avatar</label>
+            <input
+              placeholder="avatar-link optional"
+              type="text"
+              class="registerAvatar"
+            >
+            <button class="signUpButton" type="submit">Sign up</button>
+          </form>
+        </div>
+      </div>
     </div>
     <div class="footer">
-        <div class="footer-content">
-          <div class="footer-category">
-            <p>Copyright &copy; <span id="year"></span></p>
-          </div>
-          <div class="footer-category">
-            <p>Contact</p>
-            <p>+47 345 678 903</p>
-            <p><a href="mailto:bidcove@mail.com">bidcove@mail.com</a></p>
-            <p><a href="contact.html">Find out more</a></p>
-          </div>
-          <div class="footer-category">
-            <p>Services</p>
-            <a href="shipping.html">Shipping</a>
-            <p><a href="returns.html">Returns</a></p>
-          </div>
-          <div class="footer-category">
-            <p>Information</p>
-            <a href="privacy.html">Privacy Policy</a>
-          </div>
-          <div class="footer-category">
-            <div class="signup-form">
-              <p>Sign up for our newsletter</p>
-              <form>
-                <input type="text" placeholder="Name" title="Name">
-                <input type="email" placeholder="Email" title="Email">
-                <input
-                  class="submit"
-                  type="submit"
-                  name="submit"
-                  title="Sign up"
-                  value="Send"
-                >
-              </form>
-            </div>
-          </div>
-          <div class="footer-social">
-            <p>Social</p>
-            <div class="footer-social-icons">
-                <a href="https://www.instagram.com" aria-label="Instagram"
-                  ><i class="fa fa-instagram"></i
-                ></a>
-                <a href="https://www.twitter.com" aria-label="Twitter"
-                  ><i class="fa fa-twitter"></i
-                ></a>
-                <a href="https://www.facebook.com" aria-label="FaceBook"
-                  ><i class="fa fa-facebook"></i
-                ></a>
-              </div>
-          </div>
-          <!--footer-nav-->
+      <div class="footer-content">
+        <div class="footer-category">
+          <p>
+            Copyright &copy;
+            <span id="year"></span>
+          </p>
         </div>
-        <!--footer-content-->
+        <div class="footer-category">
+          <p>Contact</p>
+          <p>+47 345 678 903</p>
+          <p><a href="mailto:bidcove@mail.com">bidcove@mail.com</a></p>
+          <p><a href="contact.html">Find out more</a></p>
+        </div>
+        <div class="footer-category">
+          <p>Services</p>
+          <a href="shipping.html">Shipping</a>
+          <p><a href="returns.html">Returns</a></p>
+        </div>
+        <div class="footer-category">
+          <p>Information</p>
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
+        <div class="footer-category">
+          <div class="signup-form">
+            <p>Sign up for our newsletter</p>
+            <form>
+              <input type="text" placeholder="Name" title="Name">
+              <input type="email" placeholder="Email" title="Email">
+              <input
+                class="submit"
+                type="submit"
+                name="submit"
+                title="Sign up"
+                value="Send"
+              >
+            </form>
+          </div>
+        </div>
+        <div class="footer-social">
+          <p>Social</p>
+          <div class="footer-social-icons">
+            <a href="https://www.instagram.com" aria-label="Instagram">
+              <i class="fa fa-instagram"></i>
+            </a>
+            <a href="https://www.twitter.com" aria-label="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+            <a href="https://www.facebook.com" aria-label="FaceBook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </div>
+        </div>
+        <!--footer-nav-->
+      </div>
+      <!--footer-content-->
     </div>
-    <script src="https://use.fontawesome.com/e3b1e831fc.js"></script> 
+    <script src="https://use.fontawesome.com/e3b1e831fc.js"></script>
     <script src="js/register.js" type="module"></script>
     <script src="js/logout.js" type="module"></script>
-</body>
+  </body>
 </html>

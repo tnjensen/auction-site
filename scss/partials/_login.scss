@@ -33,7 +33,6 @@
         margin-bottom: 10px;
     }
     .loginBox{
-        height: 300px;
         padding: 20px;
         border-radius: 10px;
         display: flex;
@@ -44,6 +43,9 @@
         a{
             color: $textColor;
         }
+    }
+    .lblUsername, .lblPassword{
+        color: $textColor;
     }
     .loginName, .loginEmail, .loginPassword{
         height: 50px;

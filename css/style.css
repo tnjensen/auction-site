@@ -12757,7 +12757,6 @@ body .success {
   margin-bottom: 10px;
 }
 .login .loginBox {
-  height: 300px;
   padding: 20px;
   border-radius: 10px;
   display: -webkit-box;
@@ -12773,6 +12772,9 @@ body .success {
   background-color: #757578;
 }
 .login .loginBox a {
+  color: #fffefe;
+}
+.login .lblUsername, .login .lblPassword {
   color: #fffefe;
 }
 .login .loginName, .login .loginEmail, .login .loginPassword {
@@ -12874,7 +12876,6 @@ body .success {
   margin-bottom: 10px;
 }
 .register .registerBox {
-  height: 300px;
   padding: 20px;
   background-color: #757578;
   border-radius: 10px;
@@ -12887,6 +12888,9 @@ body .success {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+.register .registerBox .lblUsername, .register .registerBox .lblEmail, .register .registerBox .lblPassword, .register .registerBox .lblAvatarLink {
+  color: #fffefe;
 }
 .register .registerName, .register .registerEmail, .register .registerPassword, .register .registerAvatar {
   height: 50px;

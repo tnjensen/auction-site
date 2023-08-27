@@ -33,13 +33,16 @@
         margin-bottom: 10px;
     }
     .registerBox{
-        height: 300px;
         padding: 20px;
         background-color: $form-background;
         border-radius: 10px;
         display: flex;
         justify-content: space-around;
         flex-direction: column;
+
+        .lblUsername,.lblEmail, .lblPassword, .lblAvatarLink{
+            color: $textColor;
+        }
     }
     .registerName, .registerEmail, .registerPassword, .registerAvatar{
         height: 50px;
