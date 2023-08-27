@@ -128,9 +128,9 @@ function createHTML(results){
           slider.innerHTML += `<div class="card" style="overflow:hidden;">
           <img src=${results[i].media[0]} class="card-img-top" alt=''/>
           <div class="card-body">
-              <h5 class="card-title">${results[i].title}</h5> 
+              <h3 class="card-title">${results[i].title}</h3> 
               <p class="card-text">${results[i].description}</p>
-              <h3>${bidLink}</h3>
+              <span>${bidLink}</span>
               </div>
       </div>`
         }
