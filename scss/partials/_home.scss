@@ -57,6 +57,7 @@
             font-size: 16px;     
         }
     }
+
     .fa-angle-left, .fa-angle-right{
         position: absolute;
         top: 100px;
@@ -94,13 +95,14 @@
         border-radius: 10px;
         margin: 0 10px;
         flex: 1;
+        max-height: 70vh;
         
         @include tablet{
             max-width: 50%;
         }
         .card-img-top{
-            width: 100%;
-            background-position: top center;
+            height: 220px;
+            background-position: top;
             
         }
         .card-body{
@@ -109,8 +111,12 @@
             word-wrap: normal;
 
             .card-text{
-                height: 80%;
+                min-height: 20%;
+                max-height: 20%;
                 overflow: hidden;
+            }
+            .btn{
+                margin-bottom: 10px;
             }
         }
         
