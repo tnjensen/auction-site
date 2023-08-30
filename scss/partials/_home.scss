@@ -98,12 +98,12 @@
             max-width: 50%;
         }
         .card-img-top{
-            height: 30vh;
+            height: 35vh;
             object-fit: cover;
             
         }
         .card-body{
-            height: 25vh;
+            height: 20vh;
             display: flex;
             flex-direction: column;
             position: relative;
@@ -111,8 +111,8 @@
             .card-text{
                 display: -webkit-box;
                 overflow: hidden;
-                -webkit-line-clamp: 3;
-                line-clamp: 3;
+                -webkit-line-clamp: 2;
+                line-clamp: 2;
                 -webkit-box-orient: vertical;
 
                 &.long:hover{
