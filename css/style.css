@@ -12368,7 +12368,7 @@ body .success {
 }
 .showcase .fa-angle-left, .showcase .fa-angle-right {
   position: absolute;
-  top: 100px;
+  /*  top: 100px; */
   cursor: pointer;
 }
 .showcase .fa-angle-left, .showcase .fa-angle-right {
