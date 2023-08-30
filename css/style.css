@@ -12368,7 +12368,7 @@ body .success {
 }
 .showcase .fa-angle-left, .showcase .fa-angle-right {
   position: absolute;
-  /*  top: 100px; */
+  top: 100px;
   cursor: pointer;
 }
 .showcase .fa-angle-left, .showcase .fa-angle-right {
@@ -12415,18 +12415,17 @@ body .success {
   }
 }
 .showcase .card .card-img-top {
-  height: 35vh;
   -o-object-fit: cover;
      object-fit: cover;
 }
 @media (min-width: 768px) {
   .showcase .card .card-img-top {
-    height: 45vh;
+    /* height: 45vh; */
   }
 }
 @media (min-width: 992px) {
   .showcase .card .card-img-top {
-    height: 50vh;
+    /* height: 50vh; */
   }
 }
 .showcase .card .card-body {
@@ -12441,16 +12440,15 @@ body .success {
 .showcase .card .card-body .card-text {
   display: -webkit-box;
   overflow: hidden;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
-  margin: 0;
-  min-height: 1.5rem;
 }
 .showcase .card .card-body .card-text.long:hover {
   padding: 5px 10px;
   -webkit-line-clamp: unset;
   position: absolute;
+  left: 0;
   z-index: 10;
   background-color: #757578;
   color: #fffefe;
