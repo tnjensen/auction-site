@@ -12414,10 +12414,6 @@ body .success {
     max-width: 50%;
   }
 }
-.showcase .card .card-img-top {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
 @media (min-width: 768px) {
   .showcase .card .card-img-top {
     /* height: 45vh; */
