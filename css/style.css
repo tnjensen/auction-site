@@ -12354,12 +12354,6 @@ body .success {
 }
 @media (min-width: 768px) {
   .showcase .slider {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     -webkit-transition: all 1s ease-out;
     transition: all 1s ease-out;
   }
@@ -12414,21 +12408,19 @@ body .success {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  /*  height: 450px; */
 }
 @media (min-width: 768px) {
   .showcase .card {
     max-width: 50%;
-    /*  height: 500px; */
   }
 }
 .showcase .card .card-img-top {
-  min-height: 60%;
-  height: 60%;
+  height: 30vh;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .showcase .card .card-body {
+  height: 25vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12437,23 +12429,21 @@ body .success {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  word-wrap: normal;
 }
 .showcase .card .card-body .card-text {
   display: -webkit-box;
-  /* min-height: 15%;
-  max-height: 15%; */
-  /* margin: 0; */
   overflow: hidden;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
 }
-@media (min-width: 992px) {
-  .showcase .card .card-body .card-text {
-    /* min-height: 20%;
-    max-height: 20%; */
-  }
+.showcase .card .card-body .card-text.long:hover {
+  padding: 5px 10px;
+  -webkit-line-clamp: unset;
+  position: absolute;
+  z-index: 10;
+  background-color: #757578;
+  color: #fffefe;
 }
 .showcase .card .card-body .btn {
   position: absolute;

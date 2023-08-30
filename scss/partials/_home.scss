@@ -44,8 +44,6 @@
         justify-content: center;
         
         @include tablet{
-            display: flex;
-            justify-content: center;
             transition: all 1s ease-out;
         }
     }
@@ -95,39 +93,35 @@
         border-radius: 10px;
         margin: 0 10px;
         flex: 1;
-       /*  height: 450px; */
       
         @include tablet{
             max-width: 50%;
-           /*  height: 500px; */
         }
         .card-img-top{
-            min-height: 60%;
-            height: 60%;
+            height: 30vh;
             object-fit: cover;
             
         }
         .card-body{
+            height: 25vh;
             display: flex;
             flex-direction: column;
             position: relative;
-            word-wrap: normal;
-
-
-
+            
             .card-text{
                 display: -webkit-box;
-                /* min-height: 15%;
-                max-height: 15%; */
-                /* margin: 0; */
                 overflow: hidden;
-                -webkit-line-clamp: 2;
-                line-clamp: 2;
+                -webkit-line-clamp: 3;
+                line-clamp: 3;
                 -webkit-box-orient: vertical;
 
-                @include desktop{
-                    /* min-height: 20%;
-                    max-height: 20%; */
+                &.long:hover{
+                    padding: 5px 10px;
+                    -webkit-line-clamp: unset;
+                    position: absolute;
+                    z-index: 10;
+                    background-color: $form-background;
+                    color: $textColor; 
                 }
             }
             .btn{

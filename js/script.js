@@ -62,10 +62,6 @@ if(user){
 menuButton.onclick = openMenu;
 window.onresize = detectViewport();
 
-/* window.addEventListener('resize', getMaxPages); */
-
-/* document.onload = detectViewport(); */
-
 async function getItems(){
     try{
         const response = await fetch(baseUrl + listings);
@@ -73,7 +69,6 @@ async function getItems(){
         slider.innerHTML = "";
         loader.innerHTML = "";
         postResult = results;
-        console.log(results);
         loader.classList.remove('loading-indicator');
         let currentSlide = results[0];
         index = results.indexOf(currentSlide);
@@ -125,17 +120,28 @@ function createHTML(results){
           if(user){
             bidLink = `<a href="profile.html?id=${results[i].id}#bid" class="btn btn-secondary">Make a bid</a>`;
           }
-          slider.innerHTML += `<div class="card" style="overflow:hidden;">
-          <img src=${results[i].media[0]} class="card-img-top" alt=''/>
+          slider.innerHTML += `<div class="card">
+          <div class="embed-responsive embed-responsive-16by9">
+              <img src=${results[i].media[0]}  alt='item image' class="card-img-top embed-responsive-item">
+          </div>
           <div class="card-body">
               <h2 class="card-title">${results[i].title}</h2> 
               <p class="card-text">${results[i].description}</p>
               <span>${bidLink}</span>
-              </div>
-      </div>`
+          </div>
+        </div>`
         }
-    }
-    
+    } 
+    checkLength(results);
+}
+function checkLength(results){
+  let nodeList = document.querySelectorAll('.card-text');
+
+    for(let i = 0; i < nodeList.length; i++){
+        if(results[i].description.length > 70){
+          nodeList[i].classList.add('long');
+        }
+      }
 }
 
 inputForm.addEventListener('submit', handleSubmit);
