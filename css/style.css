@@ -12419,6 +12419,11 @@ body .success {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (min-width: 768px) {
+  .showcase .card .card-img-top {
+    height: 45vh;
+  }
+}
 .showcase .card .card-body {
   height: 20vh;
   display: -webkit-box;
