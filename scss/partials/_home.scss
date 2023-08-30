@@ -98,8 +98,12 @@
             max-width: 50%;
         }
         .card-img-top{
+            height: 30vw;
+            object-fit: cover;
            
-
+            &.tall{
+                object-fit: fill;
+            }
             @include tablet{
                 /* height: 45vh; */
             }
@@ -116,8 +120,8 @@
             .card-text{
                 display: -webkit-box;
                 overflow: hidden;
-                -webkit-line-clamp: 3;
-                line-clamp: 3;
+                -webkit-line-clamp: 4;
+                line-clamp: 4;
                 -webkit-box-orient: vertical;
 
                 &.long:hover{

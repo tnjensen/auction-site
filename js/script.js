@@ -131,6 +131,7 @@ function createHTML(results){
         }
     } 
     checkLength(results);
+    checkImageRatio(results);
 }
 function checkLength(results){
   let nodeList = document.querySelectorAll('.card-text');
@@ -141,7 +142,19 @@ function checkLength(results){
         }
       }
 }
-
+function checkImageRatio(results){
+  let nodeList = document.querySelectorAll('.card-img-top');
+  console.log(results[0].media[0]);
+  console.log(nodeList);
+  
+    for(let i = 0; i < nodeList.length; i++){
+      console.log(nodeList[i].naturalHeight);
+      
+        if(nodeList[i].naturalHeight > nodeList[i].naturalWidth){
+          nodeList[i].classList.add('tall');
+        }
+      }
+}
 inputForm.addEventListener('submit', handleSubmit);
 
 function handleSubmit(event){

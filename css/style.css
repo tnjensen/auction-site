@@ -12414,6 +12414,15 @@ body .success {
     max-width: 50%;
   }
 }
+.showcase .card .card-img-top {
+  height: 30vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.showcase .card .card-img-top.tall {
+  -o-object-fit: fill;
+     object-fit: fill;
+}
 @media (min-width: 768px) {
   .showcase .card .card-img-top {
     /* height: 45vh; */
@@ -12436,8 +12445,8 @@ body .success {
 .showcase .card .card-body .card-text {
   display: -webkit-box;
   overflow: hidden;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
   -webkit-box-orient: vertical;
 }
 .showcase .card .card-body .card-text.long:hover {
