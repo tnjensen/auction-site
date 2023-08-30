@@ -12448,12 +12448,7 @@ body .success {
 .showcase .card .card-body .btn {
   position: absolute;
   bottom: 10%;
-  /* top: 120px; */
-}
-@media (min-width: 992px) {
-  .showcase .card .card-body .btn {
-    /* top: 140px; */
-  }
+  margin: 10px 0 0 0;
 }
 .showcase .card h2, .showcase .card .h2 {
   font-size: 20px;

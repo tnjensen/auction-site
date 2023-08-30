@@ -127,11 +127,7 @@
             .btn{
                 position: absolute;
                 bottom: 10%;
-                /* top: 120px; */
-
-                @include desktop{
-                    /* top: 140px; */
-                }
+                margin: 10px 0 0 0;
             }
         }
         
