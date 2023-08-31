@@ -105,10 +105,10 @@
                 object-fit: fill;
             }
             @include tablet{
-                /* height: 45vh; */
+                height: 45vh;
             }
             @include desktop{
-                /* height: 50vh; */
+                height: 50vh;
             }
             
         }

@@ -12425,12 +12425,12 @@ body .success {
 }
 @media (min-width: 768px) {
   .showcase .card .card-img-top {
-    /* height: 45vh; */
+    height: 45vh;
   }
 }
 @media (min-width: 992px) {
   .showcase .card .card-img-top {
-    /* height: 50vh; */
+    height: 50vh;
   }
 }
 .showcase .card .card-body {
