@@ -12425,7 +12425,7 @@ body .success {
 }
 @media (orientation: landscape) {
   .showcase .card .card-img-top {
-    height: 100vh;
+    height: 80vh;
   }
 }
 .showcase .card .card-body {
