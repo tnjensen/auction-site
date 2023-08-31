@@ -12415,7 +12415,7 @@ body .success {
   }
 }
 .showcase .card .card-img-top {
-  height: 30vw;
+  height: 30vh;
   -o-object-fit: cover;
      object-fit: cover;
 }
