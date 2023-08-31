@@ -12423,9 +12423,9 @@ body .success {
   -o-object-fit: fill;
      object-fit: fill;
 }
-@media (min-width: 768px) {
+@media (orientation: landscape) {
   .showcase .card .card-img-top {
-    height: 50vh;
+    height: 100vh;
   }
 }
 .showcase .card .card-body {

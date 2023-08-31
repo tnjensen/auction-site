@@ -104,10 +104,9 @@
             &.tall{
                 object-fit: fill;
             }
-            @include tablet{
-                height: 50vh;
+            @media (orientation:landscape) {
+                height: 100vh;
             }
-            
         }
         .card-body{
             display: flex;
