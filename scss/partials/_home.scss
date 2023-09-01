@@ -98,14 +98,14 @@
             max-width: 50%;
         }
         .card-img-top{
-            height: 35vh;
+            /* height: 35vh; */
             object-fit: cover;
            
             &.tall{
                 object-fit: fill;
             }
             @media (orientation:landscape) {
-                height: 80vh;
+                /* height: 80vh; */
             }
         }
         .card-body{
@@ -125,9 +125,9 @@
                     -webkit-line-clamp: unset;
                     position: absolute;
                     left: 0;
-                    z-index: 10;
                     background-color: $form-background;
-                    color: $textColor; 
+                    color: $textColor;
+                    vertical-align: top; 
                 }
             }
             .btn{

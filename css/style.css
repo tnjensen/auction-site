@@ -12415,7 +12415,7 @@ body .success {
   }
 }
 .showcase .card .card-img-top {
-  height: 35vh;
+  /* height: 35vh; */
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -12425,7 +12425,7 @@ body .success {
 }
 @media (orientation: landscape) {
   .showcase .card .card-img-top {
-    height: 80vh;
+    /* height: 80vh; */
   }
 }
 .showcase .card .card-body {
@@ -12449,9 +12449,9 @@ body .success {
   -webkit-line-clamp: unset;
   position: absolute;
   left: 0;
-  z-index: 10;
   background-color: #757578;
   color: #fffefe;
+  vertical-align: top;
 }
 .showcase .card .card-body .btn {
   margin: 15px 0;
@@ -12949,6 +12949,9 @@ body .success {
             flex: 1;
   }
 }
+.profile .profileLeft, .profile .bidLeft, .bid .profileLeft, .bid .bidLeft {
+  width: 40%;
+}
 @media (min-width: 768px) {
   .profile .profileLeft, .profile .bidLeft, .bid .profileLeft, .bid .bidLeft {
     position: relative;
@@ -12991,11 +12994,14 @@ body .success {
 }
 .profile .profileUser, .profile .profileCredits, .profile .bidDesc, .profile .bidItem, .profile .bidsOnItem, .bid .profileUser, .bid .profileCredits, .bid .bidDesc, .bid .bidItem, .bid .bidsOnItem {
   background-color: #fffefe;
-  padding: 3px 6px;
   -webkit-box-decoration-break: clone;
           box-decoration-break: clone;
 }
 .profile .profileBox, .profile .bidBox, .bid .profileBox, .bid .bidBox {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   height: 300px;
   width: 250px;
   padding: 20px;

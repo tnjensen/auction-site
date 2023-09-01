@@ -137,7 +137,7 @@ function checkLength(results){
   let nodeList = document.querySelectorAll('.card-text');
 
     for(let i = 0; i < nodeList.length; i++){
-        if(results[i].description.length > 60){
+        if(results[i].description.length > 100){
           nodeList[i].classList.add('long');
         }
       }

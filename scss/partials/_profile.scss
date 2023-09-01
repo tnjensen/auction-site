@@ -19,7 +19,8 @@
         }
     }
     .profileLeft, .bidLeft{
-
+        width: 40%;
+        
         @include tablet{
             position: relative;
             left: 12%;
@@ -40,6 +41,7 @@
     }
     .bidDesc{
         word-wrap: break-word;
+        
     }
     .profileRight{
 
@@ -60,10 +62,12 @@
     }
     .profileUser, .profileCredits, .bidDesc, .bidItem, .bidsOnItem{
         background-color: $textColor;
-        padding: 3px 6px;
         box-decoration-break: clone;
     }
     .profileBox, .bidBox{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
         height: 300px;
         width: 250px;
         padding: 20px;
