@@ -23,7 +23,7 @@ const inputDesc = document.querySelector('.inputDesc');
 const inputEndsAt = document.querySelector('.inputEndsAt');
 const messageContainer = document.querySelector('.message-container');
 const loader = document.querySelector('.loader');
-const angles = document.querySelectorAll('i');
+const angle = document.querySelector('i');
 
 let index = 0;
 let maxPages = 0;
@@ -63,7 +63,9 @@ if(user){
 }
 
 menuButton.onclick = openMenu;
-
+angle.onclick = function(){
+   window.location.href = "/";
+}
 async function getItem(){
     try{
         const response = await fetch(baseUrl + listings + "/" + itemId);
@@ -74,7 +76,6 @@ async function getItem(){
         loader.classList.remove('loading-indicator');
         let currentSlide = result;
         createHTML(result);
-      
     }
     catch(error){
       console.log("Error: " + error);

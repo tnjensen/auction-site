@@ -56,13 +56,13 @@
         }
     }
 
-    .fa-angle-left, .fa-angle-right{
+    .fa-angle-left{
         position: absolute;
         top: 100px;
         cursor: pointer;
     }
 
-    .fa-angle-left, .fa-angle-right{
+    .fa-angle-left{
         color: $bs-link-hover-color;
         opacity: .7;
         font-size: 4em;
@@ -76,17 +76,6 @@
         }
         @include desktop{
             left: 100px;
-        }
-    }
-
-    .fa-angle-right{
-        right: 10px;
-
-        @include tablet{
-            right: 30px;
-        }
-        @include desktop{
-            right: 100px;
         }
     }
     .card{
