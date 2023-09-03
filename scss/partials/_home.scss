@@ -93,30 +93,20 @@
         border-radius: 10px;
         margin: 0 10px;
         display: flex;
+        max-width: 50%;
         flex: 1;
         flex-direction: column;
         
-        @include tablet{
-            max-width: 50%;
+        @include desktop{
+           max-width: 25%;
         }
         .card-img-top{
-            width: 100%;
             height: 200px;
-            background-position: top center;
+            width: 100%;
+            background-position: top;
            
             &.tall{
-                object-fit: fill;
-            }
-            @media (orientation:landscape) {
-                /* height: 80vh; */
-            }
-            @include tablet{
-                height: 250px;
-                object-fit: cover;
-
-                /* &.tall{
-                    object-fit: fill;
-                } */
+                object-position: 0 10%;
             }
         }
         .card-body{
@@ -129,6 +119,7 @@
                 -webkit-box-orient: vertical;
                 vertical-align: top;
                 
+                /* For display inline on hover */
                 /* &.long{
                     padding: 5px 10px;
                     -webkit-line-clamp: unset;

@@ -63,6 +63,7 @@ if(user){
 }
 
 menuButton.onclick = openMenu;
+angle.style = "left: 150px";
 angle.onclick = function(){
    window.location.href = "/";
 }
@@ -101,24 +102,14 @@ function createHTML(result){
         </div>`
         }
         
-    checkLength(result);
     checkImageRatio(result);
 }
-function checkLength(result){
-  let nodeList = document.querySelector('.card-text');
-    if(result.description.length > 60){
-      nodeList[i].classList.add('long');
-    }
-}
 function checkImageRatio(result){
-  let nodeList = document.querySelector('.card-img-top');
+  let image = document.querySelector('.card-img-top');
   console.log(result.media[0]);
-  console.log(nodeList);
-  
-    for(let i = 0; i < nodeList.length; i++){
-      console.log(nodeList[i].naturalHeight);
-      
-      }
+  console.log(image);
+  console.log(image.naturalWidth);
+  console.log(image.naturalHeight);
 }
 
     

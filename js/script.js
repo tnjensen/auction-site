@@ -60,7 +60,7 @@ if(user){
 }
 
 menuButton.onclick = openMenu;
-window.onresize = detectViewport();
+window.onload = detectViewport();
 
 async function getItems(){
     try{
@@ -148,8 +148,9 @@ function checkImageRatio(results){
   console.log(nodeList);
   
     for(let i = 0; i < nodeList.length; i++){
-      console.log(nodeList[i].naturalHeight);
-      
+      console.log("height: ", nodeList[i].naturalHeight);
+      console.log("width:", nodeList[i].naturalWidth);
+
         if(nodeList[i].naturalHeight > nodeList[i].naturalWidth){
           nodeList[i].classList.add('tall');
         }

@@ -12408,6 +12408,7 @@ body .success {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 50%;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -12416,34 +12417,19 @@ body .success {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .showcase .card {
-    max-width: 50%;
+    max-width: 25%;
   }
 }
 .showcase .card .card-img-top {
-  width: 100%;
   height: 200px;
-  background-position: top center;
+  width: 100%;
+  background-position: top;
 }
 .showcase .card .card-img-top.tall {
-  -o-object-fit: fill;
-     object-fit: fill;
-}
-@media (orientation: landscape) {
-  .showcase .card .card-img-top {
-    /* height: 80vh; */
-  }
-}
-@media (min-width: 768px) {
-  .showcase .card .card-img-top {
-    height: 250px;
-    -o-object-fit: cover;
-       object-fit: cover;
-    /* &.tall{
-        object-fit: fill;
-    } */
-  }
+  -o-object-position: 0 10%;
+     object-position: 0 10%;
 }
 .showcase .card .card-body .card-text {
   display: -webkit-box;
@@ -12452,6 +12438,7 @@ body .success {
   line-clamp: 4;
   -webkit-box-orient: vertical;
   vertical-align: top;
+  /* For display inline on hover */
   /* &.long{
       padding: 5px 10px;
       -webkit-line-clamp: unset;
@@ -13239,8 +13226,6 @@ body .success {
   position: absolute;
   top: 100px;
   cursor: pointer;
-}
-.showcase .fa-angle-left {
   color: #ee7e5c;
   opacity: 0.7;
   font-size: 4em;
@@ -13277,25 +13262,8 @@ body .success {
 .showcase .card.detail .card-img-top {
   width: 100%;
   height: auto;
-}
-.showcase .card.detail .card-img-top.tall {
-  -o-object-fit: fill;
-     object-fit: fill;
-}
-@media (orientation: landscape) {
-  .showcase .card.detail .card-img-top {
-    /* height: 80vh; */
-  }
-}
-@media (min-width: 768px) {
-  .showcase .card.detail .card-img-top {
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .showcase .card.detail .card-img-top.tall {
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .showcase .card.detail .card-body .card-text {
   -webkit-line-clamp: unset;
