@@ -101,7 +101,7 @@
         }
         .card-img-top{
             width: 100%;
-            height: 180px;
+            height: 200px;
             background-position: top center;
            
             &.tall{
@@ -111,7 +111,7 @@
                 /* height: 80vh; */
             }
             @include tablet{
-                height: 220px;
+                height: 250px;
                 object-fit: cover;
 
                 /* &.tall{
