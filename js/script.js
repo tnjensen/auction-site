@@ -121,14 +121,14 @@ function createHTML(results){
             bidLink = `<a href="profile.html?id=${results[i].id}#bid" class="btn btn-secondary">Make a bid</a>`;
           }
           slider.innerHTML += `<div class="card">
-            <img src=${results[i].media[0]} alt='item image' class="card-img-top">
+            <a href="detail.html?id=${results[i].id}"><img src=${results[i].media[0]} alt='item image' class="card-img-top"></a>
             <div class="card-body">
               <h2 class="card-title">${results[i].title}</h2> 
               <p class="card-text">${results[i].description}</p>
               <span>${bidLink}</span>
             </div>
         </div>`
-        }
+        } 
     } 
     checkLength(results);
     checkImageRatio(results);
@@ -137,7 +137,7 @@ function checkLength(results){
   let nodeList = document.querySelectorAll('.card-text');
 
     for(let i = 0; i < nodeList.length; i++){
-        if(results[i].description.length > 100){
+        if(results[i].description.length > 60){
           nodeList[i].classList.add('long');
         }
       }
@@ -218,10 +218,11 @@ function detectViewport(){
   if(window.innerWidth >= large){
       postsPerPage = 5;
   }
-  
+  /* 
   if(window.innerHeight <= height){
       postsPerPage = 2; 
-  }
+  } */
+  /* console.log(postsPerPage); */
   return postsPerPage;
 }
 

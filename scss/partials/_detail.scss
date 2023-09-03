@@ -90,111 +90,95 @@
         }
     }
     .card{
-        border-radius: 10px;
-        margin: 0 10px;
-        display: flex;
-        flex: 1;
-        flex-direction: column;
-        
-        @include tablet{
-            max-width: 50%;
-        }
-        .card-img-top{
-            width: 100%;
-            height: 180px;
-            background-position: top center;
-           
-            &.tall{
-                object-fit: fill;
-            }
-            @media (orientation:landscape) {
-                /* height: 80vh; */
-            }
-            @include tablet{
-                height: 220px;
-                object-fit: cover;
 
-                /* &.tall{
-                    object-fit: fill;
-                } */
-            }
-        }
-        .card-body{
-            
-            .card-text{
-                display: -webkit-box;
-                overflow: hidden;
-                -webkit-line-clamp: 4;
-                line-clamp: 4;
-                -webkit-box-orient: vertical;
-                vertical-align: top;
-                
-                /* &.long{
-                    padding: 5px 10px;
-                    -webkit-line-clamp: unset;
-                    overflow: visible;
-                    position: absolute;
-                    left: 0;
-                    background-color: $form-background;
-                    color: $textColor;
-                } */
-            }
-            .btn{
-                margin: 15px 0;
-            }
-        }
-        
-        h2{
-            font-size: 20px;
-            
-            @include tablet{
-                font-size: 22px;    
-            }
-        }
-
-        h3{
-            font-size: 19px;
-            font-weight: 600;
-
-            @include tablet{
-                font-size: 21px;     
-            }
-        }
-        .guestBidLink{
-            color: $bs-link-color;
+        &.detail{
             border-radius: 10px;
-            text-decoration: none; 
-            font-family: "Roboto Flex", sans-serif;
+            margin: 0 10px;
+            display: flex;
+            flex-direction: column;
             
             @include tablet{
-                font-size: 22px;
+                max-width: 50%;
             }
-        }
-        .bidLink{
-            font-family: "Roboto Flex", sans-serif;
-            color: $bs-link-color;
-            text-transform: uppercase;
-            border: none;
-            font-size: 16px;
-            font-weight: 600;
-            letter-spacing: .1rem;
-            font-style: oblique;
-            border-radius: 5px;
-            padding: 10px 0;
-            text-decoration: none; 
-        } 
-        .deleteLink{
-            background-color: $primary;
-            float: right;
-            color: $textColor;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 15px;
-            text-decoration: none;
-        } 
-        
-    }
+            .card-img-top{
+                width: 100%;
+                height: auto;
+               
+                &.tall{
+                    object-fit: fill;
+                }
+                @media (orientation:landscape) {
+                    /* height: 80vh; */
+                }
+                @include tablet{
+                    object-fit: cover;
     
+                    &.tall{
+                        object-fit: cover;
+                    }
+                }
+            }
+            .card-body{
+                
+                .card-text{
+                    -webkit-line-clamp: unset;
+                }
+                .btn{
+                    margin: 15px 0;
+                }
+            }
+            
+            h2{
+                font-size: 20px;
+                
+                @include tablet{
+                    font-size: 22px;    
+                }
+            }
+    
+            h3{
+                font-size: 19px;
+                font-weight: 600;
+    
+                @include tablet{
+                    font-size: 21px;     
+                }
+            }
+            .guestBidLink{
+                color: $bs-link-color;
+                border-radius: 10px;
+                text-decoration: none; 
+                font-family: "Roboto Flex", sans-serif;
+                
+                @include tablet{
+                    font-size: 22px;
+                }
+            }
+            .bidLink{
+                font-family: "Roboto Flex", sans-serif;
+                color: $bs-link-color;
+                text-transform: uppercase;
+                border: none;
+                font-size: 16px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                font-style: oblique;
+                border-radius: 5px;
+                padding: 10px 0;
+                text-decoration: none; 
+            } 
+            .deleteLink{
+                background-color: $primary;
+                float: right;
+                color: $textColor;
+                border: none;
+                border-radius: 5px;
+                padding: 10px 15px;
+                text-decoration: none;
+            } 
+            
+        }
+    }
 }
 
 .listing{

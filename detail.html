@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="qHhTCzEtkZTeGwYdHj16AsQaxNJqlPZSyrZgOIsg_9A">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto+Flex:wght@500;600&family=Roboto:wght@100;300;700;900&display=swap" rel="stylesheet">
+    <title>Auction App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="left">
+            <a href="index.html" class="logo">BidCove</a>
+        </div>
+        <div class="profile-details">
+            <a href="login.html" class="logLink">Login</a>
+            <span class="profile-divider">|</span>
+            <a href="register.html" class="regLink">Register</a>
+        </div>
+        <div class="credits"></div>
+        <div class="right">
+            <div class="bars">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="showcase-heading">
+            <h1>Listing details</h1>
+        </div>
+        <div class='showcase'>           
+            <p class="register-info">Please <a href="register.html">register</a> to get your credit, and start bidding.</p>
+            <div class="loader loading-indicator"></div>
+            <i class="fa fa-angle-left"></i>
+            <div class="container">
+                <div class="row">
+                  <div class="slider">Loading..</div>
+                </div>
+              </div>
+            <i class="fa fa-angle-right"></i>
+        </div>
+        <div class="listing">
+            <h2 class="inputHeading">Add a listing</h2>
+            <p class="listing-info">Please <a href="login.html">log in</a> to add a listing.</p>
+            <div class="message-container"></div>
+            <form class="inputForm">
+                <div class="form-left">     
+                    <label for="inputTitle">Item</label>
+                    <input type="text" aria-label="Title" class="inputTitle" id="inputTitle" placeholder="Title">
+                    <label for="inputDesc">Description</label>
+                    <input type="text" aria-label="Description" class="inputDesc" id="inputDesc" placeholder="About the item">
+                    <label for="inputEndsAt">Ends at</label>
+                    <input type="date" aria-label="Date" class="inputEndsAt" id="inputEndsAt">
+                </div>
+                <div class="form-right">
+                    <input type="submit" class="submitButton" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-content">
+          <div class="footer-category">
+            <p>Copyright &copy; <span id="year"></span></p>
+          </div>
+          <div class="footer-category">
+            <p>Contact</p>
+            <p>+47 345 678 903</p>
+            <p><a href="mailto:bidcove@mail.com">bidcove@mail.com</a></p>
+            <p><a href="contact.html">Find out more</a></p>
+          </div>
+          <div class="footer-category">
+            <p>Services</p>
+            <a href="shipping.html">Shipping</a>
+            <p><a href="returns.html">Returns</a></p>
+          </div>
+          <div class="footer-category">
+            <p>Information</p>
+            <a href="privacy.html">Privacy Policy</a>
+          </div>
+          <div class="footer-category">
+            <div class="signup-form">
+              <p>Sign up for our newsletter</p>
+              <form>
+                <input type="text" aria-label="Name" placeholder="Name" title="Name">
+                <input type="email" aria-label="Email" placeholder="Email" title="Email">
+                <input
+                  class="submit"
+                  type="submit"
+                  name="submit"
+                  title="Sign up"
+                  value="Send"
+                >
+              </form>
+            </div>
+          </div>
+          <div class="footer-social">
+            <p>Social</p>
+            <div class="footer-social-icons">
+                <a href="https://www.instagram.com" aria-label="Instagram"
+                  ><i class="fa fa-instagram"></i
+                ></a>
+                <a href="https://www.twitter.com" aria-label="Twitter"
+                  ><i class="fa fa-twitter"></i
+                ></a>
+                <a href="https://www.facebook.com" aria-label="FaceBook"
+                  ><i class="fa fa-facebook"></i
+                ></a>
+              </div>
+          </div>
+          <!--footer-nav-->
+        </div>
+        <!--footer-content-->
+    </div>
+    <script src="https://use.fontawesome.com/e3b1e831fc.js"></script> 
+    <script src="js/detail.js" type="module"></script>
+    <script src="js/logout.js" type="module"></script>
+    <script src="js/footer.js"></script>
+</body>
+</html>
