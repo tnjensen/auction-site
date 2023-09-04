@@ -12408,7 +12408,6 @@ body .success {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 50%;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -12416,6 +12415,11 @@ body .success {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+@media (min-width: 768px) {
+  .showcase .card {
+    max-width: 50%;
+  }
 }
 @media (min-width: 992px) {
   .showcase .card {
