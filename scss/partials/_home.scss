@@ -108,10 +108,10 @@
             height: 200px;
         }
         .card-img-top{
-            /* object-fit: cover; */
+            object-fit: cover;
            
             &.tall{
-                /* object-fit: fill; */
+                object-fit: fill;
                 /* object-position: 0 5%; */
             }
         }

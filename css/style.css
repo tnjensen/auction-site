@@ -12433,10 +12433,12 @@ body .success {
   height: 200px;
 }
 .showcase .card .card-img-top {
-  /* object-fit: cover; */
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .showcase .card .card-img-top.tall {
-  /* object-fit: fill; */
+  -o-object-fit: fill;
+     object-fit: fill;
   /* object-position: 0 5%; */
 }
 .showcase .card .card-body .card-text {
