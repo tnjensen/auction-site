@@ -64,9 +64,9 @@ if(user){
 
 menuButton.onclick = openMenu;
 
-if(window.innerWidth > tablet){
+/* if(window.innerWidth > tablet){
   angle.style = "left: 150px";
-}
+} */
 angle.onclick = function(){
    window.location.href = "/";
 }
