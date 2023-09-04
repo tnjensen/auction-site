@@ -12426,19 +12426,14 @@ body .success {
     max-width: 25%;
   }
 }
-.showcase .card > a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 300px;
-}
 .showcase .card .card-img-top {
+  height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .showcase .card .card-img-top.tall {
-  /* object-fit: cover; */
-  /* object-position: 0 5%; */
+  -o-object-position: bottom 0;
+     object-position: bottom 0;
 }
 .showcase .card .card-body {
   display: -webkit-box;

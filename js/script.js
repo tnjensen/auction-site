@@ -123,7 +123,7 @@ function createHTML(results){
             bidLink = `<a href="profile.html?id=${results[i].id}#bid" class="btn btn-secondary">Make a bid</a>`;
           }
           slider.innerHTML += `<div class="card">
-            <a href="detail.html?id=${results[i].id}"><img src=${results[i].media[0]} alt='item image' class="card-img-top"></a>
+            <a href="detail.html?id=${results[i].id}"><img src=${results[i].media[0]} alt="item image" class="card-img-top"></a>
             <div class="card-body">
               <h2 class="card-title">${results[i].title}</h2> 
               <p class="card-text">${results[i].description}</p>
