@@ -102,15 +102,17 @@
         @include desktop{
            max-width: 25%;
         }
+
+        > a{
+            display: flex;
+            height: 200px;
+        }
         .card-img-top{
-            /* height: auto; */
-            min-height: 200px;
-            max-height: 300px;
-            object-fit: cover;
+            /* object-fit: cover; */
            
             &.tall{
                 /* object-fit: fill; */
-                object-position: 0 5%;
+                /* object-position: 0 5%; */
             }
         }
         .card-body{

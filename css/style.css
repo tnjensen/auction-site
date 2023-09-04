@@ -12426,17 +12426,18 @@ body .success {
     max-width: 25%;
   }
 }
+.showcase .card > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 200px;
+}
 .showcase .card .card-img-top {
-  /* height: auto; */
-  min-height: 200px;
-  max-height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  /* object-fit: cover; */
 }
 .showcase .card .card-img-top.tall {
   /* object-fit: fill; */
-  -o-object-position: 0 5%;
-     object-position: 0 5%;
+  /* object-position: 0 5%; */
 }
 .showcase .card .card-body .card-text {
   display: -webkit-box;
@@ -13267,9 +13268,9 @@ body .success {
   }
 }
 .showcase .card.detail .card-img-top {
+  width: 100%;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  /* object-fit: cover; */
 }
 .showcase .card.detail .card-body .card-text {
   -webkit-line-clamp: unset;
