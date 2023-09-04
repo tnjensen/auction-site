@@ -12427,15 +12427,15 @@ body .success {
   }
 }
 .showcase .card .card-img-top {
-  height: 200px;
+  /* height: auto; */
+  min-height: 200px;
+  max-height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .showcase .card .card-img-top.tall {
-  -o-object-fit: fill;
-     object-fit: fill;
-  -o-object-position: 0 5%;
-     object-position: 0 5%;
+  /*  object-fit: fill;
+   object-position: 0 5%; */
 }
 .showcase .card .card-body .card-text {
   display: -webkit-box;

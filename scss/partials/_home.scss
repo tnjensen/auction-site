@@ -103,12 +103,14 @@
            max-width: 25%;
         }
         .card-img-top{
-            height: 200px;
+            /* height: auto; */
+            min-height: 200px;
+            max-height: 250px;
             object-fit: cover;
            
             &.tall{
-                object-fit: fill;
-                object-position: 0 5%;
+               /*  object-fit: fill;
+                object-position: 0 5%; */
             }
         }
         .card-body{
