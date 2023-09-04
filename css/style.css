@@ -12429,7 +12429,7 @@ body .success {
 .showcase .card .card-img-top {
   /* height: auto; */
   min-height: 200px;
-  max-height: 300px;
+  max-height: 400px;
   -o-object-fit: cover;
      object-fit: cover;
 }
