@@ -127,7 +127,7 @@ function createHTML(results){
             <div class="card-body">
               <h2 class="card-title">${results[i].title}</h2> 
               <p class="card-text">${results[i].description}</p>
-              <span>${bidLink}</span>
+              ${bidLink}
             </div>
         </div>`
         } 

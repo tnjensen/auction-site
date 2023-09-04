@@ -12430,16 +12430,25 @@ body .success {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 200px;
+  height: 300px;
 }
 .showcase .card .card-img-top {
   -o-object-fit: cover;
      object-fit: cover;
 }
 .showcase .card .card-img-top.tall {
-  -o-object-fit: fill;
-     object-fit: fill;
+  /* object-fit: cover; */
   /* object-position: 0 5%; */
+}
+.showcase .card .card-body {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .showcase .card .card-body .card-text {
   display: -webkit-box;
@@ -12484,6 +12493,7 @@ body .success {
   border-radius: 10px;
   text-decoration: none;
   font-family: "Roboto Flex", sans-serif;
+  margin-top: auto;
 }
 @media (min-width: 768px) {
   .showcase .card .guestBidLink {
@@ -12502,6 +12512,7 @@ body .success {
   border-radius: 5px;
   padding: 10px 0;
   text-decoration: none;
+  margin-top: auto;
 }
 .showcase .card .deleteLink {
   background-color: #f79577;

@@ -105,18 +105,21 @@
 
         > a{
             display: flex;
-            height: 200px;
+            height: 300px;
         }
         .card-img-top{
             object-fit: cover;
            
             &.tall{
-                object-fit: fill;
+                /* object-fit: cover; */
                 /* object-position: 0 5%; */
             }
         }
         .card-body{
-            
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+
             .card-text{
                 display: -webkit-box;
                 overflow: hidden;
@@ -162,7 +165,8 @@
             border-radius: 10px;
             text-decoration: none; 
             font-family: "Roboto Flex", sans-serif;
-            
+            margin-top: auto;
+
             @include tablet{
                 font-size: 22px;
             }
@@ -178,7 +182,8 @@
             font-style: oblique;
             border-radius: 5px;
             padding: 10px 0;
-            text-decoration: none; 
+            text-decoration: none;
+            margin-top: auto; 
         } 
         .deleteLink{
             background-color: $primary;
