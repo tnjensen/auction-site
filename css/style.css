@@ -12429,11 +12429,12 @@ body .success {
 .showcase .card .card-img-top {
   height: 200px;
   width: 100%;
-  background-position: top;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .showcase .card .card-img-top.tall {
-  -o-object-position: 0 10%;
-     object-position: 0 10%;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 .showcase .card .card-body .card-text {
   display: -webkit-box;
@@ -12442,7 +12443,7 @@ body .success {
   line-clamp: 4;
   -webkit-box-orient: vertical;
   vertical-align: top;
-  /* For display inline on hover */
+  /* For display inline on hover, adding class in js */
   /* &.long{
       padding: 5px 10px;
       -webkit-line-clamp: unset;

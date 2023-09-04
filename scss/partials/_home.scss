@@ -105,10 +105,10 @@
         .card-img-top{
             height: 200px;
             width: 100%;
-            background-position: top;
+            object-fit: cover;
            
             &.tall{
-                object-position: 0 10%;
+                object-fit: fill;
             }
         }
         .card-body{
@@ -121,7 +121,7 @@
                 -webkit-box-orient: vertical;
                 vertical-align: top;
                 
-                /* For display inline on hover */
+                /* For display inline on hover, adding class in js */
                 /* &.long{
                     padding: 5px 10px;
                     -webkit-line-clamp: unset;
