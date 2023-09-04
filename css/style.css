@@ -12429,13 +12429,14 @@ body .success {
 .showcase .card .card-img-top {
   /* height: auto; */
   min-height: 200px;
-  max-height: 400px;
+  max-height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .showcase .card .card-img-top.tall {
   /* object-fit: fill; */
-  /* object-position: 0 5%; */
+  -o-object-position: 0 5%;
+     object-position: 0 5%;
 }
 .showcase .card .card-body .card-text {
   display: -webkit-box;
@@ -13266,7 +13267,6 @@ body .success {
   }
 }
 .showcase .card.detail .card-img-top {
-  width: 100%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
