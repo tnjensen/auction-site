@@ -105,12 +105,12 @@
         .card-img-top{
             /* height: auto; */
             min-height: 200px;
-            max-height: 250px;
+            max-height: 300px;
             object-fit: cover;
            
             &.tall{
-               /*  object-fit: fill;
-                object-position: 0 5%; */
+                /* object-fit: fill; */
+                /* object-position: 0 5%; */
             }
         }
         .card-body{
