@@ -84,12 +84,11 @@
             flex-direction: column;
             
             @include tablet{
-                max-width: 50%;
+                width: 100%;
             }
             .card-img-top{
-                width: 100%;
                 height: auto;
-                /* object-fit: cover; */
+                width: 100%;
                
             }
             .card-body{

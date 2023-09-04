@@ -102,11 +102,15 @@
         }
 
         .card-img-top{
-            height: 300px;
+            height: 400px;
             object-fit: cover;
            
             &.tall{
-                object-position: bottom 0;
+                object-position: bottom 50%;
+            }
+
+            @include tablet{
+                
             }
         }
         .card-body{
@@ -154,29 +158,7 @@
                 font-size: 21px;     
             }
         }
-        .guestBidLink{
-            color: $bs-link-color;
-            border-radius: 10px;
-            text-decoration: none; 
-            font-family: "Roboto Flex", sans-serif;
-
-            @include tablet{
-                font-size: 22px;
-            }
-        }
-        .bidLink{
-            font-family: "Roboto Flex", sans-serif;
-            color: $bs-link-color;
-            text-transform: uppercase;
-            border: none;
-            font-size: 16px;
-            font-weight: 600;
-            letter-spacing: .1rem;
-            font-style: oblique;
-            border-radius: 5px;
-            padding: 10px 0;
-            text-decoration: none;
-        } 
+        
         .deleteLink{
             background-color: $primary;
             float: right;

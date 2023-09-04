@@ -12427,13 +12427,13 @@ body .success {
   }
 }
 .showcase .card .card-img-top {
-  height: 300px;
+  height: 400px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .showcase .card .card-img-top.tall {
-  -o-object-position: bottom 0;
-     object-position: bottom 0;
+  -o-object-position: bottom 50%;
+     object-position: bottom 50%;
 }
 .showcase .card .card-body {
   display: -webkit-box;
@@ -12484,30 +12484,6 @@ body .success {
   .showcase .card h3, .showcase .card .h3 {
     font-size: 21px;
   }
-}
-.showcase .card .guestBidLink {
-  color: #fffefe;
-  border-radius: 10px;
-  text-decoration: none;
-  font-family: "Roboto Flex", sans-serif;
-}
-@media (min-width: 768px) {
-  .showcase .card .guestBidLink {
-    font-size: 22px;
-  }
-}
-.showcase .card .bidLink {
-  font-family: "Roboto Flex", sans-serif;
-  color: #fffefe;
-  text-transform: uppercase;
-  border: none;
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 0.1rem;
-  font-style: oblique;
-  border-radius: 5px;
-  padding: 10px 0;
-  text-decoration: none;
 }
 .showcase .card .deleteLink {
   background-color: #f79577;
@@ -13272,13 +13248,12 @@ body .success {
 }
 @media (min-width: 768px) {
   .showcase .card.detail {
-    max-width: 50%;
+    width: 100%;
   }
 }
 .showcase .card.detail .card-img-top {
-  width: 100%;
   height: auto;
-  /* object-fit: cover; */
+  width: 100%;
 }
 .showcase .card.detail .card-body .card-text {
   -webkit-line-clamp: unset;
