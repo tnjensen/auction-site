@@ -12428,13 +12428,14 @@ body .success {
 }
 .showcase .card .card-img-top {
   height: 200px;
-  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .showcase .card .card-img-top.tall {
   -o-object-fit: fill;
      object-fit: fill;
+  -o-object-position: 0 5%;
+     object-position: 0 5%;
 }
 .showcase .card .card-body .card-text {
   display: -webkit-box;

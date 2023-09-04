@@ -109,6 +109,8 @@ function buildPage(results){
     let indexEnd = indexStart + postsPerPage;
     pageResult = results.slice(indexStart, indexEnd);
     createHTML(pageResult);
+    checkLength(pageResult);
+    checkImageRatio(pageResult);
 }
 
 function createHTML(results){ 
