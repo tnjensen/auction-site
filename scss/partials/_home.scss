@@ -58,8 +58,7 @@
 
     .fa-angle-left, .fa-angle-right{
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 200px;
         cursor: pointer;
         color: $bs-link-hover-color;
         opacity: .7;
@@ -102,7 +101,7 @@
         }
 
         .card-img-top{
-            height: 400px;
+            height: 250px;
             object-fit: cover;
            
             &.tall{

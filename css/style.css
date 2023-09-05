@@ -12368,9 +12368,7 @@ body .success {
 }
 .showcase .fa-angle-left, .showcase .fa-angle-right {
   position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  top: 200px;
   cursor: pointer;
   color: #ee7e5c;
   opacity: 0.7;
@@ -12427,7 +12425,7 @@ body .success {
   }
 }
 .showcase .card .card-img-top {
-  height: 400px;
+  height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -13178,14 +13176,6 @@ body .success {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 20px;
-  /* .fa-angle-left{
-      position: absolute;
-      top: 100px;
-      cursor: pointer;
-      color: $bs-link-hover-color;
-      opacity: .7;
-      font-size: 4em;
-  } */
 }
 @media (min-width: 768px) {
   .showcase {
@@ -13222,17 +13212,25 @@ body .success {
     font-size: 16px;
   }
 }
-.showcase .fa-angle-left {
+.showcase .fa-angle-left.detail {
+  position: absolute;
+  top: 100px;
+  cursor: pointer;
+  color: #ee7e5c;
+  opacity: 0.7;
+  font-size: 4em;
+}
+.showcase .fa-angle-left.detail {
   left: 10px;
 }
 @media (min-width: 768px) {
-  .showcase .fa-angle-left {
-    left: 30px;
+  .showcase .fa-angle-left.detail {
+    left: 100px;
   }
 }
 @media (min-width: 992px) {
-  .showcase .fa-angle-left {
-    left: 100px;
+  .showcase .fa-angle-left.detail {
+    left: 200px;
   }
 }
 .showcase .card.detail {

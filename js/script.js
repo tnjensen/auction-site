@@ -21,6 +21,8 @@ const inputEndsAt = document.querySelector('.inputEndsAt');
 const messageContainer = document.querySelector('.message-container');
 const loader = document.querySelector('.loader');
 const angles = document.querySelectorAll('i');
+const leftAngle = document.querySelector('.fa-angle-left');
+const rightAngle = document.querySelector('.fa-angle-right');
 
 let index = 0;
 let maxPages = 0;
@@ -114,6 +116,13 @@ function buildPage(results){
 }
 
 function createHTML(results){ 
+  if(maxPages == postPage){
+    rightAngle.style.display = "none";
+    leftAngle.style.display = "block";
+}else if( index == 0){
+    rightAngle.style.display = "block";
+    leftAngle.style.display = "none";
+}   
     for(let i = 0; i < postsPerPage; i++){ 
         if(!results[i]){
             break;

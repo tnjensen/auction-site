@@ -56,23 +56,23 @@
         }
     }
 
-    /* .fa-angle-left{
+    .fa-angle-left.detail{
         position: absolute;
         top: 100px;
         cursor: pointer;
         color: $bs-link-hover-color;
         opacity: .7;
         font-size: 4em;
-    } */
+    }
 
-    .fa-angle-left{
+    .fa-angle-left.detail{
         left: 10px;
 
         @include tablet{
-            left: 30px;
+            left: 100px;
         }
         @include desktop{
-            left: 100px;
+            left: 200px;
         }
     }
     .card{
