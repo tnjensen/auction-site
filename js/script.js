@@ -74,6 +74,7 @@ async function getItems(){
         loader.classList.remove('loading-indicator');
         let currentSlide = results[0];
         index = results.indexOf(currentSlide);
+        leftAngle.style.display = "none";
         getMaxPages(results);
         createHTML(results);
         
@@ -82,6 +83,7 @@ async function getItems(){
             if(element.classList.contains('fa-angle-right')){
                 slider.innerHTML = "";
                 index += 1;
+                leftAngle.style.display = "block";
                 if(index >= results.length/postsPerPage) {
                     index -= 1;
                 }
@@ -91,11 +93,13 @@ async function getItems(){
             else{
                 slider.innerHTML = "";
                 index -= 1;
+                rightAngle.style.display = "block";
                 if(index < 0) {
                     index = 0;
                 }
                 postPage = index + 1;
                 buildPage(postResult);
+                
             }
         }
     })
@@ -112,19 +116,16 @@ function buildPage(results){
     pageResult = results.slice(indexStart, indexEnd);
     createHTML(pageResult);
     checkLength(pageResult);
-    checkImageRatio(pageResult);
+    /* checkImageRatio(pageResult); */
 }
 
 function createHTML(results){ 
-  if(maxPages == postPage){
-    rightAngle.style.display = "none";
-    leftAngle.style.display = "block";
-}else if( index == 0){
-    rightAngle.style.display = "block";
+  if(index == 0){
     leftAngle.style.display = "none";
-}   
+  }
     for(let i = 0; i < postsPerPage; i++){ 
         if(!results[i]){
+            rightAngle.style.display = "none";
             break;
         }else{
           let bidLink = `<a href="profile.html?id=${results[i].id}#bid" class="btn btn-secondary">View bids</a>`;
@@ -142,7 +143,7 @@ function createHTML(results){
         } 
     } 
     checkLength(results);
-    checkImageRatio(results);
+    /* checkImageRatio(results); */
 }
 function checkLength(results){
   let nodeList = document.querySelectorAll('.card-text');
