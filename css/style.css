@@ -12684,7 +12684,7 @@ body .success {
           justify-content: center;
 }
 .login .wrapper {
-  width: 80%;
+  width: 85%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12699,6 +12699,17 @@ body .success {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    width: 88%;
+  }
+}
+@media (min-width: 992px) {
+  .login .wrapper {
+    width: 82%;
+  }
+}
+@media (min-width: 1280px) {
+  .login .wrapper {
+    width: 78%;
   }
 }
 .login .loginRight, .login .loginLeft {
@@ -12722,6 +12733,17 @@ body .success {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    /* margin: 0 20px 0 -5px; */
+  }
+}
+@media (min-width: 992px) {
+  .login .loginRight, .login .loginLeft {
+    /* margin: 0 20px 0 10px; */
+  }
+}
+@media (min-width: 1280px) {
+  .login .loginRight, .login .loginLeft {
+    /* margin: 0 20px 0 30px; */
   }
 }
 .login .loginLogo {
@@ -12816,6 +12838,17 @@ body .success {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    width: 85%;
+  }
+}
+@media (min-width: 992px) {
+  .register .wrapper {
+    width: 80%;
+  }
+}
+@media (min-width: 1280px) {
+  .register .wrapper {
+    width: 75%;
   }
 }
 .register .registerRight, .register .registerLeft {
@@ -12829,7 +12862,6 @@ body .success {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0 20px;
 }
 @media (min-width: 768px) {
   .register .registerRight, .register .registerLeft {
@@ -12839,6 +12871,7 @@ body .success {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    margin: 0 20px 0 20px;
   }
 }
 .register .registerLogo {

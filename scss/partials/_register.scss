@@ -10,18 +10,27 @@
 
         @include tablet{
             flex-direction: row;
+            width: 85%;
+        }
+        @include desktop{
+            width: 80%;
+        }
+        @include large{
+            width: 75%;
         }
     }
     .registerRight, .registerLeft{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin: 0 20px;
 
         @include tablet{
             flex: 1;
             justify-content: flex-start;
+            margin: 0 20px 0 20px;
+
         }
+
     }
     .registerLogo{
         font-weight: 600;
@@ -33,7 +42,6 @@
         margin-bottom: 10px;
     }
     .registerBox{
-
         padding: 20px;
         background-color: $form-background;
         border-radius: 10px;
