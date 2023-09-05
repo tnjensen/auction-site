@@ -13,10 +13,10 @@
             width: 85%;
         }
         @include desktop{
-            width: 80%;
+            width: 81%;
         }
         @include large{
-            width: 75%;
+            width: 76%;
         }
     }
     .registerRight, .registerLeft{
@@ -27,7 +27,7 @@
         @include tablet{
             flex: 1;
             justify-content: flex-start;
-            margin: 0 20px 0 20px;
+            margin: 40px 20px 0 20px;
 
         }
 

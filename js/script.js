@@ -120,6 +120,9 @@ function buildPage(results){
 }
 
 function createHTML(results){ 
+  if(maxPages == postPage){
+    rightAngle.style.display = "none";
+  }
   if(index == 0){
     leftAngle.style.display = "none";
   }

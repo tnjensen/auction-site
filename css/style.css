@@ -12699,7 +12699,6 @@ body .success {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 88%;
   }
 }
 @media (min-width: 992px) {
@@ -12733,12 +12732,12 @@ body .success {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    /* margin: 0 20px 0 -5px; */
+    margin: 20px 20px 0 20px;
   }
 }
 @media (min-width: 992px) {
   .login .loginRight, .login .loginLeft {
-    /* margin: 0 20px 0 10px; */
+    margin: 0 20px 0 30px;
   }
 }
 @media (min-width: 1280px) {
@@ -12843,12 +12842,12 @@ body .success {
 }
 @media (min-width: 992px) {
   .register .wrapper {
-    width: 80%;
+    width: 81%;
   }
 }
 @media (min-width: 1280px) {
   .register .wrapper {
-    width: 75%;
+    width: 76%;
   }
 }
 .register .registerRight, .register .registerLeft {
@@ -12871,7 +12870,7 @@ body .success {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    margin: 0 20px 0 20px;
+    margin: 40px 20px 0 20px;
   }
 }
 .register .registerLogo {
