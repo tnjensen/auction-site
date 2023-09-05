@@ -117,8 +117,8 @@ function buildPage(results){
     let indexEnd = indexStart + postsPerPage;
     pageResult = results.slice(indexStart, indexEnd);
     createHTML(pageResult);
-    /* checkLength(pageResult);
-    checkImageRatio(pageResult); */
+    checkLength(pageResult);
+    checkImageRatio(pageResult);
 }
 
 function createHTML(results){ 
@@ -147,6 +147,8 @@ function createHTML(results){
         </div>`
         } 
     } 
+    checkLength(results);
+    checkImageRatio(results);
 }
 function checkLength(results){
   let nodeList = document.querySelectorAll('.card-text');
@@ -163,10 +165,15 @@ function checkImageRatio(results){
   console.log(nodeList);
   
     for(let i = 0; i < nodeList.length; i++){
-      console.log("height: ", nodeList[i].naturalHeight);
-      console.log("width:", nodeList[i].naturalWidth);
+      let imageUrl = getComputedStyle(nodeList[i]);
+      /* let imageSrc = imageUrl.replace(/"/g,"").replace(/url\(|\)$/ig, ""); */
+      nodeList[i].height = imageUrl.height;
+      nodeList[i].width = imageUrl.width;
+      
+      console.log("height: ", imageUrl.height);
+      console.log("width:", imageUrl.width);
 
-        if(nodeList[i].naturalHeight > nodeList[i].naturalWidth){
+        if(nodeList[i].height > nodeList[i].width){
           nodeList[i].classList.add('tall');
         }
       }
