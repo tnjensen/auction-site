@@ -101,11 +101,11 @@
         }
 
         .card-img-top{
-            height: 350px;
+            height: 300px;
             width: 100%;
             background-repeat: no-repeat;
             background-size: cover;
-            background-position: center center;
+            background-position: center top;
            
             &.tall{
                 background-position: center top;
