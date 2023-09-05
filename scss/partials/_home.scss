@@ -58,7 +58,7 @@
 
     .fa-angle-left, .fa-angle-right{
         position: absolute;
-        top: 200px;
+        top: 150px;
         cursor: pointer;
         color: $bs-link-hover-color;
         opacity: .7;
@@ -101,11 +101,14 @@
         }
 
         .card-img-top{
-            height: 350px;
-            object-fit: cover;
+            height: 200px;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
            
             &.tall{
-                object-position: bottom 50%;
+                background-position: center top;
             }
 
             @include tablet{

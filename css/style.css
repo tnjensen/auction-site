@@ -12368,7 +12368,7 @@ body .success {
 }
 .showcase .fa-angle-left, .showcase .fa-angle-right {
   position: absolute;
-  top: 200px;
+  top: 150px;
   cursor: pointer;
   color: #ee7e5c;
   opacity: 0.7;
@@ -12425,13 +12425,14 @@ body .success {
   }
 }
 .showcase .card .card-img-top {
-  height: 350px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 200px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 .showcase .card .card-img-top.tall {
-  -o-object-position: bottom 50%;
-     object-position: bottom 50%;
+  background-position: center top;
 }
 .showcase .card .card-body {
   display: -webkit-box;

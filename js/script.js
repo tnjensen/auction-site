@@ -75,6 +75,8 @@ async function getItems(){
         let currentSlide = results[0];
         index = results.indexOf(currentSlide);
         leftAngle.style.display = "none";
+        checkLength(results);
+        checkImageRatio(results);
         getMaxPages(results);
         createHTML(results);
         
@@ -115,8 +117,8 @@ function buildPage(results){
     let indexEnd = indexStart + postsPerPage;
     pageResult = results.slice(indexStart, indexEnd);
     createHTML(pageResult);
-    checkLength(pageResult);
-    /* checkImageRatio(pageResult); */
+    /* checkLength(pageResult);
+    checkImageRatio(pageResult); */
 }
 
 function createHTML(results){ 
@@ -136,7 +138,7 @@ function createHTML(results){
             bidLink = `<a href="profile.html?id=${results[i].id}#bid" class="btn btn-secondary">Make a bid</a>`;
           }
           slider.innerHTML += `<div class="card">
-            <a href="detail.html?id=${results[i].id}"><img src=${results[i].media[0]} alt="item image" class="card-img-top"></a>
+            <a href="detail.html?id=${results[i].id}" style="background-image: url(${results[i].media[0]});" alt="item image" class="card-img-top"></a>
             <div class="card-body">
               <h2 class="card-title">${results[i].title}</h2> 
               <p class="card-text">${results[i].description}</p>
@@ -145,8 +147,6 @@ function createHTML(results){
         </div>`
         } 
     } 
-    checkLength(results);
-    /* checkImageRatio(results); */
 }
 function checkLength(results){
   let nodeList = document.querySelectorAll('.card-text');
