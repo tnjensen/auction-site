@@ -12141,7 +12141,7 @@ body .success {
 
 .wrapper {
   min-height: calc(100vh - 300px);
-  margin: 30px 0;
+  margin: 0 0 30px 0;
 }
 
 .header {
@@ -12944,7 +12944,7 @@ body .success {
 }
 
 .profile, .bid {
-  margin: 60px 0;
+  margin: 20px 0 60px 0;
   background-color: #fffefe;
   display: -webkit-box;
   display: -ms-flexbox;
