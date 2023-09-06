@@ -12426,14 +12426,14 @@ body .success {
   }
 }
 .showcase .card .card-img-top {
-  height: 250px;
+  height: 300px;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 }
 .showcase .card .card-img-top.tall {
-  background-position: center top;
+  /* background-position: center top; */
 }
 .showcase .card .card-body {
   display: -webkit-box;
