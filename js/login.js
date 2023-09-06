@@ -74,13 +74,8 @@ async function doLogin(loginEmailValue,loginPasswordValue){
         }
         else{
         //Redirect to homepage if successful login
-             /* submitButton.innerHTML = "Home page";
-             submitButton.onclick = function(){ */
-                location.href = "/";
-           /*   }    */
-           
-        }
-        
+            window.location.href = "/";
+        }  
     }
     catch(error){
         return displayMessage("error", "Wrong username or password", ".message-container");

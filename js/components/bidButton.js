@@ -1,3 +1,3 @@
 export function makeBid(){
-    location.href = "profile.html";
+    window.location.href = "profile.html";
 }

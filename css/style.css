@@ -13325,30 +13325,6 @@ body .success {
     font-size: 21px;
   }
 }
-.showcase .card.detail .guestBidLink {
-  color: #fffefe;
-  border-radius: 10px;
-  text-decoration: none;
-  font-family: "Roboto Flex", sans-serif;
-}
-@media (min-width: 768px) {
-  .showcase .card.detail .guestBidLink {
-    font-size: 22px;
-  }
-}
-.showcase .card.detail .bidLink {
-  font-family: "Roboto Flex", sans-serif;
-  color: #fffefe;
-  text-transform: uppercase;
-  border: none;
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 0.1rem;
-  font-style: oblique;
-  border-radius: 5px;
-  padding: 10px 0;
-  text-decoration: none;
-}
 .showcase .card.detail .deleteLink {
   background-color: #f79577;
   float: right;

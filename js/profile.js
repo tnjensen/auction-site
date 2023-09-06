@@ -216,17 +216,14 @@ async function placeBid(bidAmountValue){
             saveBid(bid);
         }
         if(json.errors){
-            displayMessage("warning", json.errors[0].message, ".bid-message-container");
-            
+            displayMessage("warning", json.errors[0].message, ".bid-message-container"); 
         }
         else{
              bidButton.innerHTML = "Go back";
              bidButton.onclick = function(){
                 location.href = "/";
-             }   
-           
-        }
-        
+             }    
+        } 
     }
     catch(error){
         return displayMessage("error", "Something went wrong, please try again.. ", ".bid-message-container");
