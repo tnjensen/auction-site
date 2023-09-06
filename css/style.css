@@ -12929,18 +12929,18 @@ body .success {
 }
 
 @media (min-width: 768px) {
-  .wrapper {
+  .profile-wrapper {
     width: 98%;
   }
 }
 @media (min-width: 992px) {
-  .wrapper {
+  .profile-wrapper {
     width: 84%;
     margin-left: 10px;
   }
 }
 @media (min-width: 1280px) {
-  .wrapper {
+  .profile-wrapper {
     width: 78%;
     margin-left: 20px;
   }
