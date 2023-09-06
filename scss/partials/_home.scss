@@ -95,10 +95,10 @@
         
         @include tablet{
             flex: 1;
-            max-width: 25%;
+            max-width: 30%;
         }
         @include desktop{
-           max-width: 20%;
+           max-width: 25%;
         }
 
         .card-img-top{

@@ -12417,12 +12417,12 @@ body .success {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    max-width: 25%;
+    max-width: 30%;
   }
 }
 @media (min-width: 992px) {
   .showcase .card {
-    max-width: 20%;
+    max-width: 25%;
   }
 }
 .showcase .card .card-img-top {
