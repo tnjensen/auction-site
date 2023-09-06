@@ -1,3 +1,17 @@
+.wrapper{
+
+    @include tablet{
+        width: 98%;
+    }
+    @include desktop{
+        width: 84%;
+        margin-left: 10px;
+    }
+    @include large{
+        width: 78%;
+        margin-left: 20px;
+    }
+}
 .profile, .bid{
     margin: 60px 0;
     background-color: $backgroundColor;
