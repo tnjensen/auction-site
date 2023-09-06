@@ -76,7 +76,7 @@ async function getItems(){
         index = results.indexOf(currentSlide);
         leftAngle.style.display = "none";
         checkLength(results);
-        checkImageRatio(results);
+        /* checkImageRatio(results); */
         getMaxPages(results);
         createHTML(results);
         
@@ -118,7 +118,7 @@ function buildPage(results){
     pageResult = results.slice(indexStart, indexEnd);
     createHTML(pageResult);
     checkLength(pageResult);
-    checkImageRatio(pageResult);
+    /* checkImageRatio(pageResult); */
 }
 
 function createHTML(results){ 
@@ -148,7 +148,7 @@ function createHTML(results){
         } 
     } 
     checkLength(results);
-    checkImageRatio(results);
+    /* checkImageRatio(results); */
 }
 function checkLength(results){
   let nodeList = document.querySelectorAll('.card-text');
@@ -159,14 +159,13 @@ function checkLength(results){
         }
       }
 }
-function checkImageRatio(results){
+/* function checkImageRatio(results){
   let nodeList = document.querySelectorAll('.card-img-top');
   console.log(results[0].media[0]);
   console.log(nodeList);
   
     for(let i = 0; i < nodeList.length; i++){
       let imageUrl = getComputedStyle(nodeList[i]);
-      /* let imageSrc = imageUrl.replace(/"/g,"").replace(/url\(|\)$/ig, ""); */
       nodeList[i].height = imageUrl.height;
       nodeList[i].width = imageUrl.width;
       
@@ -177,7 +176,7 @@ function checkImageRatio(results){
           nodeList[i].classList.add('tall');
         }
       }
-}
+} */
 inputForm.addEventListener('submit', handleSubmit);
 
 function handleSubmit(event){
