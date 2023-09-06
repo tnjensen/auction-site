@@ -87,21 +87,22 @@
         }
     }
     .card{
+        width: 70%;
         border-radius: 10px;
         margin: 0 10px;
         display: flex;
-        flex: 1;
         flex-direction: column;
         
         @include tablet{
-            max-width: 50%;
+            flex: 1;
+            max-width: 25%;
         }
         @include desktop{
-           max-width: 25%;
+           max-width: 20%;
         }
 
         .card-img-top{
-            height: 200px;
+            height: 250px;
             width: 100%;
             background-repeat: no-repeat;
             background-size: cover;
