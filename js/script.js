@@ -32,7 +32,6 @@ let pageResult = [];
 let postPage = 0;
 let mobile = 480;
 let tablet = 768;
-let height = 575.98; 
 let desktop = 992;
 let large = 1280;
 
@@ -76,7 +75,6 @@ async function getItems(){
         index = results.indexOf(currentSlide);
         leftAngle.style.display = "none";
         checkLength(results);
-        /* checkImageRatio(results); */
         getMaxPages(results);
         createHTML(results);
         
@@ -118,7 +116,6 @@ function buildPage(results){
     pageResult = results.slice(indexStart, indexEnd);
     createHTML(pageResult);
     checkLength(pageResult);
-    /* checkImageRatio(pageResult); */
 }
 
 function createHTML(results){ 
@@ -148,7 +145,6 @@ function createHTML(results){
         } 
     } 
     checkLength(results);
-    /* checkImageRatio(results); */
 }
 function checkLength(results){
   let nodeList = document.querySelectorAll('.card-text');
@@ -159,24 +155,7 @@ function checkLength(results){
         }
       }
 }
-/* function checkImageRatio(results){
-  let nodeList = document.querySelectorAll('.card-img-top');
-  console.log(results[0].media[0]);
-  console.log(nodeList);
-  
-    for(let i = 0; i < nodeList.length; i++){
-      let imageUrl = getComputedStyle(nodeList[i]);
-      nodeList[i].height = imageUrl.height;
-      nodeList[i].width = imageUrl.width;
-      
-      console.log("height: ", imageUrl.height);
-      console.log("width:", imageUrl.width);
 
-        if(nodeList[i].height > nodeList[i].width){
-          nodeList[i].classList.add('tall');
-        }
-      }
-} */
 inputForm.addEventListener('submit', handleSubmit);
 
 function handleSubmit(event){
@@ -240,11 +219,6 @@ function detectViewport(){
   if(window.innerWidth >= large){
       postsPerPage = 5;
   }
-  /* 
-  if(window.innerHeight <= height){
-      postsPerPage = 2; 
-  } */
-  /* console.log(postsPerPage); */
   return postsPerPage;
 }
 
