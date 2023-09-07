@@ -1,16 +1,6 @@
 .profile-wrapper{
-
-    @include tablet{
-        width: 98%;
-    }
-    @include desktop{
-        width: 83%;
-        margin-left: 10px;
-    }
-    @include large{
-        width: 78%;
-        margin-left: 20px;
-    }
+    max-width: 1160px;
+    margin: auto;
 }
 .profile, .bid{
     margin: 20px 0 60px 0;
@@ -22,11 +12,12 @@
     
     @include tablet{
         flex-direction: row;
+        
     }
     .profileRight, .profileLeft, .bidLeft, .bidRight{
         display: flex;
         flex-direction: column;
-        margin: 0 20px;
+        margin: 0 25px;
 
         @include tablet{
             flex: 1;
@@ -37,19 +28,19 @@
         
         @include tablet{
             position: relative;
-            left: 12%;
-            transform: translateX(-12%);
+            left: 13%;
+            transform: translateX(-13%);
             
         }
         @include desktop{
             position: relative;
-            left: 17%;
-            transform: translateX(-17%);
+            left: 15%;
+            transform: translateX(-15%);
         }
         @include large{
             position: relative;
-            left: 23%;
-            transform: translateX(-23%);
+            left: 20%;
+            transform: translateX(-20%);
         }
         
     }
@@ -79,9 +70,6 @@
         box-decoration-break: clone;
     }
     .profileBox, .bidBox{
-        position: relative;
-        left: 40%;
-        transform: translateX(-40%);
         height: 300px;
         width: 250px;
         padding: 20px;

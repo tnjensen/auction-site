@@ -3,6 +3,8 @@
     border-top: 3px solid rgba($footer-background, 0.3); 
     
     .footer-content{
+        max-width: 1160px;
+        margin: auto;
         padding: 40px;
         display: flex;
         flex-direction: column;

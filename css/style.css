@@ -12141,7 +12141,13 @@ body .success {
 
 .wrapper {
   min-height: calc(100vh - 300px);
-  margin: 0 0 30px 0;
+  margin: 0 auto;
+  max-width: 1160px;
+}
+
+.header {
+  max-width: 1160px;
+  margin: auto;
 }
 
 .header {
@@ -12594,6 +12600,8 @@ body .success {
   border-top: 3px solid rgba(74, 74, 77, 0.3);
 }
 .footer .footer-content {
+  max-width: 1160px;
+  margin: auto;
   padding: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12674,7 +12682,8 @@ body .success {
 }
 
 .login {
-  width: 100vw;
+  max-width: 1160px;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12683,7 +12692,6 @@ body .success {
           justify-content: center;
 }
 .login .wrapper {
-  width: 85%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12691,6 +12699,7 @@ body .success {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 80%;
 }
 @media (min-width: 768px) {
   .login .wrapper {
@@ -12698,16 +12707,6 @@ body .success {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-  }
-}
-@media (min-width: 992px) {
-  .login .wrapper {
-    width: 82%;
-  }
-}
-@media (min-width: 1280px) {
-  .login .wrapper {
-    width: 78%;
   }
 }
 .login .loginRight, .login .loginLeft {
@@ -12731,23 +12730,18 @@ body .success {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    margin: 20px 20px 0 20px;
-  }
-}
-@media (min-width: 992px) {
-  .login .loginRight, .login .loginLeft {
-    margin: 0 20px 0 30px;
-  }
-}
-@media (min-width: 1280px) {
-  .login .loginRight, .login .loginLeft {
-    /* margin: 0 20px 0 30px; */
+    margin: 40px 20px 0 0;
   }
 }
 .login .loginLogo {
   font-weight: 600;
   color: #0731bb;
   margin: 20px 0 10px 0;
+}
+@media (min-width: 768px) {
+  .login .loginLogo {
+    margin: 60px 0 20px 0;
+  }
 }
 .login .loginDesc {
   font-size: 22px;
@@ -12756,6 +12750,7 @@ body .success {
 .login .loginBox {
   height: 300px;
   padding: 20px;
+  margin-top: 20px;
   border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12812,7 +12807,8 @@ body .success {
 }
 
 .register {
-  width: 100vw;
+  max-width: 1160px;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12821,7 +12817,6 @@ body .success {
           justify-content: center;
 }
 .register .wrapper {
-  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12829,6 +12824,7 @@ body .success {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 80%;
 }
 @media (min-width: 768px) {
   .register .wrapper {
@@ -12836,17 +12832,6 @@ body .success {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 85%;
-  }
-}
-@media (min-width: 992px) {
-  .register .wrapper {
-    width: 81%;
-  }
-}
-@media (min-width: 1280px) {
-  .register .wrapper {
-    width: 76%;
   }
 }
 .register .registerRight, .register .registerLeft {
@@ -12869,7 +12854,7 @@ body .success {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    margin: 40px 20px 0 20px;
+    margin: 40px 20px 0 0;
   }
 }
 .register .registerLogo {
@@ -12877,12 +12862,18 @@ body .success {
   color: #0731bb;
   margin: 20px 0 10px 0;
 }
+@media (min-width: 768px) {
+  .register .registerLogo {
+    margin: 60px 0 20px 0;
+  }
+}
 .register .registerDesc {
   font-size: 22px;
   margin-bottom: 10px;
 }
 .register .registerBox {
   padding: 20px;
+  margin-top: 20px;
   background-color: #757578;
   border-radius: 10px;
   display: -webkit-box;
@@ -12925,22 +12916,9 @@ body .success {
   background-color: #1546e6;
 }
 
-@media (min-width: 768px) {
-  .profile-wrapper {
-    width: 98%;
-  }
-}
-@media (min-width: 992px) {
-  .profile-wrapper {
-    width: 83%;
-    margin-left: 10px;
-  }
-}
-@media (min-width: 1280px) {
-  .profile-wrapper {
-    width: 78%;
-    margin-left: 20px;
-  }
+.profile-wrapper {
+  max-width: 1160px;
+  margin: auto;
 }
 
 .profile, .bid {
@@ -12975,7 +12953,7 @@ body .success {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0 20px;
+  margin: 0 25px;
 }
 @media (min-width: 768px) {
   .profile .profileRight, .profile .profileLeft, .profile .bidLeft, .profile .bidRight, .bid .profileRight, .bid .profileLeft, .bid .bidLeft, .bid .bidRight {
@@ -12990,25 +12968,25 @@ body .success {
 @media (min-width: 768px) {
   .profile .profileLeft, .profile .bidLeft, .bid .profileLeft, .bid .bidLeft {
     position: relative;
-    left: 12%;
-    -webkit-transform: translateX(-12%);
-            transform: translateX(-12%);
+    left: 13%;
+    -webkit-transform: translateX(-13%);
+            transform: translateX(-13%);
   }
 }
 @media (min-width: 992px) {
   .profile .profileLeft, .profile .bidLeft, .bid .profileLeft, .bid .bidLeft {
     position: relative;
-    left: 17%;
-    -webkit-transform: translateX(-17%);
-            transform: translateX(-17%);
+    left: 15%;
+    -webkit-transform: translateX(-15%);
+            transform: translateX(-15%);
   }
 }
 @media (min-width: 1280px) {
   .profile .profileLeft, .profile .bidLeft, .bid .profileLeft, .bid .bidLeft {
     position: relative;
-    left: 23%;
-    -webkit-transform: translateX(-23%);
-            transform: translateX(-23%);
+    left: 20%;
+    -webkit-transform: translateX(-20%);
+            transform: translateX(-20%);
   }
 }
 .profile .bidDesc, .bid .bidDesc {
@@ -13033,10 +13011,6 @@ body .success {
           box-decoration-break: clone;
 }
 .profile .profileBox, .profile .bidBox, .bid .profileBox, .bid .bidBox {
-  position: relative;
-  left: 40%;
-  -webkit-transform: translateX(-40%);
-          transform: translateX(-40%);
   height: 300px;
   width: 250px;
   padding: 20px;
