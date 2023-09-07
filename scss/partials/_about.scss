@@ -1,13 +1,12 @@
 .main {
     padding: 40px 20px;
     margin: 0 auto;
-    max-width: 85%;
+    max-width: 1160px;
 
-    @include desktop{
-        max-width: 75%;
-    }
     .content{
-        margin-bottom: 40px;
+        width: 75%;
+        margin: auto;
+        margin-bottom: 60px;
     }
     .list{
         margin: 0 auto;

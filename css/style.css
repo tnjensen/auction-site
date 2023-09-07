@@ -13073,15 +13073,12 @@ body .success {
 .main {
   padding: 40px 20px;
   margin: 0 auto;
-  max-width: 85%;
-}
-@media (min-width: 992px) {
-  .main {
-    max-width: 75%;
-  }
+  max-width: 1160px;
 }
 .main .content {
-  margin-bottom: 40px;
+  width: 75%;
+  margin: auto;
+  margin-bottom: 60px;
 }
 .main .list {
   margin: 0 auto;
