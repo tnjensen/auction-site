@@ -11,7 +11,8 @@
         justify-content: center;
         
         @include tablet{
-            
+            flex-direction: row;
+            gap: 15px;
         }
         
         @include desktop{

@@ -12626,6 +12626,15 @@ body .success {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media (min-width: 768px) {
+  .footer .footer-content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 15px;
+  }
+}
 @media (min-width: 992px) {
   .footer .footer-content {
     -webkit-box-orient: horizontal;
