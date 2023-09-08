@@ -10,6 +10,10 @@
         flex-direction: column;
         justify-content: center;
         
+        @include tablet{
+            
+        }
+        
         @include desktop{
             flex-direction: row;
             justify-content: space-around;

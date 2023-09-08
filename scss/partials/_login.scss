@@ -3,15 +3,16 @@
     margin: auto;
     display: flex;
     justify-content: center;
+    align-items: center;
 
     .wrapper{
         display: flex;
         flex-direction: column;
-        width: 80%;
+        width: 70%;
 
         @include tablet{
             flex-direction: row;
-            align-items: center;
+            width: 80%;
             margin-bottom: 60px;
         }
 

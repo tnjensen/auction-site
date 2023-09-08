@@ -1,145 +1,152 @@
 .header{
-    min-height: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    z-index: 10;
-    padding: 0 15px;
-   
-    @include tablet{
-        justify-content: space-around;
-    }
-    .left{
+    width: 100vw;
+    border-bottom: 2px solid rgba($footer-background, .2);
 
-        .logo{
-            text-decoration: none;
-            cursor: pointer;
-            font-family: "Roboto Flex", sans-serif;
-            font-size: 26px;
-            margin: 0 20px 0 10px;
-
-            @include tablet{
-                font-size: 32px;
+    .header-content{
+        min-height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+        padding: 0 15px;
+       
+       
+        @include tablet{
+            justify-content: space-around;
+        }
+        .left{
+    
+            .logo{
+                text-decoration: none;
+                cursor: pointer;
+                font-family: "Roboto Flex", sans-serif;
+                font-size: 26px;
+                margin: 0 20px 0 10px;
+    
+                @include tablet{
+                    font-size: 32px;
+                }
             }
         }
-    }
-
-    .profile-details{
-
-        .profile-divider{
-            color: $secondary;
-        }
-
-        a{
-        text-decoration:none;
-        cursor: pointer;
-        }
-        img{
-            margin-bottom: 5px;
-        }
-    }
-    .credits{
-        color:$secondary;
-    }
-    .right{
-
-        ul{
-            list-style: none;
-            display: none;
     
-            @include tablet{
-                display: inline-flex;
-                margin-bottom: 0;
+        .profile-details{
+    
+            .profile-divider{
+                color: $secondary;
             }
     
-        }
-        li a{
-            text-decoration: none;
+            a{
+            text-decoration:none;
             cursor: pointer;
-            padding-right: 10px;
-            
-        }
-
-        .bars{
-            width: 30px;
-            height: 22px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            cursor: pointer;
-            
-            @include tablet{
-                display: none;
             }
-            span{
-                width: 90%;
-                height: 3px;
-                background-color: $bs-link-hover-color;
-                transform-origin: left;
-                transition: all 1s ease;
-
+            img{
+                margin-bottom: 5px;
             }
-        }
-    }
-    &.active{
-        background-color: $secondary;
-        color: $textColor;
-
-        .logo{
-            color: $textColor;
         }
         .credits{
-            color:$textColor;
-        }
-        .bars{
-
-            span{
-                &:first-child{
-                    background-color: $textColor;
-                    transform: rotate(45deg);
-                }
-                &:nth-child(2){
-                    display: none;
-                }
-                &:last-child{
-                    background-color: $textColor;
-                    transform: rotate(-45deg);
-                }
-            }
-        }
-        .profile-details{
-            
-            a{
-                color: $textColor;
-            }
-
-            .profile-divider{
-                color: $textColor;
-            }
+            color:$secondary;
         }
         .right{
-
+    
             ul{
-                display: block;
-                width: 120px;
-                background-color: $secondary;
-                position: absolute;
-                top: 70px;
-                right: 0;
-                padding: 0 20px 20px 20px;
-
+                list-style: none;
+                display: none;
+        
+                @include tablet{
+                    display: inline-flex;
+                    margin-bottom: 0;
+                }
+        
             }
             li a{
-                color: $textColor;
-                font-size: 22px;
-
-                &:hover{
-                    font-weight: 600;
-                }
-
+                text-decoration: none;
+                cursor: pointer;
+                padding-right: 10px;
+                
             }
-            
+    
+            .bars{
+                width: 30px;
+                height: 22px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                cursor: pointer;
+                
+                @include tablet{
+                    display: none;
+                }
+                span{
+                    width: 90%;
+                    height: 3px;
+                    background-color: $bs-link-hover-color;
+                    transform-origin: left;
+                    transition: all 1s ease;
+    
+                }
+            }
+        }
+        &.active{
+            background-color: $secondary;
+            color: $textColor;
+    
+            .logo{
+                color: $textColor;
+            }
+            .credits{
+                color:$textColor;
+            }
+            .bars{
+    
+                span{
+                    &:first-child{
+                        background-color: $textColor;
+                        transform: rotate(45deg);
+                    }
+                    &:nth-child(2){
+                        display: none;
+                    }
+                    &:last-child{
+                        background-color: $textColor;
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+            .profile-details{
+                
+                a{
+                    color: $textColor;
+                }
+    
+                .profile-divider{
+                    color: $textColor;
+                }
+            }
+            .right{
+    
+                ul{
+                    display: block;
+                    width: 120px;
+                    background-color: $secondary;
+                    position: absolute;
+                    top: 70px;
+                    right: 0;
+                    padding: 0 20px 20px 20px;
+    
+                }
+                li a{
+                    color: $textColor;
+                    font-size: 22px;
+    
+                    &:hover{
+                        font-weight: 600;
+                    }
+    
+                }
+                
+            }
         }
     }
 }
+   
