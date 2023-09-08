@@ -2,7 +2,11 @@
     padding: 40px 20px;
     margin: 0 auto;
     max-width: 1160px;
-
+    
+    h1{
+        text-align: center;
+        margin-bottom: 10px;
+    }
     .content{
         width: 75%;
         margin: auto;
@@ -15,50 +19,46 @@
         flex-direction: column;
         justify-content: space-between;
 
-        @include tablet{
+        @include deskop{
             flex-direction: row;
             gap: 10px;
         }
-    }
-    h1{
-        text-align: center;
-        margin-bottom: 10px;
-    }
-    .item{
-        text-align: left;
-        margin: 0 auto;
-        padding: 10px; 
-    }
-    .item h2{
-        text-align: center;
-        margin-top: 10px;
-    }
-    .item h3{
-        text-align: center;
-        margin-bottom: 10px;
-    }
-    .social{
-        display: inline-flex;
-        list-style-type: none;
-        margin: 20px 0;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .item li{
-        margin-right: 15px;
-    }
-    .item img{
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .social ul {
-        display: inline-flex;
-        padding: 0;
-    }
-    .social li{
-        list-style-type: none;
-        padding: 0 10px 0 0;
-    }
+        .item{
+            text-align: left;
+            margin: 0 auto;
+            padding: 10px; 
+            
+            h2,h3{
+                text-align: center;
+                margin-top: 10px;
+            }
+            p{
+                width: 75%;
+            }
+        }
+        .social{
+            display: inline-flex;
+            list-style-type: none;
+            margin: 20px 0;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .item li{
+            margin-right: 15px;
+        }
+        .item img{
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .social ul {
+            display: inline-flex;
+            padding: 0;
+        }
+        .social li{
+            list-style-type: none;
+            padding: 0 10px 0 0;
+        }
+    } 
 }
