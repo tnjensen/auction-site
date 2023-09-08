@@ -19,7 +19,7 @@
         flex-direction: column;
         justify-content: space-between;
 
-        @include deskop{
+        @include desktop{
             flex-direction: row;
             gap: 10px;
         }
@@ -34,6 +34,7 @@
             }
             p{
                 width: 75%;
+                margin: auto;
             }
         }
         .social{

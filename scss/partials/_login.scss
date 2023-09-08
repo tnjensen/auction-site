@@ -11,86 +11,91 @@
 
         @include tablet{
             flex-direction: row;
+            align-items: center;
+            margin-bottom: 60px;
         }
-    }
-    .loginRight, .loginLeft{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 0 20px;
 
-        @include tablet{
-            flex: 1;
-            justify-content: flex-start;
-            margin: 40px 20px 0 0;
+        .loginRight, .loginLeft{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 20px;
+    
+            @include tablet{
+                flex: 1;
+                justify-content: flex-start;
+                margin: 40px 20px 0 0;
+            }
         }
-    }
-    .loginLogo{
-        font-weight: 600;
-        color: $secondary;
-        margin: 20px 0 10px 0;
-
-        @include tablet{
-            margin: 60px 0 20px 0;
+        .loginLogo{
+            font-weight: 600;
+            color: $secondary;
+            margin: 20px 0 10px 0;
+    
+            @include tablet{
+                margin: 60px 0 20px 0;
+            }
         }
-    }
-    .loginDesc{
-        font-size: 22px;
-        margin-bottom: 10px;
-    }
-    .loginBox{
-        height: 300px;
-        padding: 20px;
-        margin-top: 20px;
-        border-radius: 10px;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        background-color: $form-background;
-        
-
-        a{
+        .loginDesc{
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .loginBox{
+            height: 300px;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            background-color: $form-background;
+            
+            @include tablet{
+                margin-top: 0;
+            }
+            a{
+                color: $textColor;
+            }
+        }
+        .loginName, .loginEmail, .loginPassword{
+            height: 50px;
+            border-radius: 5px;
+            border: 1px solid gray;
+            padding-left: 10px;
+            margin: 5px 0;
+        }
+        input:focus{
+            outline: none;
+        }
+        .loginButton{
+            height: 50px;
+            border-radius: 10px;
+            border: none;
+            background-color: $secondary;
             color: $textColor;
+            font-family: "Roboto Flex", sans-serif;
+            cursor: pointer;
+            text-transform: uppercase;
+            margin-top: 10px;
+            
+            &:hover{
+                background-color:$secondary-hover;
+            }
         }
-    }
-    .loginName, .loginEmail, .loginPassword{
-        height: 50px;
-        border-radius: 5px;
-        border: 1px solid gray;
-        padding-left: 10px;
-        margin: 5px 0;
-    }
-    input:focus{
-        outline: none;
-    }
-    .loginButton{
-        height: 50px;
-        border-radius: 10px;
-        border: none;
-        background-color: $secondary;
-        color: $textColor;
-        font-family: "Roboto Flex", sans-serif;
-        cursor: pointer;
-        text-transform: uppercase;
-        margin-top: 10px;
-        
-        &:hover{
-            background-color:$secondary-hover;
+        .loginButton:focus{
+            outline:none;
         }
-    }
-    .loginButton:focus{
-        outline:none;
-    }
-    .loginButton:disabled{
-        cursor: not-allowed;
-    }
-    .registerUser{
-        margin-top: 10px;
-        text-align: center;
-        cursor: pointer;
-
-        &:hover{
-            color: rgba($textColor, 0.7);
+        .loginButton:disabled{
+            cursor: not-allowed;
+        }
+        .registerUser{
+            margin-top: 10px;
+            text-align: center;
+            cursor: pointer;
+    
+            &:hover{
+                color: rgba($textColor, 0.7);
+            }
         }
     }
 }

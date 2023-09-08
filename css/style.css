@@ -12167,7 +12167,8 @@ body .success {
 }
 @media (min-width: 768px) {
   .header {
-    /* justify-content: space-around; */
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 .header .left .logo {
@@ -12714,9 +12715,13 @@ body .success {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 60px;
   }
 }
-.login .loginRight, .login .loginLeft {
+.login .wrapper .loginRight, .login .wrapper .loginLeft {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12730,7 +12735,7 @@ body .success {
   margin: 0 20px;
 }
 @media (min-width: 768px) {
-  .login .loginRight, .login .loginLeft {
+  .login .wrapper .loginRight, .login .wrapper .loginLeft {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
@@ -12740,21 +12745,21 @@ body .success {
     margin: 40px 20px 0 0;
   }
 }
-.login .loginLogo {
+.login .wrapper .loginLogo {
   font-weight: 600;
   color: #0731bb;
   margin: 20px 0 10px 0;
 }
 @media (min-width: 768px) {
-  .login .loginLogo {
+  .login .wrapper .loginLogo {
     margin: 60px 0 20px 0;
   }
 }
-.login .loginDesc {
+.login .wrapper .loginDesc {
   font-size: 22px;
   margin-bottom: 10px;
 }
-.login .loginBox {
+.login .wrapper .loginBox {
   height: 300px;
   padding: 20px;
   margin-top: 20px;
@@ -12771,20 +12776,25 @@ body .success {
           flex-direction: column;
   background-color: #757578;
 }
-.login .loginBox a {
+@media (min-width: 768px) {
+  .login .wrapper .loginBox {
+    margin-top: 0;
+  }
+}
+.login .wrapper .loginBox a {
   color: #fffefe;
 }
-.login .loginName, .login .loginEmail, .login .loginPassword {
+.login .wrapper .loginName, .login .wrapper .loginEmail, .login .wrapper .loginPassword {
   height: 50px;
   border-radius: 5px;
   border: 1px solid gray;
   padding-left: 10px;
   margin: 5px 0;
 }
-.login input:focus {
+.login .wrapper input:focus {
   outline: none;
 }
-.login .loginButton {
+.login .wrapper .loginButton {
   height: 50px;
   border-radius: 10px;
   border: none;
@@ -12795,21 +12805,21 @@ body .success {
   text-transform: uppercase;
   margin-top: 10px;
 }
-.login .loginButton:hover {
+.login .wrapper .loginButton:hover {
   background-color: #1546e6;
 }
-.login .loginButton:focus {
+.login .wrapper .loginButton:focus {
   outline: none;
 }
-.login .loginButton:disabled {
+.login .wrapper .loginButton:disabled {
   cursor: not-allowed;
 }
-.login .registerUser {
+.login .wrapper .registerUser {
   margin-top: 10px;
   text-align: center;
   cursor: pointer;
 }
-.login .registerUser:hover {
+.login .wrapper .registerUser:hover {
   color: rgba(255, 254, 254, 0.7);
 }
 
@@ -12841,7 +12851,7 @@ body .success {
             flex-direction: row;
   }
 }
-.register .registerRight, .register .registerLeft {
+.register .wrapper .registerRight, .register .wrapper .registerLeft {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12854,7 +12864,7 @@ body .success {
           justify-content: center;
 }
 @media (min-width: 768px) {
-  .register .registerRight, .register .registerLeft {
+  .register .wrapper .registerRight, .register .wrapper .registerLeft {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
@@ -12864,21 +12874,21 @@ body .success {
     margin: 40px 20px 0 0;
   }
 }
-.register .registerLogo {
+.register .wrapper .registerLogo {
   font-weight: 600;
   color: #0731bb;
   margin: 20px 0 10px 0;
 }
 @media (min-width: 768px) {
-  .register .registerLogo {
+  .register .wrapper .registerLogo {
     margin: 60px 0 20px 0;
   }
 }
-.register .registerDesc {
+.register .wrapper .registerDesc {
   font-size: 22px;
   margin-bottom: 10px;
 }
-.register .registerBox {
+.register .wrapper .registerBox {
   padding: 20px;
   margin-top: 20px;
   background-color: #757578;
@@ -12893,20 +12903,25 @@ body .success {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.register .lblUsername, .register .lblEmail, .register .lblPassword {
+@media (min-width: 768px) {
+  .register .wrapper .registerBox {
+    margin-top: 0;
+  }
+}
+.register .wrapper .lblUsername, .register .wrapper .lblEmail, .register .wrapper .lblPassword {
   color: #fffefe;
 }
-.register .registerName, .register .registerEmail, .register .registerPassword, .register .registerAvatar {
+.register .wrapper .registerName, .register .wrapper .registerEmail, .register .wrapper .registerPassword, .register .wrapper .registerAvatar {
   height: 50px;
   border-radius: 5px;
   border: 1px solid gray;
   padding-left: 10px;
   margin: 5px 0;
 }
-.register input:focus {
+.register .wrapper input:focus {
   outline: none;
 }
-.register .signUpButton {
+.register .wrapper .signUpButton {
   height: 50px;
   border-radius: 10px;
   border: none;
@@ -12919,14 +12934,26 @@ body .success {
   cursor: pointer;
   margin-top: 10px;
 }
-.register .signUpButton:hover {
+.register .wrapper .signUpButton:hover {
   background-color: #1546e6;
 }
 
-.profile-wrapper {
-  max-width: 1160px;
-  margin: auto;
-  padding: 0 20px;
+@media (min-width: 768px) {
+  .profile-wrapper {
+    width: 98%;
+  }
+}
+@media (min-width: 992px) {
+  .profile-wrapper {
+    width: 84%;
+    margin-left: 10px;
+  }
+}
+@media (min-width: 1280px) {
+  .profile-wrapper {
+    width: 80%;
+    margin-left: 20px;
+  }
 }
 
 .profile, .bid {
@@ -12941,9 +12968,9 @@ body .success {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media (min-width: 768px) {
   .profile, .bid {
@@ -12961,6 +12988,7 @@ body .success {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 0 20px;
 }
 @media (min-width: 768px) {
   .profile .profileRight, .profile .profileLeft, .profile .bidLeft, .profile .bidRight, .bid .profileRight, .bid .profileLeft, .bid .bidLeft, .bid .bidRight {
@@ -12970,26 +12998,37 @@ body .success {
   }
 }
 .profile .profileLeft, .profile .bidLeft, .bid .profileLeft, .bid .bidLeft {
-  /*  width: 40%; */
-  /* @include tablet{
-      position: relative;
-      left: 10%;
-      transform: translateX(-10%);
-
+  width: 40%;
+}
+@media (min-width: 768px) {
+  .profile .profileLeft, .profile .bidLeft, .bid .profileLeft, .bid .bidLeft {
+    position: relative;
+    left: 12%;
+    -webkit-transform: translateX(-12%);
+            transform: translateX(-12%);
   }
-  @include desktop{
-      position: relative;
-      left: 15%;
-      transform: translateX(-15%);
+}
+@media (min-width: 992px) {
+  .profile .profileLeft, .profile .bidLeft, .bid .profileLeft, .bid .bidLeft {
+    position: relative;
+    left: 17%;
+    -webkit-transform: translateX(-17%);
+            transform: translateX(-17%);
   }
-  @include large{
-      position: relative;
-      left: 20%;
-      transform: translateX(-20%);
-  } */
+}
+@media (min-width: 1280px) {
+  .profile .profileLeft, .profile .bidLeft, .bid .profileLeft, .bid .bidLeft {
+    position: relative;
+    left: 23%;
+    -webkit-transform: translateX(-23%);
+            transform: translateX(-23%);
+  }
 }
 .profile .bidDesc, .bid .bidDesc {
   word-wrap: break-word;
+}
+.profile .profileRight .message-container, .bid .profileRight .message-container {
+  padding: 10px 0;
 }
 .profile .profileAvatar, .bid .profileAvatar {
   width: 40px;
@@ -13007,6 +13046,10 @@ body .success {
           box-decoration-break: clone;
 }
 .profile .profileBox, .profile .bidBox, .bid .profileBox, .bid .bidBox {
+  position: relative;
+  left: 40%;
+  -webkit-transform: translateX(-40%);
+          transform: translateX(-40%);
   height: 300px;
   width: 250px;
   padding: 20px;
@@ -13071,6 +13114,10 @@ body .success {
   margin: 0 auto;
   max-width: 1160px;
 }
+.main h1, .main .h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
 .main .content {
   width: 75%;
   margin: auto;
@@ -13090,7 +13137,7 @@ body .success {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .main .list {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -13099,24 +13146,20 @@ body .success {
     gap: 10px;
   }
 }
-.main h1, .main .h1 {
-  text-align: center;
-  margin-bottom: 10px;
-}
-.main .item {
+.main .list .item {
   text-align: left;
   margin: 0 auto;
   padding: 10px;
 }
-.main .item h2, .main .item .h2 {
+.main .list .item h2, .main .list .item .h2, .main .list .item h3, .main .list .item .h3 {
   text-align: center;
   margin-top: 10px;
 }
-.main .item h3, .main .item .h3 {
-  text-align: center;
-  margin-bottom: 10px;
+.main .list .item p {
+  width: 75%;
+  margin: auto;
 }
-.main .social {
+.main .list .social {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -13127,22 +13170,22 @@ body .success {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
-.main .item li {
+.main .list .item li {
   margin-right: 15px;
 }
-.main .item img {
+.main .list .item img {
   position: relative;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
-.main .social ul {
+.main .list .social ul {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   padding: 0;
 }
-.main .social li {
+.main .list .social li {
   list-style-type: none;
   padding: 0 10px 0 0;
 }

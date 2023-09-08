@@ -1,7 +1,16 @@
 .profile-wrapper{
-    max-width: 1160px;
-    margin: auto;
-    padding: 0 20px;
+
+    @include tablet{
+        width: 98%;
+    }
+    @include desktop{
+        width: 84%;
+        margin-left: 10px;
+    }
+    @include large{
+        width: 80%;
+        margin-left: 20px;
+    }
 }
 .profile, .bid{
     margin: 20px 0 60px 0;
@@ -9,7 +18,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: left;
+    align-items: center;
     
     @include tablet{
         flex-direction: row;
@@ -17,31 +26,31 @@
     .profileRight, .profileLeft, .bidLeft, .bidRight{
         display: flex;
         flex-direction: column;
-
+        margin: 0 20px;
 
         @include tablet{
             flex: 1;
         }
     }
     .profileLeft, .bidLeft{
-       /*  width: 40%; */
+        width: 40%;
         
-        /* @include tablet{
+        @include tablet{
             position: relative;
-            left: 10%;
-            transform: translateX(-10%);
+            left: 12%;
+            transform: translateX(-12%);
             
         }
         @include desktop{
             position: relative;
-            left: 15%;
-            transform: translateX(-15%);
+            left: 17%;
+            transform: translateX(-17%);
         }
         @include large{
             position: relative;
-            left: 20%;
-            transform: translateX(-20%);
-        } */
+            left: 23%;
+            transform: translateX(-23%);
+        }
         
     }
     .bidDesc{
@@ -50,6 +59,9 @@
     }
     .profileRight{
 
+        .message-container{
+            padding: 10px 0;
+        }
     }
     .profileAvatar{
         width: 40px;
@@ -67,6 +79,9 @@
         box-decoration-break: clone;
     }
     .profileBox, .bidBox{
+        position: relative;
+        left: 40%;
+        transform: translateX(-40%);
         height: 300px;
         width: 250px;
         padding: 20px;

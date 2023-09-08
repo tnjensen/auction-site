@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "node-sass": "^8.0.0"
+    "node-sass": "^9.0.0"
   },
   "name": "bs-auction-site",
   "version": "1.0.0",
@@ -8,7 +8,7 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass -watch scss -o css"
+    "scss": "node-sass --watch scss -o css"
   },
   "keywords": [
     "Auction",

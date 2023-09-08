@@ -12,70 +12,75 @@
         @include tablet{
             flex-direction: row;
         }
-    }
-    .registerRight, .registerLeft{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
 
-        @include tablet{
-            flex: 1;
-            justify-content: flex-start;
-            margin: 40px 20px 0 0;
-
+        .registerRight, .registerLeft{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+    
+            @include tablet{
+                flex: 1;
+                justify-content: flex-start;
+                margin: 40px 20px 0 0;
+    
+            }
+    
         }
-
-    }
-    .registerLogo{
-        font-weight: 600;
-        color: $secondary;
-        margin: 20px 0 10px 0;
-
-        @include tablet{
-            margin: 60px 0 20px 0;
+        .registerLogo{
+            font-weight: 600;
+            color: $secondary;
+            margin: 20px 0 10px 0;
+    
+            @include tablet{
+                margin: 60px 0 20px 0;
+            }
         }
-    }
-    .registerDesc{
-        font-size: 22px;
-        margin-bottom: 10px;
-    }
-    .registerBox{
-        padding: 20px;
-        margin-top: 20px;
-        background-color: $form-background;
-        border-radius: 10px;
-        display: flex;
-        justify-content: space-around;
-        flex-direction: column;
-    }
-    .lblUsername,.lblEmail, .lblPassword{
-        color: $textColor;
-    }
-    .registerName, .registerEmail, .registerPassword, .registerAvatar{
-        height: 50px;
-        border-radius: 5px;
-        border: 1px solid gray;
-        padding-left: 10px;
-        margin: 5px 0;
-    }
-    input:focus{
-        outline: none;
-    }
-    .signUpButton{
-        height: 50px;
-        border-radius: 10px;
-        border: none;
-        background: $secondary;
-        color: $textColor;
-        text-transform: uppercase;
-        padding: 8px 12px;
-        text-decoration: none;
-        font-family: "Roboto Flex", sans-serif;
-        cursor: pointer;
-        margin-top: 10px;
-
-        &:hover{
-            background-color:$secondary-hover;
+        .registerDesc{
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .registerBox{
+            padding: 20px;
+            margin-top: 20px;
+            background-color: $form-background;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+    
+            @include tablet{
+                margin-top: 0;
+            }
+        }
+        .lblUsername,.lblEmail, .lblPassword{
+            color: $textColor;
+        }
+        .registerName, .registerEmail, .registerPassword, .registerAvatar{
+            height: 50px;
+            border-radius: 5px;
+            border: 1px solid gray;
+            padding-left: 10px;
+            margin: 5px 0;
+        }
+        input:focus{
+            outline: none;
+        }
+        .signUpButton{
+            height: 50px;
+            border-radius: 10px;
+            border: none;
+            background: $secondary;
+            color: $textColor;
+            text-transform: uppercase;
+            padding: 8px 12px;
+            text-decoration: none;
+            font-family: "Roboto Flex", sans-serif;
+            cursor: pointer;
+            margin-top: 10px;
+    
+            &:hover{
+                background-color:$secondary-hover;
+            }
         }
     }
 }
