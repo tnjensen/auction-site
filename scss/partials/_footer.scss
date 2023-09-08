@@ -1,16 +1,16 @@
 .footer{
     width: 100vw;
     border-top: 3px solid rgba($footer-background, 0.3); 
-    
+    padding: 40px 25px;
+
     .footer-content{
         max-width: 1160px;
         margin: auto;
-        padding: 40px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         
-        @include tablet{
+        @include desktop{
             flex-direction: row;
             justify-content: space-around;
             gap: 15px;

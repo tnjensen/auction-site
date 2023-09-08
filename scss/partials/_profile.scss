@@ -1,6 +1,7 @@
 .profile-wrapper{
     max-width: 1160px;
     margin: auto;
+    padding: 0 20px;
 }
 .profile, .bid{
     margin: 20px 0 60px 0;
@@ -8,28 +9,27 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    align-items: left;
     
     @include tablet{
         flex-direction: row;
-        
     }
     .profileRight, .profileLeft, .bidLeft, .bidRight{
         display: flex;
         flex-direction: column;
-        margin: 0 25px;
+
 
         @include tablet{
             flex: 1;
         }
     }
     .profileLeft, .bidLeft{
-        width: 40%;
+       /*  width: 40%; */
         
-        @include tablet{
+        /* @include tablet{
             position: relative;
-            left: 13%;
-            transform: translateX(-13%);
+            left: 10%;
+            transform: translateX(-10%);
             
         }
         @include desktop{
@@ -41,7 +41,7 @@
             position: relative;
             left: 20%;
             transform: translateX(-20%);
-        }
+        } */
         
     }
     .bidDesc{
@@ -50,9 +50,6 @@
     }
     .profileRight{
 
-        .message-container{
-            padding: 10px 0;
-        }
     }
     .profileAvatar{
         width: 40px;

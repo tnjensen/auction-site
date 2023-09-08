@@ -12155,13 +12155,20 @@ body .success {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   position: relative;
   z-index: 10;
+  padding: 0 15px;
+}
+@media (min-width: 768px) {
+  .header {
+    /* justify-content: space-around; */
+  }
 }
 .header .left .logo {
   text-decoration: none;
@@ -12598,11 +12605,11 @@ body .success {
 .footer {
   width: 100vw;
   border-top: 3px solid rgba(74, 74, 77, 0.3);
+  padding: 40px 25px;
 }
 .footer .footer-content {
   max-width: 1160px;
   margin: auto;
-  padding: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12614,7 +12621,7 @@ body .success {
       -ms-flex-pack: center;
           justify-content: center;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .footer .footer-content {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -12919,6 +12926,7 @@ body .success {
 .profile-wrapper {
   max-width: 1160px;
   margin: auto;
+  padding: 0 20px;
 }
 
 .profile, .bid {
@@ -12933,9 +12941,9 @@ body .success {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
 }
 @media (min-width: 768px) {
   .profile, .bid {
@@ -12953,7 +12961,6 @@ body .success {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0 25px;
 }
 @media (min-width: 768px) {
   .profile .profileRight, .profile .profileLeft, .profile .bidLeft, .profile .bidRight, .bid .profileRight, .bid .profileLeft, .bid .bidLeft, .bid .bidRight {
@@ -12963,37 +12970,26 @@ body .success {
   }
 }
 .profile .profileLeft, .profile .bidLeft, .bid .profileLeft, .bid .bidLeft {
-  width: 40%;
-}
-@media (min-width: 768px) {
-  .profile .profileLeft, .profile .bidLeft, .bid .profileLeft, .bid .bidLeft {
-    position: relative;
-    left: 13%;
-    -webkit-transform: translateX(-13%);
-            transform: translateX(-13%);
+  /*  width: 40%; */
+  /* @include tablet{
+      position: relative;
+      left: 10%;
+      transform: translateX(-10%);
+
   }
-}
-@media (min-width: 992px) {
-  .profile .profileLeft, .profile .bidLeft, .bid .profileLeft, .bid .bidLeft {
-    position: relative;
-    left: 15%;
-    -webkit-transform: translateX(-15%);
-            transform: translateX(-15%);
+  @include desktop{
+      position: relative;
+      left: 15%;
+      transform: translateX(-15%);
   }
-}
-@media (min-width: 1280px) {
-  .profile .profileLeft, .profile .bidLeft, .bid .profileLeft, .bid .bidLeft {
-    position: relative;
-    left: 20%;
-    -webkit-transform: translateX(-20%);
-            transform: translateX(-20%);
-  }
+  @include large{
+      position: relative;
+      left: 20%;
+      transform: translateX(-20%);
+  } */
 }
 .profile .bidDesc, .bid .bidDesc {
   word-wrap: break-word;
-}
-.profile .profileRight .message-container, .bid .profileRight .message-container {
-  padding: 10px 0;
 }
 .profile .profileAvatar, .bid .profileAvatar {
   width: 40px;
