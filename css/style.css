@@ -12714,7 +12714,6 @@ body .success {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 70%;
 }
 @media (min-width: 768px) {
   .login .wrapper {
@@ -12722,7 +12721,6 @@ body .success {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 80%;
     margin-bottom: 60px;
   }
 }
@@ -12846,7 +12844,6 @@ body .success {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 70%;
 }
 @media (min-width: 768px) {
   .register .wrapper {
@@ -12854,7 +12851,6 @@ body .success {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 80%;
   }
 }
 .register .wrapper .registerRight, .register .wrapper .registerLeft {

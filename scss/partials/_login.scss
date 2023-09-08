@@ -8,11 +8,9 @@
     .wrapper{
         display: flex;
         flex-direction: column;
-        width: 70%;
 
         @include tablet{
             flex-direction: row;
-            width: 80%;
             margin-bottom: 60px;
         }
 
