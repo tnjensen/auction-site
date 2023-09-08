@@ -12,6 +12,7 @@
         @include tablet{
             flex-direction: row;
             width: 80%;
+            margin-bottom: 60px;
         }
 
         .registerRight, .registerLeft{
