@@ -8,7 +8,7 @@
         margin: auto;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-around;
         
         @include tablet{
             flex-direction: row;
