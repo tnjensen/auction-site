@@ -10,7 +10,7 @@ body{
     h1,h2,h3,h4,h5,h6{
         font-family: Lora, Georgia, 'Times New Roman', Times, serif;
     }
-    h1{
+    h1, h2, h3{
         color: $secondary;
     }
     a{
@@ -19,7 +19,7 @@ body{
     a:hover{
         color: $bs-link-hover-color;
     }
-    p{
+    p, ul{
         color: $darkTextColor;
     }
     .warning{
@@ -40,9 +40,13 @@ body{
     margin: 0 auto;
     max-width: 1160px;
 }
-.header-content{
+.header-content, .header-top-content{
     max-width: 1160px;
     margin: auto;
 }
 
-
+input, select{
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid rgba($footer-background, 0.5);
+}

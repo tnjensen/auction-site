@@ -1,7 +1,52 @@
 .header{
     width: 100vw;
     border-bottom: 1px solid rgba($footer-background, .3);
+    
+    .header-top{
+        width: 100vw;
+        border-bottom: 1px solid rgba($footer-background, .3);
+        
+        .header-top-content{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100vw;
+            padding: 5px 20px;
+            font-size: .9rem;
 
+            .profile-details{
+        
+                .profile-divider{
+                    color: $secondary;
+                }
+        
+                a{
+                text-decoration:none;
+                cursor: pointer;
+                }
+                img{
+                    margin-bottom: 5px;
+                }
+            }
+            .credits{
+                color:$secondary;
+            }
+            .right{
+        
+                ul{
+                    list-style: none;
+                    display: inline-flex;
+                    margin-bottom: 0;
+                }
+                li a{
+                    text-decoration: none;
+                    cursor: pointer;
+                    padding-right: 10px;
+                    
+                }
+            }
+        }
+    }
     .header-content{
         min-height: 70px;
         display: flex;
@@ -9,63 +54,74 @@
         align-items: center;
         position: relative;
         z-index: 10;
-        padding: 0 15px;
+        padding: 0 10px;
        
        
         @include tablet{
             justify-content: space-around;
         }
         .left{
-    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
             .logo{
                 text-decoration: none;
                 cursor: pointer;
                 font-family: "Roboto Flex", sans-serif;
                 font-size: 26px;
                 margin: 0 20px 0 10px;
+
+                &:hover{
+                    color: $secondary;
+                }
     
                 @include tablet{
                     font-size: 32px;
                 }
+
+                span{
+                    color: $bs-link-hover-color;
+                }
             }
-        }
-    
-        .profile-details{
-    
-            .profile-divider{
-                color: $secondary;
-            }
-    
-            a{
-            text-decoration:none;
-            cursor: pointer;
-            }
-            img{
-                margin-bottom: 5px;
-            }
-        }
-        .credits{
-            color:$secondary;
-        }
-        .right{
-    
+            
             ul{
                 list-style: none;
-                display: none;
-        
-                @include tablet{
-                    display: inline-flex;
-                    margin-bottom: 0;
+                display: inline-flex;
+                justify-content: space-around;
+                align-items: center;
+                margin-bottom: 0;
+                padding-left: 40px;
+
+                li{
+                    
+                    input{
+                        border-radius: 5px 0 0 5px;
+                        padding: 4px 5px;
+                        border: 1px solid rgba($footer-background, 0.5);
+
+                        @include tablet{
+                            width: 30vw;
+                        }
+                    }
+                    button{
+                        background-color: $secondary;
+                        color: $textColor;
+                        margin: 0;
+                        padding: 5px 8px;
+                        border: none;
+                        border-radius: 0 5px 5px 0;
+
+                        &:hover{
+                            background-color: $bs-link-hover-color;
+                        }
+                    }
                 }
-        
             }
-            li a{
-                text-decoration: none;
-                cursor: pointer;
-                padding-right: 10px;
-                
-            }
+        }
     
+        .right{
+
             .bars{
                 width: 30px;
                 height: 22px;
@@ -83,11 +139,26 @@
                     background-color: $bs-link-hover-color;
                     transform-origin: left;
                     transition: all 1s ease;
-    
                 }
+            }
+            ul{
+                list-style: none;
+                display: none;
+        
+                @include tablet{
+                    display: inline-flex;
+                    margin-bottom: 0;
+                }
+        
+            }
+            li a{
+                text-decoration: none;
+                cursor: pointer;
+                padding-right: 10px;      
             }
         }
         &.active{
+            
             background-color: $secondary;
             color: $textColor;
     
@@ -122,6 +193,9 @@
                 .profile-divider{
                     color: $textColor;
                 }
+            }
+            .search-icon{
+                color: $textColor;
             }
             .right{
     

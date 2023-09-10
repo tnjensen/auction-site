@@ -135,6 +135,11 @@
             }
             .btn{
                 margin: auto 0 15px 0;
+                border: none;
+
+                &:hover{
+                    background-color: $bs-link-hover-color;
+                }
             }
         }
         
@@ -154,19 +159,7 @@
                 font-size: 21px;     
             }
         }
-        
-        .deleteLink{
-            background-color: $primary;
-            float: right;
-            color: $textColor;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 15px;
-            text-decoration: none;
-        } 
-        
     }
-    
 }
 
 .listing{
