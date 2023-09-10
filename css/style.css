@@ -12263,7 +12263,6 @@ input, select {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 0;
-  padding-left: 40px;
 }
 .header .header-content .left ul li input {
   border-radius: 5px 0 0 5px;
