@@ -12152,7 +12152,7 @@ body .success {
 
 .header {
   width: 100vw;
-  border-bottom: 2px solid rgba(74, 74, 77, 0.2);
+  border-bottom: 1px solid rgba(74, 74, 77, 0.3);
 }
 .header .header-content {
   min-height: 70px;
@@ -12609,7 +12609,7 @@ body .success {
 
 .footer {
   width: 100vw;
-  border-top: 3px solid rgba(74, 74, 77, 0.3);
+  border-top: 1px solid rgba(74, 74, 77, 0.3);
   padding: 40px 25px;
 }
 .footer .footer-content {
