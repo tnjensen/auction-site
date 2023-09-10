@@ -12263,16 +12263,18 @@ input, select {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 0;
+  margin-right: 10px;
   padding: 0;
 }
 .header .header-content .left .search-bar li input {
   border-radius: 5px 0 0 5px;
   padding: 4px 5px;
   border: 1px solid rgba(74, 74, 77, 0.5);
+  width: 30vw;
 }
 @media (min-width: 768px) {
   .header .header-content .left .search-bar li input {
-    width: 30vw;
+    width: 40vw;
   }
 }
 .header .header-content .left .search-bar li button {
