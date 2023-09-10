@@ -85,12 +85,13 @@
                 }
             }
             
-            ul{
+            .search-bar{
                 list-style: none;
                 display: inline-flex;
                 justify-content: space-around;
                 align-items: center;
                 margin-bottom: 0;
+                padding: 0;
 
                 li{
                     
