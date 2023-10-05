@@ -13040,22 +13040,9 @@ input, select {
   background-color: #1546e6;
 }
 
-@media (min-width: 768px) {
-  .profile-wrapper {
-    width: 98%;
-  }
-}
-@media (min-width: 992px) {
-  .profile-wrapper {
-    width: 84%;
-    margin-left: 10px;
-  }
-}
-@media (min-width: 1280px) {
-  .profile-wrapper {
-    width: 80%;
-    margin-left: 20px;
-  }
+.profile-wrapper {
+  max-width: 1160px;
+  margin: 0 auto;
 }
 
 .profile, .bid {

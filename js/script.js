@@ -8,6 +8,7 @@ const listings = 'listings';
 const slider = document.querySelector('.slider');
 const logLink = document.querySelector('.logLink');
 const regLink = document.querySelector('.regLink');
+const profileLink = document.querySelector('.profileLink');
 const credits = document.querySelector('.credits');
 const divider = document.querySelector('.profile-divider');
 const user = JSON.parse(localStorage.getItem('user'));
@@ -47,6 +48,7 @@ if( date > 2023){
 messageContainer.style = "display:none";
 inputForm.style = "display:none";
 credits.style = "display:none";
+profileLink.style = "display:none";
 
 if(user){
     console.log(user);
@@ -54,6 +56,7 @@ if(user){
     regLink.innerHTML = `<img src=${userAvatar} class="avatarHeaderImg" style="width:40px; border-radius:50% "/>`;
     credits.innerHTML = "Credits: NOK " + userCredits;
     divider.style = "display:none";
+    profileLink.style = "display:block";
     registerInfo.style = "display:none";
     listingInfo.style = "display:none";
     inputForm.style = "display:block";

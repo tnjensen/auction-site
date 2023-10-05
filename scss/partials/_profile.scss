@@ -1,16 +1,7 @@
 .profile-wrapper{
+    max-width: 1160px;
+    margin: 0 auto;
 
-    @include tablet{
-        width: 98%;
-    }
-    @include desktop{
-        width: 84%;
-        margin-left: 10px;
-    }
-    @include large{
-        width: 80%;
-        margin-left: 20px;
-    }
 }
 .profile, .bid{
     margin: 20px 0 60px 0;
