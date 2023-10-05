@@ -83,6 +83,10 @@
         justify-content: space-around;
         flex-direction: column;
 
+        .avatarText a, .bidAmountText a{
+            color: $textColor;
+        } 
+
         @include tablet{
             width: 300px;
         }

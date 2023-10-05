@@ -39,8 +39,8 @@ if( date > 2023){
   year.innerHTML = date;
 }
 
-bidAmountText.innerHTML = "Please log in to make a bid";
-avatarText.innerHTML = "Please log in to edit avatar";
+bidAmountText.innerHTML = `Please <a href="login.html">log in</a> to make a bid`;
+avatarText.innerHTML = `Please <a href="login.html">log in</a> to edit avatar`;
 profileUser.innerHTML = "Not logged in";
 profileCredits.innerHTML = 0;
 credits.style = "display:none";

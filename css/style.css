@@ -13155,6 +13155,9 @@ input, select {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.profile .profileBox .avatarText a, .profile .profileBox .bidAmountText a, .profile .bidBox .avatarText a, .profile .bidBox .bidAmountText a, .bid .profileBox .avatarText a, .bid .profileBox .bidAmountText a, .bid .bidBox .avatarText a, .bid .bidBox .bidAmountText a {
+  color: #fffefe;
+}
 @media (min-width: 768px) {
   .profile .profileBox, .profile .bidBox, .bid .profileBox, .bid .bidBox {
     width: 300px;
