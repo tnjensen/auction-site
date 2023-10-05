@@ -1,9 +1,9 @@
 import { openMenu } from "./components/menuButton.js";
 import displayMessage from "./components/displayMessage.js";
+import { baseUrl } from "./components/settings.js";
 const menuButton = document.querySelector('.bars');
 const registerInfo = document.querySelector('.register-info');
 const listingInfo = document.querySelector('.listing-info');
-const baseUrl = 'https://api.noroff.dev/api/v1/auction/';
 const listings = 'listings';
 const slider = document.querySelector('.slider');
 const logLink = document.querySelector('.logLink');
