@@ -95,7 +95,7 @@ async function getBidItem(){
     }
    
 }
-if(itemId){
+if(itemId || user){
     getBidItem();
 }
 else{
@@ -115,7 +115,7 @@ if(user){
 if(user){
     regLink.innerHTML = `<img src=${avatar} style="width:40px; border-radius:50% "/>`;
 }else{
-    regLink.innerHTML = "";
+    regLink.innerHTML = "Register";
 }
 if(user){
     profileAvatarLink.value = `${avatar}`;
