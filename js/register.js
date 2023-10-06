@@ -24,7 +24,7 @@ menuButton.onclick = openMenu;
 
 form.addEventListener('submit', submitForm);
 
-function submitForm(event){
+async function submitForm(event){
     event.preventDefault();
     
     message.innerHTML = "";
@@ -38,7 +38,7 @@ function submitForm(event){
         return displayMessage("warning", "Invalid values", ".message-container");
     }
 
-    doLogin(registerNameValue, registerEmailValue, registerPasswordValue, registerAvatarValue);
+    await doLogin(registerNameValue, registerEmailValue, registerPasswordValue, registerAvatarValue);
 }
 
 async function doLogin(registerName,registerEmail,registerPassword, registerAvatar){

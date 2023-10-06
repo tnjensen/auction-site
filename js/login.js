@@ -23,7 +23,7 @@ menuButton.onclick = openMenu;
 
 form.addEventListener('submit', submitForm);
 
-function submitForm(event){
+async function submitForm(event){
     event.preventDefault();
 
     message.innerHTML = "";
@@ -35,7 +35,7 @@ function submitForm(event){
         return displayMessage("warning", "Invalid values", ".message-container");
     }
 
-    doLogin(loginEmailValue, loginPasswordValue);
+    await doLogin(loginEmailValue, loginPasswordValue);
 }
 
 async function doLogin(loginEmailValue,loginPasswordValue){
