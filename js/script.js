@@ -54,6 +54,7 @@ if(user){
     console.log(user);
     logLink.innerHTML = "Logout";
     regLink.innerHTML = `<img src=${userAvatar} class="avatarHeaderImg" style="width:40px; border-radius:50% "/>`;
+    credits.style = "display:block";
     credits.innerHTML = "Credits: NOK " + userCredits;
     divider.style = "display:none";
     profileLink.style = "display:block";
