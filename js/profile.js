@@ -115,7 +115,7 @@ if(user){
 if(user){
     regLink.innerHTML = `<img src=${avatar} style="width:40px; border-radius:50% "/>`;
 }else{
-    regLink.innerHTML = "Register";
+    regLink.innerHTML = "";
 }
 if(user){
     profileAvatarLink.value = `${avatar}`;
