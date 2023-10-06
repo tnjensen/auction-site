@@ -82,6 +82,7 @@
             margin: 0 10px;
             display: flex;
             flex-direction: column;
+            max-width: 80%;
             
             @include tablet{
                 width: 100%;
