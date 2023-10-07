@@ -12156,6 +12156,10 @@ input, select {
   border: 1px solid rgba(74, 74, 77, 0.5);
 }
 
+.active {
+  border-bottom: 1px solid #f79577;
+}
+
 .header {
   width: 100vw;
   border-bottom: 1px solid rgba(74, 74, 77, 0.3);
@@ -12332,7 +12336,7 @@ input, select {
 .header .header-content .right li a {
   text-decoration: none;
   cursor: pointer;
-  padding-right: 10px;
+  margin-right: 10px;
 }
 .header .header-content.active {
   background-color: #0731bb;

@@ -7,6 +7,13 @@ const divider = document.querySelector('.profile-divider');
 const user = JSON.parse(localStorage.getItem('user'));
 const userCredits = JSON.parse(localStorage.getItem('credits'));
 const userAvatar = JSON.parse(localStorage.getItem('avatar'));
+const links = document.querySelectorAll('.nav-menu li a');
+
+for(let i = 0; i < links.length;i++){
+  if(links[i] == document.URL){
+      links[i].classList.add('active');
+  }
+}
 
 const year = document.getElementById('year');
 

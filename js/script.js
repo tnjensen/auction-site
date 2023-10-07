@@ -26,6 +26,7 @@ const loader = document.querySelector('.loader');
 const angles = document.querySelectorAll('i');
 const leftAngle = document.querySelector('.fa-angle-left');
 const rightAngle = document.querySelector('.fa-angle-right');
+const links = document.querySelectorAll('.nav-menu li a');
 
 let index = 0;
 let maxPages = 0;
@@ -45,6 +46,12 @@ if( date > 2023){
   year.innerHTML = `2023 - `+ date;
 }else{
   year.innerHTML = date;
+}
+
+for(let i = 0; i < links.length;i++){
+  if(links[i] == document.URL){
+      links[i].classList.add('active');
+  }
 }
 
 messageContainer.style = "display:none";
@@ -121,11 +128,13 @@ function buildPage(results){
     let indexEnd = indexStart + postsPerPage;
     pageResult = results.slice(indexStart, indexEnd);
     createHTML(pageResult);
-    /* checkLength(pageResult); */
 }
 
 function createHTML(results){ 
-
+  console.log(maxPages);
+  console.log(index);
+  
+  
   if(maxPages == postPage){
     rightAngle.style.display = "none";
   }

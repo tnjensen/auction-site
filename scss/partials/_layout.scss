@@ -50,3 +50,6 @@ input, select{
     padding: 5px;
     border: 1px solid rgba($footer-background, 0.5);
 }
+.active{
+    border-bottom: 1px solid $primary;
+}
