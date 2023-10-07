@@ -1,10 +1,12 @@
 import { openMenu } from "./components/menuButton.js";
 import displayMessage from "./components/displayMessage.js";
 import { baseUrl } from "./components/settings.js";
+import { listingsUrl } from "./components/settings.js";
 const menuButton = document.querySelector('.bars');
 const registerInfo = document.querySelector('.register-info');
 const listingInfo = document.querySelector('.listing-info');
 const listings = 'listings';
+const searchButton = document.querySelector('.searchButton');
 const slider = document.querySelector('.slider');
 const logLink = document.querySelector('.logLink');
 const regLink = document.querySelector('.regLink');
@@ -78,7 +80,7 @@ async function getItems(){
         let currentSlide = results[0];
         index = results.indexOf(currentSlide);
         leftAngle.style.display = "none";
-        checkLength(results);
+        /* checkLength(results); */
         getMaxPages(results);
         createHTML(results);
         
@@ -119,10 +121,11 @@ function buildPage(results){
     let indexEnd = indexStart + postsPerPage;
     pageResult = results.slice(indexStart, indexEnd);
     createHTML(pageResult);
-    checkLength(pageResult);
+    /* checkLength(pageResult); */
 }
 
 function createHTML(results){ 
+
   if(maxPages == postPage){
     rightAngle.style.display = "none";
   }
@@ -148,9 +151,10 @@ function createHTML(results){
         </div>`
         } 
     } 
-    checkLength(results);
+    /* checkLength(results); */
 }
 function checkLength(results){
+  console.log(results);
   let nodeList = document.querySelectorAll('.card-text');
 
     for(let i = 0; i < nodeList.length; i++){
@@ -234,3 +238,25 @@ function getMaxPages(results){
   maxPages = Math.trunc(maxPages);
   return maxPages;
 }
+
+async function Search() {
+  const tag = document.querySelector('.searchField').value;
+	const url = `${listingsUrl}?_tag=${tag}`;
+
+  try{
+    const response = await fetch(url);
+
+    if (response.ok) {
+      const json = await response.json();
+     
+      slider.innerHTML = ""; 
+      createHTML(json);
+    }
+  }
+  catch(error){
+    console.log(error);
+    
+  }
+}
+
+searchButton.addEventListener('click', Search);
