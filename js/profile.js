@@ -53,6 +53,7 @@ if(user){
     credits.innerHTML = "Credits : NOK " + userCredits;
     profileCredits.innerHTML = "NOK " + userCredits;
     logLink.innerHTML = "Logout";
+    logLink.style = "text-decoration: none";
     divider.style = "display:none";
     profileAvatar.style = "display:block";
     editButton.disabled = false;

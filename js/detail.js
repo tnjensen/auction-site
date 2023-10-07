@@ -53,6 +53,7 @@ credits.style = "display:none";
 if(user){
     console.log(user);
     logLink.innerHTML = "Logout";
+    logLink.style = "text-decoration: none";
     regLink.innerHTML = `<img src=${userAvatar} class="avatarHeaderImg" style="width:40px; border-radius:50% "/>`;
     credits.innerHTML = "Credits: NOK " + userCredits;
     divider.style = "display:none";
