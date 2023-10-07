@@ -43,13 +43,14 @@ bidAmountText.innerHTML = `Please <a href="login.html">log in</a> to make a bid`
 avatarText.innerHTML = `Please <a href="login.html">log in</a> to edit avatar`;
 profileUser.innerHTML = "Not logged in";
 profileCredits.innerHTML = 0;
-credits.style = "display:none";
 profileAvatar.style = "display:none";
 editButton.disabled = true;
 bidButton.disabled = true;
 
 if(user){
     profileUser.innerHTML = user;
+    credits.style = "display:block";
+    credits.innerHTML = "Credits : NOK " + userCredits;
     profileCredits.innerHTML = "NOK " + userCredits;
     logLink.innerHTML = "Logout";
     divider.style = "display:none";
