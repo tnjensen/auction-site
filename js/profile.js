@@ -77,17 +77,29 @@ async function getBidItem(){
     try{
         const result = await fetch(baseUrl + "listings/" + itemId, options);
         const response = await result.json();
+        console.log(response);
         
-        bidItem.innerHTML = response.title;
+        if(response){
+            bidItem.innerHTML = response.title;
+        }
+        else{
+            bidItem.innerHTML = "";
+        }
         
-        bidDescription.innerHTML = response.description;
-
-        if(bidDescription.innerHTML === ""){
+        if(response){
+            bidDescription.innerHTML = response.description;
+        }
+        else{
+            bidDescription.innerHTML = "";
             bidDescription.style.backgroundColor = "inherit";
         }
 
-        bidsOnItem.innerHTML = response._count.bids;
-        
+        if(response){
+            bidsOnItem.innerHTML = response._count.bids;
+        }
+        else{
+            bidsOnItem.innerHTML = "";
+        } 
     }
     catch(err){
         console.log(err);
@@ -95,7 +107,7 @@ async function getBidItem(){
     }
    
 }
-if(itemId || user){
+if(window.location.search){
     getBidItem();
 }
 else{
