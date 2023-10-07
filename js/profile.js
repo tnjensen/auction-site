@@ -145,7 +145,6 @@ function submitProfileForm(event){
     message.innerHTML = "";
 
     let profileAvatarLinkValue = profileAvatarLink.value;
-    console.log(profileAvatarLinkValue);
     
     if(profileAvatarLinkValue.length === 0){
         profileAvatarLinkValue = "";    
@@ -172,8 +171,10 @@ async function doUpdate(profileAvatarLinkValue){
         const json = await response.json();
         
         if(response.ok){
-            displayMessage("success", "Successfully updated avatar for " + json.name, ".message-container");
+            /* displayMessage("success", "Successfully updated avatar for " + json.name, ".message-container"); */
             const avatar = json.avatar;
+            profileAvatar.src = avatar;
+            regLink.innerHTML = `<img src=${avatar} style="width:40px; border-radius:50% "/>`;
             saveAvatar(avatar);
         }
         if(json.error){
