@@ -11,7 +11,6 @@ const avatar = JSON.parse(localStorage.getItem('avatar'));
 const profileAvatarLink = document.querySelector('.profileAvatarLink');
 const profileAvatar = document.querySelector('.profileAvatar');
 const menuButton = document.querySelector('.bars');
-const credits = document.querySelector('.credits');
 const userCredits = JSON.parse(localStorage.getItem('credits'));
 const profileForm = document.querySelector('.profileBox');
 const logLink = document.querySelector('.logLink');
@@ -49,8 +48,6 @@ bidButton.disabled = true;
 
 if(user){
     profileUser.innerHTML = user;
-    credits.style = "display:block";
-    credits.innerHTML = "Credits : NOK " + userCredits;
     profileCredits.innerHTML = "NOK " + userCredits;
     logLink.innerHTML = "Logout";
     logLink.style = "text-decoration: none";
