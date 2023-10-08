@@ -12130,12 +12130,21 @@ body .warning {
   background-color: #f79577;
   color: #fffefe;
   padding: 10px;
+  margin: 15px 0;
   width: 300px;
 }
 body .success {
   background-color: #0731bb;
   color: #fffefe;
   padding: 10px;
+  margin: 15px 0;
+  width: 300px;
+}
+body .error {
+  background-color: #ee7e5c;
+  color: #fffefe;
+  padding: 10px;
+  margin: 15px 0;
   width: 300px;
 }
 
@@ -12372,12 +12381,13 @@ input, select {
 }
 .header .header-content.active .right ul {
   display: block;
-  width: 120px;
+  width: 100%;
   background-color: #0731bb;
   position: absolute;
   top: 70px;
   right: 0;
   padding: 0 20px 20px 20px;
+  text-align: center;
 }
 .header .header-content.active .right li a {
   color: #fffefe;

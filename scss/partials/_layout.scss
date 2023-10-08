@@ -26,12 +26,21 @@ body{
         background-color: $primary;
         color: $textColor;
         padding: 10px;
+        margin: 15px 0;
         width: 300px;
     }
     .success{
         background-color: $secondary;
         color: $textColor;
         padding: 10px;
+        margin: 15px 0;
+        width: 300px;
+    }
+    .error{
+        background-color: $bs-link-hover-color;
+        color: $textColor;
+        padding: 10px;
+        margin: 15px 0;
         width: 300px;
     }
 }
