@@ -24,7 +24,7 @@ menuButton.onclick = openMenu;
 
 form.addEventListener('submit', submitForm);
 
-async function submitForm(event){
+function submitForm(event){
     event.preventDefault();
     
     message.innerHTML = "";
@@ -38,14 +38,16 @@ async function submitForm(event){
         return displayMessage("warning", "Invalid values", ".message-container");
     }
 
-    await doLogin(registerNameValue, registerEmailValue, registerPasswordValue, registerAvatarValue);
+    doRegister(registerNameValue, registerEmailValue, registerPasswordValue, registerAvatarValue);
 }
 
-async function doLogin(registerName,registerEmail,registerPassword, registerAvatar){
+async function doRegister(registerName,registerEmail,registerPassword, registerAvatar){
     const url = baseUrl + "auth/register";
-
+    console.log(url);
+    
     const data = JSON.stringify({name:registerName, email: registerEmail, password:registerPassword, avatar:registerAvatar});
-
+    console.log(data);
+    
     const options = {
         method: "POST",
         body: data,

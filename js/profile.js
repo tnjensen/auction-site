@@ -1,7 +1,7 @@
 import { baseUrl } from "./components/settings.js";
 import displayMessage from "../js/components/displayMessage.js";
 import { openMenu } from "./components/menuButton.js";
-import { saveAvatar } from "./components/storage.js";
+import { saveAvatar} from "./components/storage.js";
 const profileUser = document.querySelector('.profileUser');
 const profileCredits = document.querySelector('.profileCredits');
 const editButton = document.querySelector('.editButton');
@@ -168,21 +168,19 @@ async function doUpdate(profileAvatarLinkValue){
         const json = await response.json();
         
         if(response.ok){
-            /* displayMessage("success", "Successfully updated avatar for " + json.name, ".message-container"); */
+            displayMessage("success", "Successfully updated avatar for " + json.name, ".message-container");
             const avatar = json.avatar;
             profileAvatar.src = avatar;
             regLink.innerHTML = `<img src=${avatar} style="width:40px; border-radius:50% "/>`;
             saveAvatar(avatar);
         }
-        if(json.error){
-            displayMessage("warning", json.error.message, ".message-container");
+        if(json.errors){
+            displayMessage("warning", json.errors[0].message, ".message-container");
         }
-        else{
-             editButton.innerHTML = "Home page";
-             editButton.onclick = function(){
-                location.href = "/";
-             }     
-        }
+        editButton.innerHTML = "Home page";
+        editButton.onclick = function(){
+           location.href = "/";
+        }     
     }
     catch(error){
         return displayMessage("error", "Wrong username or password", ".message-container");
@@ -197,10 +195,6 @@ function submitBidForm(event){
     message.innerHTML = "";
 
     let bidAmountValue = bidAmount.value;
-    
-    /* if(bidAmountValue.length === 0){
-        displayMessage("warning", "Please enter valid bid amount", ".bid-message-container"); 
-    } */
    
     placeBid(bidAmountValue);
 }
@@ -221,23 +215,25 @@ async function placeBid(bidAmountValue){
     try{
         const response = await fetch(url, options);
         const json = await response.json();
+        console.log(json);
+        
         
         if(response.ok){
-            displayMessage("success", "Successfully placed bid for " + json.title, ".bid-message-container");
-            const bid = json.bids.amount;
-            saveBid(bid);
+            displayMessage("success", "Successfully placed bid: NOK " + data + " for " + json.title, ".bid-message-container");
+            
         }
         if(json.errors){
-            displayMessage("warning", json.errors[0].message, ".bid-message-container"); 
+            return displayMessage("warning", json.errors[0].message, ".bid-message-container"); 
         }
         else{
-             bidButton.innerHTML = "Go back";
-             bidButton.onclick = function(){
+            bidButton.innerHTML = "Go back";
+            bidButton.onclick = function(){
                 location.href = "/";
-             }    
-        } 
+            }  
+        }  
+        
     }
     catch(error){
-        return displayMessage("error", "Something went wrong, please try again.. ", ".bid-message-container");
+        return displayMessage("error", error, ".bid-message-container");
     }
 }

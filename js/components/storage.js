@@ -2,14 +2,7 @@ const tokenKey = "token";
 const userKey = "user";
 const creditKey = "credits";
 const avatarKey = "avatar";
-const bidKey = "bids";
 
-export function saveBid(bid){
-    saveToStorage(bidKey, bid);
-}
-export function getBid(){
-    return getFromStorage(bidKey);
-}
 export function saveAvatar(avatar){
     saveToStorage(avatarKey, avatar);
 }

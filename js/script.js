@@ -90,6 +90,8 @@ async function getItems(){
         /* checkLength(results); */
         getMaxPages(results);
         createHTML(results);
+        console.log(results.filter(item => item.endsAt > "2023-10-09T08:00:48.693Z"));
+        
         
         angles.forEach(element => {
           element.onclick = function(){
@@ -115,7 +117,7 @@ async function getItems(){
                 
             }
         }
-    })
+      })
     }
     catch(error){
       slider.innerHTML = "Error: " + error;

@@ -54,7 +54,7 @@ async function doLogin(loginEmailValue,loginPasswordValue){
     try{
         const response = await fetch(url, options);
         const json = await response.json();
-        console.log(json);
+        console.log(json.name);
         
         if(response.ok){
             displayMessage("success", "Successfully logged in as " + json.name, ".message-container");
@@ -67,16 +67,14 @@ async function doLogin(loginEmailValue,loginPasswordValue){
             const avatar = json.avatar;
             saveAvatar(avatar);
         }
-       
         else if(!response.ok){
-            displayMessage("warning", json.errors[0].message, ".message-container");
+            return displayMessage("warning", json.errors[0].message, ".message-container");
         }
-        else{
-            submitButton.innerHTML = "Home page";
-            submitButton.onclick = function(){
-               location.href = "/";
-            }   
-        }
+       
+        submitButton.innerHTML = "Home page";
+        submitButton.onclick = function(){
+            location.href = "/";
+        } 
     }
     catch(error){
         return displayMessage("error", "An unknown error occurred", ".message-container");
