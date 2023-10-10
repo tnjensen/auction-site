@@ -219,7 +219,7 @@ async function placeBid(bidAmountValue){
         
         
         if(response.ok){
-            displayMessage("success", "Successfully placed bid: NOK " + data + " for " + json.title, ".bid-message-container");
+            displayMessage("success", "Successfully placed bid: NOK " + bidAmountValue + " for " + json.title, ".bid-message-container");
             
         }
         if(json.errors){
