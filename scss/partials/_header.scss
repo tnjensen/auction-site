@@ -166,6 +166,10 @@
     
             .logo{
                 color: $textColor;
+
+                span{
+                    color: $textColor;
+                }
             }
             .credits{
                 color:$textColor;
@@ -202,7 +206,8 @@
             .right{
     
                 ul{
-                    display: block;
+                    display: inline-flex;
+                    justify-content: flex-end;
                     width: 100%;
                     background-color: $secondary;
                     position: absolute;
@@ -216,7 +221,7 @@
                     font-size: 22px;
     
                     &:hover{
-                        font-weight: 600;
+                        color: $bs-link-hover-color;
                     }
     
                 }
