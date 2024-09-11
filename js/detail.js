@@ -78,6 +78,7 @@ async function getItem(){
         loader.classList.remove('loading-indicator');
         let currentSlide = result;
         createHTML(result);
+        console.log(result);
     }
     catch(error){
       console.log("Error: " + error);

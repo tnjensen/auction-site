@@ -42,4 +42,16 @@ https://stellular-lamington-d5dc71.netlify.app/
 
 ## Contact
 
+[My Twitter page](www.twitter.com/ThomasNJensen1)
+
 [My LinkedIn page](https://www.linkedin.com/in/tnjensen09/)
+
+[My Instagram page](https://www.instagram.com/tnjensen09/)
+
+## License
+
+MIT License
+
+## Acknowledgments
+
+Thanks to Connor o´Brien and Oliver Dipple at Noroff for their guiding and advice.
